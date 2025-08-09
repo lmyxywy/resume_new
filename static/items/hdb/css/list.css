@@ -1,0 +1,280 @@
+@media screen and (max-width: 1920px) {
+  .listpage_tittle {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .listpage_vertical_line {
+    height: 60%;
+    border-left: 7px solid #00ada7;
+    display: inline-block;
+    margin-top: 12px;
+    float: left;
+  }
+  .listpage_tittle_word {
+    display: inline;
+  }
+  .listpage_tittle_word img {
+    width: 20px;
+    margin: 20px 5px 0 10px;
+    display: block;
+    float: left;
+  }
+  .listpage_tittle_word a {
+    display: inline-block;
+    color: #626262;
+  }
+  .listpage_content {
+    padding-top: 20px;
+    overflow: hidden;
+  }
+  .listpage_left {
+    float: left;
+    width: 15%;
+    border: 1px solid #d5d5d5;
+    min-height: 400px;
+    position: relative;
+  }
+  .listpage_left_tittle {
+    text-align: center;
+    background: #00ada7;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 1.3em;
+  }
+  .listpage_left_tittle a {
+    color: #fff;
+  }
+  .listpage_left_ul {
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+  }
+  .listpage_left_ul li a {
+    color: #626262;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+  }
+  .listpage_left_ul li a:hover {
+    color: #00ada7;
+  }
+  .listpage_left_line {
+    height: 25px;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    margin-top: 12px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .listpage_left_line_checked {
+    height: 25px;
+    border-left: 7px solid #00ada7;
+    margin-top: 12px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .listpage_right {
+    float: left;
+    width: 84%;
+  }
+  .listpage_right_tittle {
+    padding: 20px 0;
+    font-size: 1.3em;
+    margin-left: 20px;
+    color: #626262;
+  }
+  .listpage_right_tittle a {
+    color: #00ada7;
+  }
+  .listpage_right_ul {
+    margin-left: 35px;
+    color: #00ada7;
+  }
+  .listpage_right_ul li {
+    list-style: disc;
+    border-bottom: 1px dotted #d5d5d5;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1%;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    list-style: none none lower-roman;
+  }
+  .listpage_right_ul li:hover {
+    background: #ededed;
+  }
+  .listpage_right_ul li a {
+    overflow: hidden;
+    font-size: 0.9em;
+    width: 100%;
+    float: right;
+    color: #626262;
+  }
+  .list_name {
+    float: left;
+    width: 79%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .list_time {
+    float: right;
+    width: 20%;
+    text-align: right;
+  }
+  .pageing {
+    width: 80%;
+    float: left;
+  }
+  .pageing ul {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 4%;
+  }
+  .pageing ul li {
+    float: left;
+    font-size: 0.7em;
+  }
+  .pageing ul li a {
+    padding: 10px 20px;
+    color: #626262;
+    border: 1px solid #d5d5d5;
+    transition: background 0.5s, color 0.5s;
+    -webkit-transition: background 0.5s, color 0.5s;
+    -o-transition: background 0.5s, color 0.5s;
+    -moz-transition: background 0.5s, color 0.5s;
+  }
+  .pageing ul li a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #00ada7;
+    color: #fff;
+  }
+  .list_write_btn {
+    float: right;
+    width: 20%;
+    margin-top: 3%;
+    background: #00ada7;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+  }
+  .list_write_btn:hover {
+    background: #00716e;
+  }
+  .list_write_btn img {
+    width: 25px;
+    vertical-align: top;
+  }
+  .list_write_btn span {
+    display: inline-block;
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .listpage_tittle {
+    height: auto;
+  }
+  .listpage_left {
+    float: none;
+    width: 99.5%;
+    min-height: initial;
+    height: auto;
+  }
+  .listpage_left_tittle {
+    padding: 10px 0;
+  }
+  .listpage_left_ul {
+    height: auto;
+    margin-left: 10px;
+    overflow: hidden;
+  }
+  .listpage_left_ul li {
+    width: 50%;
+    float: left;
+  }
+  .listpage_right {
+    float: none;
+    width: 100%;
+  }
+  .listpage_right_tittle {
+    padding: 20px 0;
+    font-size: 1.3em;
+    margin-left: 10px;
+    color: #626262;
+  }
+  .listpage_right_ul {
+    margin-left: 20px;
+    color: #00ada7;
+  }
+  .listpage_right_ul li {
+    list-style: disc;
+    border-bottom: 1px dotted #d5d5d5;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1%;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    list-style: none none lower-roman;
+  }
+  .listpage_right_ul li:hover {
+    background: #ededed;
+  }
+  .listpage_right_ul li a {
+    overflow: hidden;
+    font-size: 0.9em;
+    width: 100%;
+    float: right;
+    color: #626262;
+  }
+  .list_name {
+    float: left;
+    width: 69%;
+  }
+  .list_time {
+    float: right;
+    width: 30%;
+  }
+  .pageing {
+    width: 100%;
+  }
+  .pageing ul {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 4%;
+  }
+  .pageing ul li {
+    float: left;
+    font-size: 0.7em;
+  }
+  .pageing ul li a {
+    padding: 10px 20px;
+    color: #626262;
+    border: 1px solid #d5d5d5;
+    transition: background 0.5s, color 0.5s;
+    -webkit-transition: background 0.5s, color 0.5s;
+    -o-transition: background 0.5s, color 0.5s;
+    -moz-transition: background 0.5s, color 0.5s;
+  }
+  .pageing ul li a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #00ada7;
+    color: #fff;
+  }
+  .list_write_btn {
+    float: none;
+    clear: both;
+    margin-left: 20px;
+    margin-top: 18%;
+  }
+}

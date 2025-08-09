@@ -1,0 +1,595 @@
+﻿@import "css3-library";
+@import "definition";
+
+html {
+    //////////////////////解决移动端点击出现蓝色色块的问题
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, hr, button, article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+li {
+    list-style: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+    display: block;
+}
+
+.whole {
+    width: 100%;
+}
+
+
+//////////////////////////////////////////////////////////////台式
+
+@media screen and (max-width:1920px) {
+    body {
+        font-size: 16px;
+    }
+
+    .content {
+        .content_center(1200px);
+    }
+
+    .black_bg {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /////////////////////////////////////////////////头部
+
+    .header {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        z-index: 10;
+        top: 50px;
+        left: 0;
+        height: @header_height;
+        overflow: hidden;
+        .transition(height 0.5s,top 0.5s);
+
+        .content {
+            overflow: hidden;
+        }
+    }
+
+    .header_left {
+        float: left;
+        overflow: hidden;
+        margin-top: 2.5%;
+        width: 17%;
+        .transition(margin-top 0.5s);
+    }
+
+    .header_logo {
+        float: left;
+        width: 35%;
+        .transition(width 0.5s);
+
+        img {
+            .img(100%);
+        }
+    }
+
+    .header_word {
+        float: right;
+        width: 60%;
+        text-align: center;
+        /*.transition(text-align 0.5s);*/
+    }
+
+    .header_name {
+        color: #fff;
+        font-size: 2.5em;
+        .transition(font-size 0.5s);
+    }
+
+    .header_intro {
+        color: @theme_light_color;
+        font-size: 0.75em;
+        .transition(font-size 0.5s);
+    }
+
+    .nav {
+        float: right;
+        overflow: hidden;
+        width:82%;
+        display:block;
+
+        li {
+            float: left;
+            width: 1/11*100%;
+            text-align: center;
+
+            a {
+                color: #fff;
+                width: 95%;
+                font-size: 1em;
+                .line_height(@header_height);
+                .transition(background 0.5s,height 0.5s,font-size 0.5s);
+
+                &:hover {
+                    background: @theme_dark_color;
+                }
+            }
+        }
+    }
+
+    .nav_show {
+        background: @theme_dark_color;
+    }
+    ////////////头部固定贴顶
+
+    .header_fixed {
+        position: fixed;
+        top: 0;
+        height: @header_fixed_height;
+
+        .header_left {
+            margin-top: 0.7%;
+        }
+
+        .header_logo {
+            width: 40px;
+        }
+
+        .header_word {
+            float: left;
+            text-align:left;
+            margin-left:10px;
+        }
+        .header_name {
+            font-size: 1.1em;
+        }
+
+        .nav {
+            li {
+                a {
+                    .line_height(@header_fixed_height);
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    .mobile_menu_btn {
+        display: none;
+    }
+
+    /////////////////////////////////////////////////时间、公告、搜索
+    .remind {
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+    }
+
+    .remind .content {
+        overflow: hidden;
+    }
+    /////////////////////////////时间
+    .time {
+        float: left;
+        width: 19%;
+        margin-right: 1%;
+        color: @theme_light_color;
+    }
+
+    .time_body {
+        overflow: hidden;
+        /*margin: 0 auto;*/
+        margin: 15px 20px;
+    }
+
+    .time_left {
+        float: left;
+        font-size: 3.1em;
+    }
+
+    .time_right {
+        float: right;
+        text-align: right;
+        margin-top: 5%;
+    }
+
+    .time_date {
+        font-size: 1em;
+    }
+
+    .time_week {
+        font-size: 1.4em;
+    }
+
+    ////////////////////////////公告
+
+    .notice {
+        float: left;
+        width: 50%;
+        margin-right: 1%;
+    }
+
+    .notice_body {
+        margin: 1.6% 4%;
+        overflow: hidden;
+    }
+
+    .notice_tittle {
+        color: @theme_light_color;
+        float: left;
+        font-size: 1.8em;
+    }
+
+    .notice_content {
+        float: right;
+        margin-left: 2%;
+        font-size: 0.9em;
+        width: 92%;
+
+        li {
+            overflow: hidden;
+            margin-top: 5px;
+        }
+    }
+
+    .notice_name {
+        color: #fff;
+        float: left;
+        width:76%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        .transition(color 0.5s);
+
+        &:hover {
+            color: @theme_light_color;
+        }
+    }
+
+    .notice_time {
+        color: @theme_light_color;
+        float: right;
+    }
+
+    //////////////////////////////搜索
+
+    .search {
+        float: right;
+        width: 29%;
+        padding:2% 0;
+    }
+    .search_whole{
+        margin:3% 5%;
+    }
+    .search_body {
+        width:70%;
+        float:right;
+        position: relative;
+
+        input {
+            width: 92%;
+            padding: 3.5%;
+            border:0;
+            .line_height(18px);
+        }
+
+    }
+    .search_whole >a{
+            float:left;
+            margin-right:13px;
+    }
+    .search_btn {
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        z-index: 5;
+        width: 12%;
+    }
+
+    //////////////////////////////////////////////////////block
+
+    .block {
+        background: #fff;
+        .transition(box-shadow 0.5s);
+
+        &:hover {
+            box-shadow:0 0 3px 3px rgba(0, 0, 0, 0.2);
+
+            .title_1 {
+                color: @theme_light_color;
+
+                span {
+                    color: @middle_color;
+                }
+            }
+        }
+    }
+    .block_body {
+        padding:15px;
+    }
+
+    //////////////////////////////////////////////////////title
+
+    .title_1 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: @middle_color;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        .transition(color 0.5s);
+
+        span {
+            color: @theme_light_color;
+            display: inline-block;
+            .transition(color 0.5s);
+        }
+    }
+    .title_2 {
+        background: @theme_color_blue_1;
+        color: @theme_color_blue_2;
+        text-align: center;
+        margin-top: 30px;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        display: inline-block;
+        width: 100%;
+        .transition(opacity 0.5s);
+
+        &:hover {
+            opacity: 0.5;
+            display: inline-block;
+        }
+    }
+    .title_3 {
+        text-align: center;
+        .transition(margin-top 0.5s);
+        margin: 30px 0;
+
+        &:hover {
+            margin-top:10px;
+        }
+    }
+    //////////////////////////////////////////////////////footer
+
+    .footer {
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 2% 0;
+        margin-top: 100px;
+        font-size: 0.85em;
+    }
+
+
+    /////////////////////////////////////////////////内页头部
+
+    .inpage_top {
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .inpage_content {
+        /*padding-bottom:300px;*/
+    }
+}
+
+@media screen and (max-width:1360px) {
+    .header_left {
+        margin-top: 3.5%;
+    }
+}
+
+@media screen and (max-width:414px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .content {
+        .content_center(96%);
+    }
+
+    //////////////////////////////////////////移动端 header
+    .header {
+        overflow: visible;
+        position: fixed;
+        top: 0;
+        .line_height(60px);
+
+        .content {
+            overflow: visible;
+        }
+    }
+
+    .header_left {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .header_logo {
+        width: 40px;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+
+    .header_word {
+        float: left;
+        width: 60%;
+    }
+
+    .header_address {
+        display: none;
+    }
+
+    .header_intro {
+        display: none;
+    }
+
+    .nav {
+        float: none;
+        width: 100%;
+        overflow: visible;
+        background: rgba(0, 0, 0, 0.9);
+        margin-top: 5px;
+        display:none;
+
+        li {
+            float: none;
+            width: 100%;
+
+            a {
+                font-size: 1em;
+                .line_height(40px);
+            }
+        }
+    }
+
+    ////////////头部固定贴顶
+
+    .header_fixed {
+
+        .header_name {
+            margin-top: 0;
+        }
+
+        .nav {
+            li {
+                a {
+                    .line_height(40px);
+                }
+            }
+        }
+    }
+
+    .mobile_menu_btn {
+        position: fixed;
+        right: 0;
+        top: 0;
+        text-align: center;
+        color: @theme_light_color;
+        width: 13%;
+        display: block;
+    }
+
+    /////////////////////////////////////////////////移动端 时间、公告、搜索
+    .remind {
+        position: absolute ;
+        left: 0;
+        bottom: 20px;
+    }
+    /////////////////////////////时间
+    .time {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    .time_body{
+    margin:10px;
+    margin-bottom:2px;
+    }
+    .time_right {
+        margin-top: 2.5%;
+    }
+
+    ////////////////////////////公告
+
+    .notice {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .notice_body {
+    margin:0;
+    margin-bottom:2px;
+        padding: 3% 2%;
+        overflow: hidden;
+    }
+
+    .notice_content {
+        width: 89%;
+
+        li{
+        margin-top:4px;
+        }
+    }
+
+    .notice_name {
+        width:76%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    //////////////////////////////搜索
+
+    .search {
+        float: none;
+        width: 100%;
+    }
+
+    .search_body {
+        margin: 0;
+        padding: 3% 3%;
+    }
+
+    .search_btn {
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        z-index: 5;
+        width: 8%;
+    }
+
+    //////////////////////////////////////////////////////移动端 footer
+
+    .footer {
+        padding: 4% 0;
+    }
+
+    .footer_relevant {
+
+        ul {
+
+            li {
+                width: 1/2*100%;
+
+                &:nth-child(2n+1) {
+                    text-align: left;
+                }
+
+                &:nth-child(2n) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .footer_intro {
+        font-size:0.85em;
+        line-height:20px;
+    }
+
+    
+    //////////////////////////////////////////////////////移动端 内页头部
+
+    .inpage_top {
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+}

@@ -1,0 +1,927 @@
+﻿@import "css3-library";
+@import "definition";
+
+
+@media screen and (max-width:1920px) {
+    .row {
+        overflow: hidden;
+        margin-top: 0.5%;
+        padding:4px 0;
+    }
+
+    ///////////////////////////////////////第一屏
+
+    .content_1 {
+        /*background: url(../image/bg_1.jpg);
+        background-attachment: fixed;*/
+        background-size: cover;
+        min-height: 1080px;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .first_img {
+        padding-top: 14%;
+
+        img {
+            margin-left: 45%;
+        }
+    }
+
+    ///////////////////////////////////////第二屏
+
+    .content_2 {
+        /*background: url(../image/bg_2.jpg);
+        background-attachment: fixed;*/
+        background-size: cover;
+        min-height: 1080px;
+        min-height: 100vh;
+        position: relative;
+        padding: 5% 0;
+    }
+    ///////////////////////////////////////新闻
+    .news {
+        width: 70%;
+        float:left;
+    }
+    .news_wrap {
+        position: relative;
+
+        img {
+            .img(100%);
+        }
+    }
+
+    .news_wrap_bottom {
+        padding-top:10px;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    .news_wrap_intro {
+        font-size: 0.85em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 60%;
+        float: left;
+        color:@dark_color;
+        .transition(padding-left 0.5s);
+
+        &:hover {
+            padding-left:5px;
+        }
+    }
+    
+    //////////////////新闻轮播下小点按钮样式
+
+    .news_wrap .pagination {
+        z-index: 6;
+        bottom:0;
+        right:0;
+    }
+    
+    .news_wrap .swiper-slide img {
+        height:300px;
+    }
+    ///////////////////////////////////////视频
+    .video {
+        float: right;
+        width: 28.5%;
+
+        &:hover {
+            .video_btn {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .video_bottom {
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .video_top {
+        position: relative;
+
+        & > img {
+            .img(100%);
+            height:235px;
+        }
+    }
+
+    .video_btn {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        .transition(background 0.5s);
+
+        img {
+            margin-top: 30%;
+        }
+    }
+
+    .video_bottom {
+        color: @dark_color;
+        margin-top: 15px;
+        height: 42px;
+        overflow: hidden;
+        .transition(padding-left 0.5s);
+
+    }
+
+    /////////////////////////////////////////////////////////////////微博
+
+    .weibo {
+        width:25%;
+        float:left;
+    }
+    
+    /////////////////////////////////////////////////////////////////最新资讯
+
+    .information {
+        float:right;
+    }
+
+    
+
+    .index_list {
+        width:73.5%;
+    }
+    ////////////////////////////////////最新资讯、发展动态的头条信息
+    .block_show {
+        overflow: hidden;
+        margin:10px 0;
+
+        &:hover {
+            .block_show_word {
+                margin-right:1%;
+            }
+
+            .block_show_img {
+                 margin-left:1%;
+            }
+        }
+    }
+    .block_show_img {
+        float: left;
+        width: 15%;
+        border: 3px solid @line_color;
+        .transition(margin-left 0.5s);
+
+        img {
+            .img(100%);
+        }
+    }
+    .block_show_word {
+        float: right;
+        width: 81%;
+        overflow:hidden;
+        .transition(margin-right 0.5s);
+
+    }
+    .block_show_title {
+        font-size: 1.1em;
+        color: #bf1d32;
+        margin-bottom: 10px;
+        width:100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .block_show_content {
+        color:@light_color;
+        height:63px;
+    }
+
+    ////////////////////////////最新资讯列表
+    .information {
+        ul {
+            height: 222px;
+        }
+    }
+    .block_list {
+        margin-top: 19px;
+        overflow: hidden;
+
+        li {
+            overflow: hidden;
+            width: 48%;
+            line-height: 37px;
+
+            &:hover {
+                a {
+                    margin-left:8px;
+                    color:@theme_dark_color;
+                }
+            }
+
+            &:nth-child(odd) {
+                float: left;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+        }
+
+        a {
+            color: @dark_color;
+            font-size: 0.95em;
+            overflow:hidden;
+            .transition(margin-left 0.5s;color 0.5s);
+        }
+    }
+    .block_list_name {
+        float: left;
+        width: 68%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .block_list_time {
+        float:right;
+        width:30%;
+        text-align:right;
+    }
+
+    //////////////////////////////////////////////////////////////////滑雪度假
+
+    .vacation_body {
+        overflow: hidden;
+
+        a {
+            overflow: hidden;
+        }
+
+        img {
+            .transition(transform 0.5s);
+
+            &:hover {
+                .scale(1.1,1.1);
+            }
+        }
+    }
+    .vacation_left {
+        float:left;
+        width:49%;
+    }
+    .vacation_word {
+        line-height: 30px;
+        color: @dark_color;
+        height: 205px;
+        overflow: hidden;
+        .transition(color 0.5s);
+
+        &:hover {
+            color:@light_color;
+        }
+    }
+    .vacation_middle {
+        float: left;
+        width: 33%;
+        margin: 0 1%;
+
+        img {
+            .img(100%);
+        }
+    }
+    .vacation_right {
+        float: right;
+        width: 15.5%;
+
+        a:first-child {
+            margin-bottom:16px;
+        }
+
+        img {
+            .img(100%);
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////通栏
+
+    .activity {
+        img {
+            .img(100%);
+            .transition(opacity 0.5s);
+
+            &:hover {
+                opacity:0.7;
+            }
+        }
+    }
+
+
+    ///////////////////////////////////////第三屏
+
+    .content_3 {
+        /*background: url(../image/bg_3.jpg);
+        background-attachment: fixed;*/
+        background-size: cover;
+        min-height: 1080px;
+        min-height: 100vh;
+        position: relative;
+        padding: 5% 0 0 0;
+    }
+
+    ///////////////////////////////////////户外运动
+
+    .outdoors {
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: (1-0.03)/4*100%;
+            margin-right: 1%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:nth-child(1) {
+                .title_2 {
+                    background:@theme_color_green_1;
+                    color:@theme_color_green_2;
+                }
+            }
+            &:nth-child(3) {
+                .title_2 {
+                    background:@theme_color_red_1;
+                    color:@theme_color_red_2;
+                }
+            }
+            &:nth-child(4) {
+                .title_2 {
+                    background:@theme_color_yellow_1;
+                    color:@theme_color_yellow_2;
+                }
+            }
+
+            &:hover {
+                img {
+                    .scale(1.1,1.1);
+                }
+
+                .outdoors_word {
+                    color: @light_color;
+                }
+            }
+        }
+
+        .title_2 {
+            margin-top: 0;
+        }
+    }
+    .outdoors_img {
+        background: #fff;
+
+    }
+    .outdoors_img_body {
+        margin:15px;
+        overflow:hidden;
+        display:inline-block;
+
+        img {
+            .img(100%);
+            .transition(transform 0.5s);
+        }
+    }
+    .outdoors_word {
+        background:#fff;
+        padding:15px;
+        color:@dark_color;
+        font-size:0.95em;
+        line-height:28px;
+        height:105px;
+        overflow:hidden;
+        .transition(color 0.5s);
+    }
+
+    /////////////////////////////////////////////////////////////////////////////发展动态
+
+    .develop {
+        float:left;
+        width:73.5%;
+    }
+
+    .blog {
+        float:right;
+        width:25%;
+    }
+
+    .blog_btn {
+        color: #fff;
+        padding: 15px 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.2em;
+        .transition(opacity 0.5s);
+
+        img {
+            /*float:left;*/
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            opacity:0.5;
+        }
+
+        &:nth-child(2) {
+            background: #60e5f8;
+            margin-top: 25px;
+        }
+
+        &:nth-child(3) {
+            background: #60e7be;
+        }
+
+        &:nth-child(4) {
+            background: #ffc564;
+            margin-bottom: 21px;
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////酒店、休闲体验
+
+    .two_block {
+        width: 49.3%;
+
+        &:hover {
+            img {
+                .scale(1.1,1.1);
+            }
+
+            .two_block_word {
+                color:@light_color;
+            }
+        }
+
+        &:nth-child(1) {
+            float: left;
+        }
+
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+    .two_block_img {
+        overflow: hidden;
+        height: 277px;
+        margin: 10px 0 20px 0;
+
+        img {
+            .img(100%);
+            .transition(transform 0.5s);
+        }
+    }
+    .two_block_word {
+        font-size:0.95em;
+        color:@dark_color;
+        line-height:30px;
+        margin-bottom:10px;
+        height:175px;
+        overflow:hidden;
+        .transition(color 0.5s);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////合作伙伴
+
+    .partner_href {
+        text-align:center;
+
+        a {
+            width: (1-0.06)/5*100%;
+            margin-right: 1%;
+            margin-bottom:15px;
+            display:inline-block;
+            .transition(transform 0.5s;box-shadow 0.5s);
+
+            &:hover{
+                .scale(1.1,1.1);
+                box-shadow:0 0 3px 3px rgba(0, 0, 0, 0.15);
+            }
+
+            &:nth-child(5n) {
+                margin-right:0;
+            }
+
+            img {
+                .img(100%);
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////联系我们
+    
+    .contact_card {
+
+        li {
+            width: (1-0.04)/3*100%;
+            margin-right: 2%;
+            background: #fff;
+            float: left;
+            .transition(transform 0.5s);
+
+            &:hover {
+                .scale(1.1,1.1);
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            margin: 15px;
+            padding: 15px;
+            width: 84.5%;
+            display: inline-block;
+            background: @theme_light_color;
+            color: @dark_color;
+            font-size: 0.9em;
+            line-height: 25px;
+            height: 155px;
+            /*.transition(background 0.5s);
+
+            &:hover {
+                background:#e8e8e8;
+            }*/
+        }
+
+        span {
+            display: block;
+        }
+    }
+    .contact_name {
+        font-size:1.1em;
+        font-weight:bold;
+        margin-bottom:10px;
+    }
+    ////////////////////////////////////////////////////////////////////////////swiper2x版本样式
+
+    .swiper-slide {
+        height: auto !important;
+        position:relative;
+    }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+
+    .pagination {
+        position: absolute;
+        z-index: 20;
+    }
+
+    .swiper-pagination-switch {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background:#e8e8e8;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+
+    .swiper-visible-switch {
+        background: #aaa;
+    }
+
+    .swiper-active-switch {
+        background: @theme_light_color;
+    }
+
+    .arrow-left {
+        position: absolute;
+        left: 0;
+        top: 42%;
+        margin-top: -15px;
+        font-size: 3em;
+        color: rgba(34, 34, 34, 0.5);
+    }
+
+    .arrow-right {
+        position: absolute;
+        right: 0;
+        top: 42%;
+        margin-top: -15px;
+        font-size: 3em;
+        color: rgba(34, 34, 34, 0.5);
+    }
+
+    //////////////////专题活动轮播下小点按钮样式
+    .activity .swiper-pagination-switch {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .activity .swiper-active-switch {
+        background: #00ada7;
+    }
+}
+
+@media screen and (max-width:414px) {
+
+    .row {
+        margin-top: 2%;
+    }
+
+    /////////////////////////////////////////移动端 标语图片
+
+    .first_img {
+        .content_center(20%);
+        padding-top: 28%;
+
+        img {
+            .img(100%);
+        }
+    }
+
+    ///////////////////////////////////////移动端 新闻
+
+
+    .news {
+        overflow: hidden;
+    }
+
+    .news_wrap {
+        width: 100%;
+        float: none;
+    }
+
+    .news_word {
+        width: 100%;
+        float: none;
+        padding: 3% 0;
+    }
+
+    ///////////////////////////////////////移动端 政务公开
+
+    .open {
+        background: #fff;
+
+        ul {
+            overflow: hidden;
+        }
+    }
+
+    .open_btn {
+        float: left;
+        width: 1/2*100%;
+
+        a {
+            padding: 5% 0;
+        }
+    }
+
+    ///////////////////////////////////////移动端 视频
+    .video {
+        float: none;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .video_top {
+        position: relative;
+
+        & > img {
+            .img(100%);
+        }
+    }
+
+    .video_btn {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        .transition(background 0.5s);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            margin-top: 30%;
+        }
+    }
+
+    .video_bottom {
+        background: #fff;
+        text-align: center;
+        color: @dark_color;
+        width:100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .video_bottom_body {
+        padding: 9% 0;
+    }
+
+    .video_chi {
+        font-size: 1.3em;
+    }
+
+    ///////////////////////////////////////移动端 互动交流
+    .three_block.row {
+        overflow: visible;
+        height: 100px;
+    }
+
+    .three_block .content {
+        overflow: visible;
+    }
+
+    .communi {
+        width: 100%;
+    }
+
+    .communi_btn {
+
+        img {
+            .img(50%);
+            float: none;
+            margin: 10% auto;
+            display: block;
+        }
+    }
+
+    .communi_word {
+        float: none;
+        width: 100%;
+        margin-top: 15%;
+    }
+
+    .communi_chi {
+        font-size: 0.9em;
+    }
+
+    /////////////////////////////////////移动端 办事服务和组织机构
+
+    .business.three_block_tittle, .organization.three_block_tittle {
+        width: 50%;
+        height: auto;
+        margin-bottom: 2%;
+    }
+
+    ///////////////////////////////////////移动端 多组按钮
+
+    .btn_group {
+        ul {
+            overflow: hidden;
+
+            li {
+                width: (1-0.007)/3*100%;
+                float: left;
+
+                &:nth-child(3n) {
+                    border-right: none;
+                }
+
+                img {
+                    width: 28%;
+                }
+            }
+        }
+    }
+    
+    ///////////////////////////////////////移动端 专题活动
+
+    .activity {
+        .content {
+            width: 98%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    
+    .activity .pagination {
+        position: absolute;
+        z-index: 20;
+        left: 46%;
+        bottom: 5px;
+    }
+    .activity .arrow-left,.activity .arrow-right {
+        top: 25%;
+    }
+
+    ///////////////////////////////////////移动端 旅游景点
+
+    .spot .content {
+        padding-bottom:18%;
+    }
+
+    .spot_img {
+        float: none;
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    .spot_word {
+        float: none;
+        width: 96%;
+        margin:0 auto;
+    }
+
+    .spot_tittle_word {
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .spot_btns {
+        margin-top: 8%;
+
+       
+    }
+    .spot_btn_line {
+        width: 98%;
+        border-bottom: 1px solid @line_color;
+        margin: 0 0 2% 0;
+        padding: 2% 0;
+
+        &:nth-child(2) {
+            padding:5% 0;
+            margin-bottom: 10%;
+        }
+    }
+
+    ///////////////////////////////////////松花湖摄像
+
+    .photo .content {
+        background: #fff;
+        padding-bottom: 0.8%;
+
+        ul {
+            overflow: hidden;
+            margin: 0 0 0 1%;
+
+            li {
+                width: 49%;
+
+                a {
+                    img {
+                        .img(100%);
+                        margin-bottom:2%;
+                    }
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    ///////////////////////////////////////旅游线路
+
+    .three_items {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom:2%;
+    }
+
+    ///////////////////////////////////////松花湖之旅
+
+    .tour_tittle {
+        background: #fff;
+        color: @dark_color;
+        font-size: 1.5em;
+        text-align: center;
+        .line_height(60px);
+        border-top: 3px solid @theme_dark_color;
+    }
+
+    .tour_tittle_triangle {
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: dashed dashed solid dashed;
+        border-color: #fff transparent transparent transparent;
+        margin-left: 49%;
+    }
+
+    .tour_content {
+
+        & > li {
+            width: 99%;
+        }
+    }
+}

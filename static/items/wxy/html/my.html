@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <style>
+        .width {
+            width: calc(100% - 20px);
+        }
+        
+        .index_three_btns {
+            margin: 20px auto;
+            overflow: visible;
+        }
+        
+        .index_three_btn {
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            margin-right: 15px;
+            box-shadow: 0 0 2px 2px rgba(252, 123, 84, 0.1);
+        }
+        
+        .index_three_btn span {
+            font-size: 14px;
+        }
+        
+        .index_three_btn:last-child {
+            margin-right: 0;
+        }
+        
+        .index_three_btn img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 5px auto;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="hui-wrap">
+        <div class="hui-list" style="background:#FFFFFF;">
+            <a href="javascript:;" style="height:auto; height:190px; padding-bottom:8px;display: block;" onclick="window.location.href='myInfor.html'">
+                <div class="hui-list-icons" style="width:100%; height:100px;">
+                    <img src="../image/home.png" style="width:100px; margin:0px; border-radius:50%;" />
+                </div>
+                <div class="hui-list-text" style="height:79px; line-height:79px;">
+                    <span>15662111111</span>
+                    <div style="color: #ff8579;margin-right: 20px;">【ID:2241】</div>
+
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="hui-list-text">
+                    <div class="hui-list-text-content">
+                        免费申领剩余：0
+                    </div>
+                    <div class="hui-list-info">
+                        增加次数
+                        <span class="hui-icons hui-icons-right"></span>
+                    </div>
+                </div>
+            </a>
+            <div class="width index_three_btns">
+                <div class="hui-flex" style="overflow: visible;">
+                    <div class="index_three_btn active" onclick="window.location.href='myList1.html';">
+                        <img src="../image/three_btn_4.png" alt="">
+                        <span>我的申领</span>
+                    </div>
+                    <div class="index_three_btn active" onclick="window.location.href='myList2.html';">
+                        <img src="../image/three_btn_5.png" alt="">
+                        <span>我的许愿</span>
+                    </div>
+                    <div class="index_three_btn active" onclick="window.location.href='myList3.html';">
+                        <img src="../image/three_btn_2.png" alt="">
+                        <span>我的爱心</span>
+                    </div>
+                </div>
+                <div class="hui-flex" style="overflow: visible;margin-top: 15px;">
+                    <div class="index_three_btn active" onclick="window.location.href='myAddress.html';">
+                        <img src="../image/three_btn_2.png" alt="">
+                        <span>我的地址</span>
+                    </div>
+                    <div class="index_three_btn active" onclick="window.location.href='identity.html';">
+                        <img src="../image/three_btn_6.png" alt="">
+                        <span>实名认证</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background:#FFFFFF; margin-top:28px;" onclick="window.location.href='register.html'">
+            <button type="button" class="hui-button hui-button-large exit_btn" onclick="hui.toast('退出');">
+                <span class="hui-icons hui-icons-logoff"></span>退出
+            </button>
+        </div>
+    </div>
+    <div id="hui-footer">
+        <a href="index.html" id="nav-home">
+            <div class="hui-footer-icons hui-icons-home" style="font-weight: bold;font-size: 20px;"></div>
+        </a>
+        <div style="width:33.33%; text-align:center;" class="hui-fl active" onclick="window.location.href='search.html';">
+            <img src="../image/logo_footer.png" height="44" />
+        </div>
+        <a href="my.html" class="active">
+            <div class="hui-footer-icons hui-icons-my"></div>
+        </a>
+    </div>
+</body>
+<script type="text/javascript" src="../script/hui.js"></script>
+<script type="text/javascript" src="../script/hui-swipe.js"></script>
+
+
+</html>

@@ -1,0 +1,148 @@
+.right_show {
+  display: none;
+}
+.middle_btn_right {
+  top: 540px;
+}
+.left_bg_outer img {
+  transition: all 0.7s;
+}
+.active2 .right_show {
+  display: block;
+}
+.active2 .right_hidden {
+  display: none;
+}
+.active2 .index_left {
+  width: 78%;
+}
+.active2 .index_right {
+  width: 22%;
+}
+.active2 .left .top {
+  transform: scale(1.5, 1.5);
+  margin: 100px 39% 200px 0;
+}
+.active2 .left .left_bg_outer img {
+  width: 100%;
+  margin-top: -200px;
+}
+.active2 .nav.right_show li {
+  width: 100%;
+  text-align: left;
+  font-size: 1.35em;
+}
+.active2 .nav.right_show li:hover {
+  background: inherit;
+}
+.active2 .nav.right_show li:hover a {
+  color: inherit;
+}
+.active2 .top_link {
+  text-align: left;
+  padding-left: 60px;
+}
+.active2 .icons {
+  text-align: center;
+}
+.active2 .icons a:last-child {
+  margin-right: 0;
+}
+.active2 .left_btns {
+  text-align: center;
+}
+.active2 .btn_1 {
+  width: 10%;
+}
+.active2 .btn_2 {
+  width: 14%;
+}
+.active2 .btns_5 {
+  min-height: inherit;
+}
+.active2 .box_body {
+  margin-top: 0;
+}
+.active2 .left_body {
+  min-height: inherit;
+}
+.active2 .footer_tit {
+  display: block;
+}
+.active2 .index_footer .index_left {
+  padding: 70px 0 100px 0;
+}
+.active2 .footer_word {
+  margin-top: 10px;
+}
+.active2 .footer_right_hidden {
+  bottom: 245px;
+}
+.active2 .inpage_map_1 {
+  border-top-left-radius: 0;
+  padding: 20px 30px;
+}
+.active2 .inpage_map_title_1 {
+  font-weight: inherit;
+  font-size: 1.4em;
+}
+.active2 .inpage_map_title_2 {
+  font-size: 1.1em;
+}
+.active2 .inpage_map_1.active .inpage_map_1 {
+  color: #d80100;
+}
+.active2 .inpage_map_1.active .inpage_map_2,
+.active2 .inpage_map_1.active .inpage_map_3 {
+  display: block;
+}
+.active2 .inpage_map_1.active .map_show_btn {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+.active2 .inpage_map_2 {
+  display: none;
+}
+.active2 .map_show_btn {
+  display: inline-block;
+  transition: all 0.5s;
+  font-size: 0.7em;
+  padding: 0 30px 0 10px;
+}
+.active2 .middle_btn {
+  left: calc(78% - 20px);
+}
+@media screen and (max-width: 1700px) {
+  .active2 .index_left {
+    width: 75%;
+  }
+  .active2 .index_right {
+    width: 25%;
+  }
+  .active2 .left .top {
+    margin: 100px 34% 200px 0;
+  }
+  .active2 .middle_btn {
+    left: calc(75% - 20px);
+  }
+}
+@media screen and (max-width: 1366px) {
+  .middle_btn_right {
+    top: 410px;
+  }
+  .active2 .index_left {
+    width: 70%;
+  }
+  .active2 .index_right {
+    width: 30%;
+  }
+  .active2 .left .top {
+    margin: 100px 30% 200px 0;
+  }
+  .active2 .middle_btn {
+    left: calc(70% - 20px);
+  }
+}

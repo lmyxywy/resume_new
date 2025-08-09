@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body>
+    <div id="event">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav header" style="padding:10px 0;line-height: 30px;">
+            <div>上报</div>
+        </div>
+        <div class="second_header">
+            <div class="aui-row-padded">
+                <div class="aui-col-xs-6" style="margin-left: 20%;">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-round" style="margin-left: 15px; font-size: 0.5em;color: #808080;">
+                        <div class="aui-bar-btn-item aui-active header-tab-btn">
+                            <span>时间：2019/01/23 16:38</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="aui-content content road-detail">
+        <!-- 路段基础信息 -->
+        <div class="">
+            <ul class="aui-list aui-list-noborder">
+                <li class="aui-list-item">
+                    <div class="camera aui-row-padded">
+                        <div class="aui-col-xs-4">
+                            <i class="aui-iconfont aui-icon-close remove-btn"></i>
+                            <img src="../image/demo3.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-4">
+                            <i class="aui-iconfont aui-icon-close remove-btn"></i>
+                            <img src="../image/demo1.png" alt="">
+                        </div>
+                        <div class="aui-col-xs-4 camera-btn-outer">
+                            <div class="camera-btn">
+                                <span>
+                                    <i class="aui-iconfont aui-icon-camera"></i>
+                                    <div>照相</div>
+                                </span>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner aui-row">
+                        <span class="aui-col-xs-4">上报人</span>
+                        <span class="aui-col-xs-8">sys</span>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner aui-row">
+                        <span class="aui-col-xs-4">上报位置</span>
+                        <span class="aui-col-xs-8">【43.8382 126.5487】</span>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner aui-row">
+                        <span class="aui-col-xs-4">联系电话</span>
+                        <span class="aui-col-xs-8">13654327871</span>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-list-item-inner aui-row">
+                        <span class="aui-col-xs-4">事件类型</span>
+                        <span class="aui-col-xs-8 check-btn"><span>请选择</span></span>
+                        <div class="check-body">
+                            <ul class="aui-list aui-list-in">
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        路政管理类（道路质量问题）
+                                    </div>
+                                </li>
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        道路施工类（噪音、环境污染等）
+                                    </div>
+                                </li>
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        道路设施类（护栏、警示牌等）
+                                    </div>
+                                </li>
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        其他
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-list-item-inner aui-row">
+                        <span class="aui-col-xs-4">上报路段</span>
+                        <span class="aui-col-xs-8 check-btn">
+                                <span>请选择</span>
+                        </span>
+                        <div class="check-body">
+                            <ul class="aui-list aui-list-in">
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        路段1
+                                    </div>
+                                </li>
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        路段2
+                                    </div>
+                                </li>
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner header-tab-change">
+                                        路段3
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <textarea name="" id="" cols="30" rows="50" placeholder="请输入描述" style="margin: 20px 0;height: 5rem;"></textarea>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="aui-bar aui-bar-tab aui-row" id="footer">
+        <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="window.location.href='event.html'">
+                <i class="aui-iconfont aui-icon-back"></i> 返回</span>
+        <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="showMap()">
+                <i class="aui-iconfont aui-icon-map"></i> 显示地图
+            </span>
+        <span class="aui-col-xs-4" onclick="window.location.href='roadDetail.html'" style="background: rgb(6, 217, 149);color: #fff;">
+                <i class="aui-iconfont aui-icon-correct"></i> 提交</span>
+    </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-2', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+</script>
+
+<script>
+    $(function() {
+
+        $('.remove-btn').click(function() {
+            $(this).parent().remove()
+        })
+
+        $('.check-btn').click(function() {
+                var index = parseInt($(this).index('.check-btn'));
+
+                if ($('.check-body').eq(index).css('display') === 'none') {
+                    $('.check-body').eq(index).show()
+                    $('.check-body').not(":eq(" + index + ")").hide()
+
+                } else {
+                    $('.check-body').eq(index).hide()
+                }
+            })
+            // 点击下拉框中选项，tab按钮相应文字改变
+        $('.header-tab-change').click(function() {
+            var text = $(this).text()
+            $(this).parent().addClass('active').siblings().removeClass('active')
+            var bodyIndex = parseInt($(this).parent().parent().parent('.check-body').index('.check-body'));
+            $('.check-btn').eq(bodyIndex).children('span').text(text)
+
+            $('.check-body').hide()
+        })
+    })
+
+    function showMap() {
+        if ($('.map-outer-2').css('display') === 'none') {
+            $('.map-outer-2').show()
+            $('.content').addClass('active')
+        } else {
+            $('.map-outer-2').hide()
+            $('.content').removeClass('active')
+        }
+    }
+
+    function fullMap() {
+        if ($('.map-outer-2').hasClass('full-map')) {
+            $('.map-outer-2').removeClass('full-map')
+            $('.full-map-btn').show()
+            $('.unfull-map-btn').hide()
+        } else {
+            $('.map-outer-2').addClass('full-map')
+            $('.unfull-map-btn').show()
+
+            $('.full-map-btn').hide()
+        }
+    }
+
+    function showCheck() {
+        if ($('.check').css('display') === 'none') {
+            $('.check').slideDown()
+            $('.area-btn').addClass('active')
+        } else {
+            $('.check').slideUp()
+            $('.area-btn').removeClass('active')
+        }
+    }
+</script>
+
+</ht路段3

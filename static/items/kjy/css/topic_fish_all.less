@@ -1,0 +1,893 @@
+﻿@import "css3-library";
+@import "definition";
+
+html {
+    //////////////////////解决移动端点击出现蓝色色块的问题
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, hr, button, article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body {
+    background:#f5f4f0;
+}
+li {
+    list-style: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+    display: block;
+}
+img {
+    border:0;
+}
+
+.whole {
+    width: 100%;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    margin-bottom:@margin_bottom;
+}
+.content {
+    width:1200px;
+    margin:0 auto;
+}
+.red_bg {
+    background:@theme_color_1;
+    color:#fff;
+    display:inline-block;
+    padding:2px 15px;
+    .transition(background 0.5s,color 0.5s);
+}
+@margin_bottom:80px;
+    /******************************************首页样式******************************************/
+.topic_fish_bg {
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:0;
+    img {
+        .img(100%);
+    }
+}
+.topic_fish_top_img {
+
+    img {
+        .img(100%);
+    }
+
+}
+.topic_fish_center_row {
+    background:#fff;
+    overflow:hidden;
+}
+.topic_fish_center_block {
+    float: left;
+    width: 50%;
+    overflow:hidden;
+
+    img {
+        width: 600px;
+        height: 400px;
+        vertical-align: bottom;
+        .transition(transform 0.5s);
+
+        &:hover {
+            .scale(1.1,1.1);
+        }
+    }
+}
+.topic_fish_intro_tit {
+    font-size:1.4em;
+    margin:15px 0;
+}
+.topic_fish_intro {
+    &:nth-child(1) {
+        text-align:center;
+    }
+}
+.topic_fish_intro_word {
+    font-size:1.2em;
+    line-height:30px;
+    margin-bottom:10px;
+}
+.topic_fish_center_body {
+    padding:40px;
+}
+.topic_fish_bigtit {
+    margin-bottom:50px;
+    img {
+        .img(100%);
+    }
+}
+.topic_fish_right_img {
+    position:absolute;
+    right:0;
+    top:80px;
+    width:13%;
+    text-align:right;
+
+    img {
+        .img(100%);
+    }
+}
+.topic_fish_left_img {
+    position:absolute;
+    left:0;
+    top:80px;
+    width:13%;
+    text-align:right;
+
+    img {
+        .img(100%);
+    }
+}
+.topic_fish_activity {
+    overflow: hidden;
+
+    li {
+        background: #fff;
+        float: left;
+        width: (1-0.1)/3*100%;
+        width: 28%\9;
+        margin-right: 5%;
+        .transition(background 0.5s);
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background: @theme_color_1;
+
+            .topic_fish_activity_tit {
+                color: #000;
+                background: #fff;
+            }
+
+            .red_bg {
+                background: #fff;
+                color: @theme_color_1;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+
+        a {
+            color: #000;
+            .transition(color 0.5s);
+        }
+    }
+}
+.topic_fish_activity_tit {
+    padding: 10px 30px;
+    margin-top: 40px;
+    background: #e4e4e4;
+    font-size: 1.4em;
+    height: 60px;
+    overflow: hidden;
+    .transition(background 0.5s,color 0.5s);
+}
+.topic_fish_activity_bottom {
+    margin: 30px;
+
+    .red_bg {
+        margin-right:10px;
+    }
+}
+.topic_fish_activity_row {
+    margin-top:15px;
+    p{
+        margin:20px 0;
+        line-height:25px;
+    }
+}
+.topic_fish_activity_more_btn {
+    background: @theme_color_2;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+.topic_fish_pic {
+    li {
+        overflow:hidden;
+    }
+
+    img {
+        .img(100%);
+        height: 250px;
+        .transition(transform 0.5s);
+
+        &:hover {
+            .scale(1.1,1.1);
+        }
+    }
+}
+.topic_fish_list {
+    background: #FFF;
+    overflow: hidden;
+    padding:30px 40px;
+
+    li {
+        float: left;
+        width: 47%;
+        width: 46%\9;
+        margin-right:4%\9;
+        padding:20px 0;
+        border-bottom:1px dashed @line_color;
+        .transition(transform 0.5s);
+
+        &:nth-child(odd) {
+            float:left;
+        }
+        &:nth-child(even) {
+            float:right;
+        }
+        &:hover {
+            .scale(1.1,1.1);
+        }
+    }
+}
+.topic_fish_list_name {
+    font-size:1.3em;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.topic_fish_footer {
+    text-align: center;
+    background: #2f2f2f;
+    color: rgba(255, 255, 255, 0.71);
+    color: #fff\9;
+    font-size: 0.95em;
+    padding: 30px 0;
+    margin-top: 40px;
+
+    .content {
+        border:1px solid @word_color_2;
+        padding:30px 0;
+    }
+}
+    ////////////////////////////////////////////////////////////////////////////swiper2x版本样式
+    .topic_fish_wrap {
+        width: 100%;
+        position: relative;
+    }
+    .swiper-slide {
+        height: auto !important;
+        position: relative;
+
+        img {
+            width:100%;
+            height:300px;
+            vertical-align:bottom;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+
+    .pagination {
+        position: absolute;
+        z-index: 20;
+        right: 10px;
+        bottom:40px;
+    }
+
+    .swiper-pagination-switch {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .swiper-visible-switch {
+        background: #aaa;
+    }
+
+    .swiper-active-switch {
+        background: red;
+    }
+
+    .arrow-left {
+        position: absolute;
+        left: 24%;
+        top: 45%;
+        margin-top: -15px;
+        width: 17px;
+        height: 30px;
+        font-size: 3em;
+        color: rgba(34, 34, 34, 0.5);
+        z-index:10;
+        cursor:pointer;
+    }
+
+    .arrow-right {
+        position: absolute;
+        left: 74.5%;
+        top: 45%;
+        margin-top: -15px;
+        width: 17px;
+        height: 30px;
+        font-size: 3em;
+        color: rgba(34, 34, 34, 0.5);
+        z-index:10;
+        cursor:pointer;
+    }
+    .wrap_block {
+        margin:0 20px;
+        position:relative;
+    }
+    .wrap_title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 3%;
+        width: 94%;
+        background: rgba(0, 0, 0, 0.60);
+        color: #fff;
+        text-align: center;
+        font-size: 1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .wrap_white_left {
+        position:absolute;
+        height:100%;
+        background:rgba(255, 255, 255, 0.5);
+        top:0;
+        left:0;
+        width:23.4%;
+        z-index:9;
+    }
+    
+    .wrap_white_right {
+        position:absolute;
+        height:100%;
+        background:rgba(255, 255, 255, 0.5);
+        top:0;
+        right:0;
+        width:23.4%;
+        z-index:9;
+    }
+    /******************************************列表页样式******************************************/
+.topic_fish_inpage_body {
+    background:#fff;
+    padding:30px;
+}
+.topic_fish_name {
+    font-size:1.5em;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+    .listpage_tittle {
+        .line_height(60px);
+        border-bottom: 1px solid @line_color;
+    }
+
+    .listpage_vertical_line {
+        height: 60%;
+        border-left: 7px solid @theme_color_1;
+        display: inline-block;
+        margin-top: 12px;
+        float: left;
+    }
+
+    .listpage_tittle_word {
+        display: inline;
+
+
+        img {
+            width: 20px;
+            margin: 20px 5px 0 10px;
+            display: block;
+            float: left;
+        }
+
+        a {
+            display: inline-block;
+            color: @word_color_2;
+        }
+    }
+
+    .listpage_content {
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+    ////////////////////////////////////左侧导航
+
+    .listpage_left {
+        float: left;
+        width: 15%;
+        border: 1px solid @line_color;
+        min-height: 400px;
+        position:relative;
+    }
+
+    .listpage_left_tittle {
+        text-align: center;
+        background: @theme_color_1;
+        color: #fff;
+        padding: 20px 0;
+        font-size: 1.3em;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .listpage_left_ul {
+        .line_height(40px);
+        margin-left: 10px;
+
+        li {
+            a {
+                color:@word_color_2;
+                .transition(color 0.5s);
+
+                &:hover {
+                    color: @theme_color_1;
+                }
+            }
+        }
+    }
+
+    .listpage_left_line {
+        height: 25px;
+        border-left: 7px solid rgba(0, 0, 0, 0.00);
+        margin-top: 12px;
+        float: left;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+
+    .listpage_left_line_checked {
+        height: 25px;
+        border-left: 7px solid @theme_color_1;
+        margin-top: 12px;
+        float: left;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+    ////////////////////////////////////右侧列表
+
+    .listpage_right {
+        float: none;
+        width: 100%;
+    }
+
+    .listpage_right_tittle {
+        padding: 20px 0;
+        font-size: 1.3em;
+        color: @word_color_2;
+
+        a {
+            color:@theme_color_1;
+        }
+    }
+
+    .listpage_right_ul {
+        margin-left: 20px;
+        color: @theme_color_1;
+
+        li {
+            list-style: disc;
+            border-bottom: 1px dotted @line_color;
+            .line_height(50px);
+            padding:0 1%;
+            .transition(background 0.5s);
+
+            list-style:none none lower-roman; 
+
+                &:hover {
+                    background: #fff2d1;
+                }
+
+            a {
+                overflow: hidden;
+                font-size: 0.9em;
+                width:100%;
+                float:right;
+                color: @word_color_2;
+            }
+        }
+    }
+
+    .list_name {
+        float: left;
+        width:79%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .list_time {
+        float:right;
+        width:20%;
+        text-align:right;
+    }
+
+
+    //////////////////////////////////////////////////////页码
+
+    .pageing {
+        margin-top: 4%;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            font-size: 0.7em;
+            margin-bottom:5px;
+            padding: 10px 20px;
+            color: @word_color_2;
+            border: 1px solid @line_color;
+            .transition(background 0.5s,color 0.5s,border 0.5s);
+
+            &:hover {
+                border: 1px solid @theme_color_1;
+                background: @theme_color_1;
+                color: #fff;
+            }
+        }
+    }
+    .list_write_btn {
+        float: right;
+        width: 20%;
+        margin-top: 3%;
+        background: @theme_color_1;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        .transition(background 0.5s);
+
+        &:hover {
+            background: @theme_hover_color;
+        }
+
+        img {
+            width: 25px;
+            vertical-align: top;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 2px;
+        }
+    }
+
+    
+    /******************************************详情页页样式******************************************/
+
+    .detail_tittle {
+        text-align:center;
+        color:@theme_color_1;
+        padding:20px 0;
+        line-height:30px;
+        font-size:1.3em;
+        border-bottom:1px solid @line_color;
+    }
+    .detail_intro {
+        text-align: center;
+        margin: 20px;
+        color: @word_color_3;
+        font-size: 0.8em;
+
+        
+    }
+
+    .detail_content {
+        margin-top:20px;
+        padding-bottom:10px;
+
+    }
+    .inpage_form_intro {
+        font-family:initial;
+    }
+    .inpage_form_intro div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, hr, button, article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        font-family:initial;
+    }
+    .detail_content div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, hr, button, article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        font-family:initial;
+    }
+
+    
+    /******************************************图片列表样式******************************************/
+
+    .ninteenth_pic_list {
+        overflow: hidden;
+
+        a {
+            float: left;
+            width: (1-0.06)/4*100%;
+            width:23%\9;
+            margin-right: 2%;
+            margin-top: 25px;
+            text-align:center;
+            background:#f3f3f3;
+            .transition(opacity 0.5s);
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 160px;
+            vertical-align: bottom;
+        }
+    }
+    .ninteenth_pic_list_word {
+        color:#bb282e;
+        margin:20px;
+        height:60px;
+        overflow:hidden;
+        line-height:30px;
+    }
+
+@media screen and (max-width:1660px) {
+    .topic_fish_left_img,.topic_fish_right_img {
+        width:10%;
+    }
+}
+@media screen and (max-width:1366px) {
+    
+    .topic_fish_left_img,.topic_fish_right_img {
+        width:7%;
+    }
+}
+@media screen and (max-width:798px) {
+    .whole {
+        margin-bottom:20px;
+    }
+    .content {
+        width:96%;
+        overflow:hidden;
+    }
+    
+    /****************************************移动端 主页******************************/
+    .topic_fish_right_img,.topic_fish_left_img {
+        display:none;
+    }
+    .topic_fish_center_body {
+        padding: 30px;
+    }
+    .topic_fish_center_row {
+        margin-bottom:10px;
+    }
+    .topic_fish_center_block {
+        float: none;
+        width: 100%;
+
+        img {
+            .img(100%);
+            height:auto;
+        }
+    }
+    .topic_fish_bg {
+
+        img {
+            .img(200%);
+            margin-left:-50%;
+        }
+    }
+    .topic_fish_bigtit {
+        margin-bottom:30px;
+        img {
+            .img(110%);
+        }
+    }
+    .topic_fish_pic {
+        a {
+            padding:15px;
+            background:#fff;
+        }
+    }
+    .topic_fish_block_body {
+        li {
+            float:none!important;
+            width:100%;
+            margin-right:0!important;
+            overflow:hidden;
+            margin-bottom:20px;
+        }
+    }
+    .topic_fish_bottom_left,.topic_fish_bottom_right {
+        float:none;
+        width:100%;
+    }
+    .topic_fish_bottom_title {
+        img {
+            width:100%;
+        }
+    }
+
+    
+    .topic_fish_block_2 {
+        overflow: hidden;
+        margin-top: 20px;
+        padding-bottom: 0px;
+        background-size:cover;
+    }
+    ////////////////////////////////////////////////////////////////////////////swiper2x版本样式
+    .topic_fish_wrap {
+        width: 100%;
+        position: relative;
+        height:275px\9;
+        overflow:hidden;
+    }
+    .swiper-slide {
+        height: auto !important;
+        position: relative;
+
+        img {
+            width:100%;
+            height:100px;
+            vertical-align:bottom;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+
+    .swiper-visible-switch {
+        background: #aaa;
+    }
+
+    .swiper-active-switch {
+        background: red;
+    }
+
+    .arrow-left {
+        position: absolute;
+        left: 22%;
+        top: 35%;
+    }
+
+    .arrow-right {
+        position: absolute;
+        left: 73%;
+        top: 35%;
+    }
+    .wrap_block {
+        margin:10px;
+    }
+    .wrap_title {
+        font-size:0.9em;
+        padding: 5px 3%;
+    }
+    .wrap_white_left,.wrap_white_right {
+        display:none;
+    }
+    /****************************************移动端 列表页******************************/
+    .listpage_tittle {
+        height: auto;
+        line-height: 25px;
+        padding:10px 0;
+
+        img {
+            width: 20px;
+             margin: 3px 3px 0 0; 
+            float: left;
+        }
+    }
+
+
+    ////////////////////////////////////移动端 右侧列表
+
+    .listpage_right {
+        float: none;
+        width: 100%;
+    }
+
+    .listpage_right_tittle {
+        padding: 20px 0;
+        font-size: 1.3em;
+        margin-left: 10px;
+        color: @word_color_2;
+    }
+
+    .listpage_right_ul {
+        margin-left: 20px;
+        color: @theme_color_1;
+
+        li {
+            list-style: disc;
+            border-bottom: 1px dotted @line_color;
+            .line_height(50px);
+            padding:0 1%;
+            .transition(background 0.5s);
+
+            list-style:none none lower-roman; 
+
+                &:hover {
+                    background: #ededed;
+                }
+
+            a {
+                overflow: hidden;
+                font-size: 0.9em;
+                width:100%;
+                float:right;
+                color: @word_color_2;
+            }
+        }
+    }
+
+    .list_name {
+        float: left;
+        width:69%;
+    }
+
+    .list_time {
+        float:right;
+        width:30%;
+    }
+
+    .pageing {
+        width: 100%;
+
+        ul {
+            overflow: hidden;
+            margin-left: 20px;
+            margin-top: 4%;
+
+            li {
+                float: left;
+                font-size: 0.7em;
+
+                a {
+                    padding: 10px 20px;
+                    color: @word_color_2;
+                    border: 1px solid @line_color;
+                    .transition(background 0.5s,color 0.5s);
+
+                    &:hover {
+                        border: 1px solid rgba(0, 0, 0, 0.00);
+                        background: @theme_color_1;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .list_write_btn {
+        float:none;
+        clear:both;
+        margin-left:20px;
+        margin-top:18%;
+    }
+    /****************************************移动端 图片列表页******************************/
+    
+    /****************************************移动端 详情页******************************/
+}

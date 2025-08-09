@@ -1,0 +1,955 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  display: block;
+}
+img {
+  border: 0;
+}
+.whole {
+  width: 100%;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+/******************************************首页样式******************************************/
+.govbuild_top img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: bottom;
+}
+.govbuild_nav {
+  background: -webkit-linear-gradient(180deg, #ffffff, #d7d7d7);
+  background: -o-linear-gradient(180deg, #ffffff, #d7d7d7);
+  background: -moz-linear-gradient(180deg, #ffffff, #d7d7d7);
+  background: linear-gradient(180deg, #ffffff, #d7d7d7);
+}
+.govbuild_nav ul {
+  overflow: hidden;
+}
+.govbuild_nav li {
+  float: left;
+  width: 12.5%;
+}
+.govbuild_nav a {
+  color: #2f2f2f;
+  font-size: 1em;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+}
+.govbuild_nav a:hover {
+  background: #930100\9;
+  background: -webkit-linear-gradient(0deg, #f60d10, #930100);
+  background: -o-linear-gradient(0deg, #f60d10, #930100);
+  background: -moz-linear-gradient(0deg, #f60d10, #930100);
+  background: linear-gradient(0deg, #f60d10, #930100);
+  color: #fff;
+}
+.govbuild_title {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.govbuild_title img {
+  float: left;
+  margin-right: 15px;
+}
+.govbuild_title:hover .govbuild_tit_c_word {
+  color: #c70708;
+}
+.govbuild_title:hover .govbuild_tit_e_word {
+  color: #626262;
+}
+.govbuild_tit_c_word {
+  color: #000;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+}
+.govbuild_tit_e_word {
+  color: #959595;
+  font-size: 0.95em;
+  margin-top: 3px;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+}
+.govbuild_block_body {
+  margin: 50px 0;
+  overflow: hidden;
+}
+.govbuild_block_body ul {
+  overflow: hidden;
+}
+.govbuild_block_body li {
+  padding: 5px 0;
+}
+.govbuild_block_body li a {
+  overflow: hidden;
+  color: #626262;
+  transition: margin-left 0.5s;
+  -webkit-transition: margin-left 0.5s;
+  -o-transition: margin-left 0.5s;
+  -moz-transition: margin-left 0.5s;
+}
+.govbuild_block_body li a img {
+  float: left;
+  margin: 7px 10px 0 0;
+}
+.govbuild_block_body li a:hover {
+  margin-left: 10px;
+}
+.govbuild_name {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.govbuild_more_btn {
+  text-align: center;
+  padding: 7px 0;
+  color: #fff;
+  border-radius: 30px;
+  margin-top: 20px;
+  width: 150px;
+  background: #930100\9;
+  background: -webkit-linear-gradient(180deg, #f60d10, #930100);
+  background: -o-linear-gradient(180deg, #f60d10, #930100);
+  background: -moz-linear-gradient(180deg, #f60d10, #930100);
+  background: linear-gradient(180deg, #f60d10, #930100);
+}
+.govbuild_more_btn:hover {
+  background: -webkit-linear-gradient(0deg, #f60d10, #930100);
+  background: -o-linear-gradient(0deg, #f60d10, #930100);
+  background: -moz-linear-gradient(0deg, #f60d10, #930100);
+  background: linear-gradient(0deg, #f60d10, #930100);
+  color: rgba(255, 255, 255, 0.8);
+}
+.govbuild_block_left {
+  float: left;
+  width: 49.9%;
+  border-right: 1px dashed #f6d3d4;
+}
+.govbuild_block_right {
+  float: right;
+  width: 46%;
+  overflow: hidden;
+}
+.row_1 .govbuild_block_left {
+  width: 35%;
+}
+.row_1 .govbuild_block_right {
+  width: 62%;
+}
+.row_2 {
+  background: #930100\9;
+  background: -webkit-linear-gradient(0deg, #f60d10, #930100);
+  background: -o-linear-gradient(0deg, #f60d10, #930100);
+  background: -moz-linear-gradient(0deg, #f60d10, #930100);
+  background: linear-gradient(0deg, #f60d10, #930100);
+  padding: 1px;
+}
+.row_2 li a {
+  color: rgba(255, 255, 255, 0.95);
+  color: #fff\9;
+}
+.row_2 .govbuild_block_right {
+  width: 50%;
+}
+.row_2 .govbuild_tit_c_word,
+.row_2 .govbuild_tit_e_word {
+  color: #fff7bc;
+}
+.row_2 .govbuild_title:hover .govbuild_tit_c_word {
+  color: #fff;
+}
+.row_2 .govbuild_title:hover .govbuild_tit_e_word {
+  color: #fff;
+}
+.row_2 .govbuild_more_btn {
+  background: #da7817\9;
+  background: -webkit-linear-gradient(180deg, #fee164, #da7817);
+  background: -o-linear-gradient(180deg, #fee164, #da7817);
+  background: -moz-linear-gradient(180deg, #fee164, #da7817);
+  background: linear-gradient(180deg, #fee164, #da7817);
+}
+.row_2 .govbuild_more_btn:hover {
+  background: -webkit-linear-gradient(0deg, #fee164, #da7817);
+  background: -o-linear-gradient(0deg, #fee164, #da7817);
+  background: -moz-linear-gradient(0deg, #fee164, #da7817);
+  background: linear-gradient(0deg, #fee164, #da7817);
+}
+.row_4 {
+  background: #5350bb\9;
+  background: -webkit-linear-gradient(0deg, #a3b7fe, #5350bb);
+  background: -o-linear-gradient(0deg, #a3b7fe, #5350bb);
+  background: -moz-linear-gradient(0deg, #a3b7fe, #5350bb);
+  background: linear-gradient(0deg, #a3b7fe, #5350bb);
+}
+.row_4 .govbuild_more_btn {
+  background: -webkit-linear-gradient(180deg, #f60d10, #930100);
+  background: -o-linear-gradient(180deg, #f60d10, #930100);
+  background: -moz-linear-gradient(180deg, #f60d10, #930100);
+  background: linear-gradient(180deg, #f60d10, #930100);
+}
+.row_4 .govbuild_more_btn:hover {
+  background: -webkit-linear-gradient(0deg, #f60d10, #930100);
+  background: -o-linear-gradient(0deg, #f60d10, #930100);
+  background: -moz-linear-gradient(0deg, #f60d10, #930100);
+  background: linear-gradient(0deg, #f60d10, #930100);
+}
+.govbuild_title_img {
+  float: left;
+  width: 45%;
+  overflow: hidden;
+}
+.govbuild_title_img img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: bottom;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+}
+.govbuild_title_img:hover img {
+  transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+}
+.govbuild_big_title {
+  margin-top: 50px;
+}
+.govbuil_btns ul {
+  border-top: 1px solid #f6d3d4;
+  border-bottom: 1px solid #f6d3d4;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.govbuil_btns ul li {
+  float: left;
+  width: 25%;
+  border-radius: 3px;
+}
+.govbuil_btns ul a {
+  color: #000;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 10px 0;
+  width: 70%;
+  margin: 0 auto;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+}
+.govbuil_btns ul a:hover {
+  background: #e9e9e9;
+}
+.govbuil_btns ul img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.govbuild_footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.71);
+  color: #fff\9;
+  font-size: 0.9em;
+  padding: 30px 0;
+  background: #2f2f2f;
+  margin-top: 50px;
+}
+.govbuild_wrap {
+  width: 100%;
+  float: right;
+  position: relative;
+  margin-top: 10px;
+}
+.swiper-slide {
+  height: auto !important;
+  position: relative;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 250px;
+  vertical-align: bottom;
+}
+.swiper-wrapper {
+  height: auto !important;
+}
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  right: 10px;
+  bottom: 40px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: red;
+}
+.arrow-left {
+  position: absolute;
+  left: 175px;
+  top: 42%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  font-size: 3em;
+  color: rgba(34, 34, 34, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  left: 550px;
+  top: 42%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  font-size: 3em;
+  color: rgba(34, 34, 34, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+.wrap_block {
+  margin: 0 15px;
+  position: relative;
+}
+.wrap_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 3%;
+  width: 94%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.wrap_white_left {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  width: 172px;
+  z-index: 9;
+}
+.wrap_white_right {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  width: 172px;
+  z-index: 9;
+}
+/******************************************列表页样式******************************************/
+.listpage_tittle {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #f6d3d4;
+}
+.listpage_vertical_line {
+  height: 60%;
+  border-left: 7px solid #bb282e;
+  display: inline-block;
+  margin-top: 12px;
+  float: left;
+}
+.listpage_tittle_word {
+  display: inline;
+}
+.listpage_tittle_word img {
+  width: 20px;
+  margin: 20px 5px 0 10px;
+  display: block;
+  float: left;
+}
+.listpage_tittle_word a {
+  display: inline-block;
+  color: #626262;
+}
+.listpage_content {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.listpage_left {
+  float: left;
+  width: 15%;
+  border: 1px solid #f6d3d4;
+  min-height: 400px;
+  position: relative;
+}
+.listpage_left_tittle {
+  text-align: center;
+  background: #bb282e;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 1.3em;
+}
+.listpage_left_tittle a {
+  color: #fff;
+}
+.listpage_left_ul {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.listpage_left_ul li a {
+  color: #626262;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+}
+.listpage_left_ul li a:hover {
+  color: #bb282e;
+}
+.listpage_left_line {
+  height: 25px;
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  margin-top: 12px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.listpage_left_line_checked {
+  height: 25px;
+  border-left: 7px solid #bb282e;
+  margin-top: 12px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.listpage_right {
+  float: none;
+  width: 100%;
+}
+.listpage_right_tittle {
+  padding: 20px 0;
+  font-size: 1.3em;
+  color: #626262;
+}
+.listpage_right_tittle a {
+  color: #bb282e;
+}
+.listpage_right_ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #bb282e;
+}
+.listpage_right_ul li {
+  list-style: disc;
+  border-bottom: 1px dotted #f6d3d4;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1%;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  list-style: none none lower-roman;
+}
+.listpage_right_ul li:hover {
+  background: #ffe7e7;
+}
+.listpage_right_ul li a {
+  overflow: hidden;
+  font-size: 0.9em;
+  width: 100%;
+  float: right;
+  color: #626262;
+}
+.list_name {
+  float: left;
+  width: 79%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.list_time {
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+.pageing {
+  margin-top: 4%;
+  text-align: center;
+}
+.pageing a {
+  display: inline-block;
+  font-size: 0.7em;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  color: #626262;
+  border: 1px solid #f6d3d4;
+  transition: background 0.5s, color 0.5s, border 0.5s;
+  -webkit-transition: background 0.5s, color 0.5s, border 0.5s;
+  -o-transition: background 0.5s, color 0.5s, border 0.5s;
+  -moz-transition: background 0.5s, color 0.5s, border 0.5s;
+}
+.pageing a:hover {
+  border: 1px solid #bb282e;
+  background: #bb282e;
+  color: #fff;
+}
+.list_write_btn {
+  float: right;
+  width: 20%;
+  margin-top: 3%;
+  background: #bb282e;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+}
+.list_write_btn:hover {
+  background: #2d2e42;
+}
+.list_write_btn img {
+  width: 25px;
+  vertical-align: top;
+}
+.list_write_btn span {
+  display: inline-block;
+  margin-top: 2px;
+}
+/******************************************详情页页样式******************************************/
+.detail_tittle {
+  text-align: center;
+  color: #bb282e;
+  padding: 20px 0;
+  line-height: 30px;
+  font-size: 1.3em;
+  border-bottom: 1px solid #f6d3d4;
+}
+.detail_intro {
+  text-align: center;
+  margin: 20px;
+  color: #959595;
+  font-size: 0.8em;
+}
+.detail_content {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.inpage_form_intro {
+  font-family: initial;
+}
+.inpage_form_intro div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  font-family: initial;
+}
+.detail_content div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  font-family: initial;
+}
+/******************************************图片列表样式******************************************/
+.ninteenth_pic_list {
+  overflow: hidden;
+}
+.ninteenth_pic_list a {
+  float: left;
+  width: 23.5%;
+  width: 23%\9;
+  margin-right: 2%;
+  margin-top: 25px;
+  text-align: center;
+  background: #fff;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+}
+.ninteenth_pic_list a:hover {
+  opacity: 0.7;
+}
+.ninteenth_pic_list a:nth-child(4n) {
+  margin-right: 0;
+}
+.ninteenth_pic_list img {
+  width: 100%;
+  height: 160px;
+  vertical-align: bottom;
+}
+.ninteenth_pic_list_word {
+  color: #760000;
+  margin: 20px 0;
+  height: 60px;
+  overflow: hidden;
+  line-height: 30px;
+}
+@media screen and (max-width: 798px) {
+  .content {
+    width: 96%;
+  }
+  /****************************************移动端 主页******************************/
+  .govbuild_top img {
+    width: 150%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: -25%;
+  }
+  .govbuild_nav {
+    background: -webkit-linear-gradient(0deg, #930100, #f60d10);
+    background: -o-linear-gradient(0deg, #930100, #f60d10);
+    background: -moz-linear-gradient(0deg, #930100, #f60d10);
+    background: linear-gradient(0deg, #930100, #f60d10);
+  }
+  .govbuild_nav li {
+    width: 25%;
+  }
+  .govbuild_nav a {
+    font-size: 0.8em;
+    padding: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+  }
+  .govbuild_big_title img {
+    width: 200%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: -50%;
+  }
+  .govbuild_title_img {
+    margin-bottom: 20px;
+  }
+  .govbuild_block_left,
+  .govbuild_block_right,
+  .govbuild_title_img {
+    float: none!important;
+    width: 100%!important;
+    margin: 20px 0;
+  }
+  .govbuild_block_right {
+    margin-top: 30px;
+  }
+  .govbuild_block_body {
+    margin: 20px 10px;
+  }
+  .govbuild_name {
+    font-size: 1em;
+  }
+  .govbuild_bottom_left,
+  .govbuild_bottom_right {
+    float: none;
+    width: 100%;
+  }
+  .govbuild_more_btn {
+    margin-top: 20px;
+  }
+  .govbuil_btns ul {
+    border-top: 1px solid #f6d3d4;
+    border-bottom: 1px solid #f6d3d4;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  .govbuil_btns ul li {
+    float: left;
+    width: 50%;
+    border-radius: 3px;
+  }
+  .govbuil_btns ul a {
+    color: #000;
+    text-align: left;
+    font-size: 0.90em;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 auto;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+  }
+  .govbuil_btns ul a:hover {
+    background: #e9e9e9;
+  }
+  .govbuil_btns ul img {
+    vertical-align: middle;
+    margin: 0 5px 0 15px;
+  }
+  .govbuild_footer {
+    font-size: 0.8em;
+    padding: 20px 0;
+  }
+  .govbuild_wrap {
+    width: 100%;
+    position: relative;
+  }
+  .swiper-slide {
+    height: auto !important;
+    position: relative;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100px;
+    vertical-align: bottom;
+  }
+  .swiper-wrapper {
+    height: auto !important;
+  }
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-visible-switch {
+    background: #aaa;
+  }
+  .swiper-active-switch {
+    background: red;
+  }
+  .arrow-left {
+    position: absolute;
+    left: 22%;
+    top: 35%;
+  }
+  .arrow-right {
+    position: absolute;
+    left: 73%;
+    top: 35%;
+  }
+  .wrap_block {
+    margin: 10px;
+  }
+  .wrap_title {
+    font-size: 0.9em;
+    padding: 5px 3%;
+  }
+  .wrap_white_left,
+  .wrap_white_right {
+    display: none;
+  }
+  /****************************************移动端 列表页******************************/
+  .listpage_tittle {
+    height: auto;
+    line-height: 25px;
+    padding: 10px 0;
+  }
+  .listpage_tittle img {
+    width: 20px;
+    margin: 3px 3px 0 0;
+    float: left;
+  }
+  .listpage_right {
+    float: none;
+    width: 100%;
+  }
+  .listpage_right_tittle {
+    padding: 20px 0;
+    font-size: 1.3em;
+    margin-left: 10px;
+    color: #626262;
+  }
+  .listpage_right_ul {
+    margin-left: 20px;
+    color: #bb282e;
+  }
+  .listpage_right_ul li {
+    list-style: disc;
+    border-bottom: 1px dotted #f6d3d4;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1%;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    list-style: none none lower-roman;
+  }
+  .listpage_right_ul li:hover {
+    background: #ededed;
+  }
+  .listpage_right_ul li a {
+    overflow: hidden;
+    font-size: 0.9em;
+    width: 100%;
+    float: right;
+    color: #626262;
+  }
+  .list_name {
+    float: left;
+    width: 69%;
+  }
+  .list_time {
+    float: right;
+    width: 30%;
+  }
+  .pageing {
+    width: 100%;
+  }
+  .pageing ul {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 4%;
+  }
+  .pageing ul li {
+    float: left;
+    font-size: 0.7em;
+  }
+  .pageing ul li a {
+    padding: 10px 20px;
+    color: #626262;
+    border: 1px solid #f6d3d4;
+    transition: background 0.5s, color 0.5s;
+    -webkit-transition: background 0.5s, color 0.5s;
+    -o-transition: background 0.5s, color 0.5s;
+    -moz-transition: background 0.5s, color 0.5s;
+  }
+  .pageing ul li a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #bb282e;
+    color: #fff;
+  }
+  .list_write_btn {
+    float: none;
+    clear: both;
+    margin-left: 20px;
+    margin-top: 18%;
+  }
+  /****************************************移动端 图片列表页******************************/
+  /****************************************移动端 详情页******************************/
+}

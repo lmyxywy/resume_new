@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <style>
+        .hui-list-text {
+            color: #999;
+        }
+        
+        .hui-list-info,
+        .hui-list-info span {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <h1>编辑个人信息</h1>
+    </header>
+    <div class="hui-wrap">
+        <div class="hui-list" style="background:#FFFFFF; margin-top:28px;">
+            <a href="javascript:;" style="height:auto; height:80px; padding-bottom:15px;" id="avatar_btn">
+                <div class="hui-list-icons" style="width:110px; height:80px;">
+                    <img src="../image/home.png" style="width:66px; margin:0px; border-radius:50%;" />
+                </div>
+                <div class="hui-list-text" style="height:79px; line-height:79px;">
+                    <div class="hui-list-text-content">
+                        头像
+                    </div>
+                    <div class="hui-list-info">
+                        <span class="hui-icons hui-icons-right"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="hui-list" style="background:#FFFFFF; margin-top:28px;">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" id="name_btn">
+                        <div class="hui-list-icons">
+                            <img src="../image/user.png" />
+                        </div>
+                        <div class="hui-list-text">
+                            昵称
+                            <div class="hui-list-info">
+                                晴天雨天、艳阳天
+                                <span class="hui-icons hui-icons-right"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" id="sex_btn">
+                        <div class="hui-list-icons">
+                            <img src="../image/sex.png" />
+                        </div>
+                        <div class="hui-list-text">
+                            性别
+                            <div class="hui-list-info">
+                                <span id="sex">女</span>
+                                <span class="hui-icons hui-icons-right"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <div class="hui-list-icons">
+                            <img src="../image/phone.png" />
+                        </div>
+                        <div class="hui-list-text">
+                            联系方式
+                            <div class="hui-list-info">
+                                18643216678
+                                <span class="hui-icons hui-icons-right" style="opacity: 0;"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" id="address_btn">
+                        <div class="hui-list-icons">
+                            <img src="../image/address.png" />
+                        </div>
+                        <div class="hui-list-text">
+                            地区
+                            <div class="hui-list-info">
+                                <span id="address">吉林省吉林市船营区</span>
+                                <span class="hui-icons hui-icons-right"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/hui.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/hui-picker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/cities.js" charset="UTF-8"></script>
+</body>
+<script>
+    // 头像弹出框
+    var meuns = ['拍照', '从相册中选择'];
+    var cancel = '取消';
+    hui('#avatar_btn').click(function() {
+        hui.actionSheet(meuns, cancel, function(e) {
+            console.log(e.index);
+            hui.toast(e.innerHTML);
+        });
+    });
+
+
+    // 修改昵称
+    hui('#name_btn').click(function() {
+        hui.prompt('请输入您的昵称', ['取消', '确定'], function(name) {
+            console.log('您输入了 :' + name);
+        }, '请输入您的昵称', '晴天雨天、艳阳天', function() {
+            console.log('您点击了取消')
+        });
+    });
+
+
+    // 性别选择
+    var picker1 = new huiPicker('#sex_btn', function() {
+        var val = picker1.getVal(0);
+        var txt = picker1.getText(0);
+        hui('#sex').html(txt);
+    });
+    // 同级 picker 数量设置 默认 1
+    picker1.level = 1;
+    //1. piker 数据
+    var pickerData = [{
+        value: 1,
+        text: '男'
+    }, {
+        value: 2,
+        text: '女'
+    }];
+    //2. 查询默认值 例如  {value:2, text:'女'} 的默认值为 2
+    //不设置默认值此步骤省略即可
+    var defaultValue = 2;
+    var defaultIndex = pickerData.pickerIndexOf(defaultValue);
+    //3 绑定数据时设置默认值 //不设置默认值 忽略第三个参数即可
+    picker1.bindData(0, pickerData, defaultIndex);
+
+
+    // 地区选择
+    var picker3 = new huiPicker('#address_btn', function() {
+        var sheng = picker3.getText(0);
+        var shi = picker3.getText(1);
+        var qu = picker3.getText(2);
+        var shengVal = picker3.getVal(0);
+        var shiVal = picker3.getVal(1);
+        var quVal = picker3.getVal(2);
+        console.log(shengVal, shiVal, quVal);
+        hui('#address').html(sheng + shi + qu);
+    });
+    picker3.level = 3;
+    //cities 数据来源于 cities.js
+    // 默认值设置方式 [220000, 220200, 220204] 吉林省 吉林市 船营区
+    var defaultVal = [220000, 220200, 220204];
+    // 不设置默认值忽略第三个参数即可
+    picker3.bindRelevanceData(cities, defaultVal);
+</script>
+
+</html>

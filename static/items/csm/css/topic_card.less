@@ -1,0 +1,1281 @@
+﻿@import "css3-library";
+@import "definition";
+
+@card_theme_color: #ff9e01;
+@card_color_red_1: #fee0d8;
+@card_color_red_2: #fe3700;
+@card_color_green_1: #d9fff4;
+@card_color_green_2: #00b67d;
+@card_color_blue_1: #ccedff;
+@card_color_blue_2: #0080ff;
+@card_color_yellow_1: #ffefd5;
+@card_color_yellow_2: #fd8534;
+
+
+//////////////////////////////////////////////////////////////台式
+
+    /////////////////////////////////////////////////////////////////////////////导航
+    .mobile_menu_btn, .mobile_card_first {
+        display: none;
+    }
+
+    .card_nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 90%;
+        background: rgba(0, 0, 0, 0.4);
+        background:#055591\9;
+        z-index: 15;
+
+        ul {
+            margin-top: 60%;
+            *margin-top:4%;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #fff;
+            text-align: center;
+            padding: 10% 30px;
+            *padding:0.5% 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            .transition(color 0.5s);
+        }
+    }
+
+    .card_nav_show {
+        background: @card_theme_color;
+    }
+
+    .card_nav_hover {
+        a {
+            color: #ffcb76 !important;
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////左侧按钮
+
+    .card_left_icon {
+        position: fixed;
+        top: 0;
+        left: 10%;
+        z-index: 10;
+
+        ul {
+            margin-top: 80%;
+            *margin-top: 4%;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            background: rgba(0, 0, 0, 0.4);
+            background:#0c5890\9;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            .transition(background 0.5s);
+            *width:4%;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////logo
+    .card_logo {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        width: 15%;
+
+        img {
+            margin-top: 50px;
+            width: 89%;
+            .transition(transform 0.5s);
+
+            &:hover {
+                .scale(0.9,0.9);
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////footer
+
+    .card_footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2);
+        background:#568bba\9;
+        color: #fff;
+        height: 10%;
+        font-size: 0.9em;
+
+        div {
+            margin-bottom: 10px;
+
+            &:nth-child(1) {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////主体
+
+
+    .card {
+        height: 950px;
+        height: 100vh;
+    }
+
+    .card_top {
+        height: 12%;
+    }
+
+    .card_body {
+        background: rgba(0, 0, 0, 0.2);
+        background:#1778c3\9;
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .card_title {
+        position: absolute;
+        top: -90px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+
+        img {
+            width: 17.2%;
+            .transition(margin-top 0.5s);
+
+            &:hover {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .card_content {
+        padding: 140px 4% 40px 4%;
+        margin-top: 0;
+
+        ul {
+            overflow: hidden;
+        }
+    }
+
+    .card_block {
+
+        li {
+            background: #fff;
+            float: left;
+            .transition(padding-bottom 0.5s);
+
+            &:hover {
+                padding-bottom: 15px;
+
+                .card_block_img {
+
+                    img {
+                        .scale(1.1,1.1);
+                    }
+                }
+
+                .card_block_title {
+                    opacity: 0.7;
+                }
+
+                .card_block_intro {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    .card_block_img {
+        margin: 15px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            vertical-align: bottom;
+            .transition(transform 0.5s);
+        }
+    }
+
+    .card_block_title {
+        text-align: center;
+        padding: 20px 0;
+        margin: 25px 0;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        .transition(opacity 0.5s);
+    }
+
+    .card_block_intro {
+        margin: 5px 15px 25px 15px;
+        color: @word_color_1;
+        line-height: 25px;
+        overflow: hidden;
+        .transition(color 0.5s);
+    }
+    /////////////////////////////////////////////////////////四季节庆
+
+    .card_1_block {
+
+        li {
+            float: left;
+            width: 45%;
+            width: 44%\9;
+            margin-right:2%\9;
+            background: #fff;
+            padding: 15px;
+            overflow: hidden;
+            margin-bottom: 4%;
+
+
+            &:hover {
+                .card_1_block_left {
+
+                    img {
+                        .scale(1.1,1.1);
+                    }
+                }
+
+                .card_1_block_right {
+
+                    img {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                border-right: 7px solid #b2dc53;
+            }
+
+            &:nth-child(2) {
+                border-right: 7px solid #1bcfac;
+            }
+
+            &:nth-child(3) {
+                border-right: 7px solid #fea950;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(4) {
+                border-right: 7px solid #6eb9fd;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(odd) {
+                float: left;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+        }
+    }
+
+    .card_1_block_left {
+        float: left;
+        width: 60%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            vertical-align: bottom;
+            .transition(transform 0.5s);
+        }
+    }
+
+    .card_1_block_right {
+        float: right;
+        width: 40%;
+        text-align: center;
+
+        img {
+            width: 92%;
+            margin-top: 20%;
+            .transition(opacity 0.5s);
+        }
+    }
+
+    //////////////////////////////////////////////////////////游在吉林
+
+    .card_tab {
+        background: #fff;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        a {
+            padding: 15px 0;
+            width: 1/5*100%;
+            text-align: center;
+            color: #509efe;
+            font-size: 1.2em;
+            float: left;
+            .transition(background 0.5s);
+
+            span {
+                display: inline-block;
+                background: #509efe;
+                color: #fff;
+                border-radius: 50%;
+                padding: 5px 8px;
+                margin: 0 5px;
+                .transition(background 0.5s,color 0.5s);
+            }
+        }
+    }
+
+    .card_tab_checked {
+        color: #fe3700 !important;
+        background: #fee0d8;
+
+        span {
+            background: #fe3700 !important;
+        }
+    }
+
+    .card_thr_block {
+        li {
+            width: (1-0.06)/3*100%;
+            width:30%\9;
+            margin-right: 3%;
+
+            &:nth-child(n) {
+                border-bottom: 7px solid @card_color_red_2;
+
+                .card_block_title {
+                    background: @card_color_red_1;
+                    color: @card_color_red_2;
+                }
+            }
+
+            &:nth-child(2n) {
+                border-bottom: 7px solid @card_color_green_2;
+
+                .card_block_title {
+                    background: @card_color_green_1;
+                    color: @card_color_green_2;
+                }
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+                border-bottom: 7px solid @card_color_blue_2;
+
+                .card_block_title {
+                    background: @card_color_blue_1;
+                    color: @card_color_blue_2;
+                }
+            }
+
+            .card_block_intro {
+                height: 130px;
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////购在吉林
+
+    .card_3 {
+        .card_content {
+            position: relative;
+            height: 500px;
+        }
+    }
+
+    .card_buy {
+        background: #fff;
+        position: absolute;
+        overflow: hidden;
+
+        span {
+            display: block;
+            padding: 15px;
+            font-size: 0.9em;
+            color: @word_color_1;
+            .transition(color 0.5s);
+            height: 100px;
+            width: 97.3%;
+            overflow-y: auto;
+
+            &:hover {
+                color: @word_color_3;
+            }
+        }
+
+        img {
+            width: 92%;
+            margin: 14px;
+            vertical-align: bottom;
+            .transition(transform 0.5s);
+
+            &:hover {
+                .scale(1.1,1.1);
+            }
+        }
+    }
+
+    .card_buy_1 {
+        border-top: 7px solid @card_theme_color;
+        width: 63%;
+        height: 23%;
+        top: 110px;
+        left: 50px;
+    }
+
+    .card_buy_2 {
+        border-top: 7px solid @card_theme_color;
+        width: 27%;
+        height: 52%;
+        top: 110px;
+        right: 50px;
+    }
+
+    .card_buy_3 {
+        border-bottom: 7px solid @card_theme_color;
+        width: 27%;
+        height: 52%;
+        top: 42%;
+        left: 50px;
+    }
+
+    .card_buy_4 {
+        border-bottom: 7px solid @card_theme_color;
+        width: 63%;
+        height: 23%;
+        top: 71%;
+        right: 50px;
+    }
+
+    .card_buy_5 {
+        width: 34.5%;
+        height: 27%;
+        top: 42%;
+        left: 32.5%;
+    }
+
+    //////////////////////////////////////////////////////////娱在吉林
+
+
+    .card_two_block {
+        li {
+            width: (1-0.04)/2*100%;
+            width:45%\9;
+            margin-right: 4%;
+
+            &:nth-child(n) {
+                border-bottom: 7px solid @card_color_green_2;
+
+                .card_block_title {
+                    background: @card_color_green_1;
+                    color: @card_color_green_2;
+                }
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+                border-bottom: 7px solid @card_color_blue_2;
+
+                .card_block_title {
+                    background: @card_color_blue_1;
+                    color: @card_color_blue_2;
+                }
+            }
+
+            .card_block_intro {
+                height: 170px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////食在吉林
+
+    .card_eat {
+
+        li {
+
+            &:nth-child(n) {
+                border-bottom: 7px solid @card_color_yellow_2;
+
+                .card_block_title {
+                    background: @card_color_yellow_1;
+                    color: @card_color_yellow_2;
+                }
+            }
+
+            &:nth-child(2n) {
+                border-bottom: 7px solid @card_color_red_2;
+
+                .card_block_title {
+                    background: @card_color_red_1;
+                    color: @card_color_red_2;
+                }
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////住在吉林
+    .card_6 {
+        .card_content {
+            padding-top: 110px;
+        }
+    }
+
+    .card_four_block {
+        .card_block_title {
+            margin-bottom: 15px;
+        }
+
+        .card_block_intro {
+            font-size: 0.9em;
+            height: 145px;
+        }
+
+        li {
+            width: (1-0.03)/4*100%;
+            width:24%\9;
+            margin-right: 1%;
+            float: left;
+
+            &:nth-child(1) {
+                .card_block_title {
+                    background: @card_color_green_1;
+                    color: @card_color_green_2;
+                }
+            }
+
+            &:nth-child(2) {
+
+                .card_block_title {
+                    background: @card_color_blue_1;
+                    color: @card_color_blue_2;
+                }
+            }
+
+            &:nth-child(3) {
+
+                .card_block_title {
+                    background: @card_color_red_1;
+                    color: @card_color_red_2;
+                }
+            }
+
+            &:nth-child(4) {
+                margin-right: 0;
+
+                .card_block_title {
+                    background: @card_color_yellow_1;
+                    color: @card_color_yellow_2;
+                }
+            }
+        }
+    }
+
+    .card_block_rank {
+        text-align: center;
+
+        img {
+            display: inline-block;
+            margin: 0 8px;
+        }
+    }
+
+    .card_block_addr {
+        background: #b3e5fe;
+        color: @word_color_1;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    //////////////////////////////////////////////////////////行在吉林
+
+    .card_7 {
+        .card_content {
+            padding-top: 110px;
+        }
+    }
+
+    .card_go_intro {
+        color: #fff;
+        font-size: 0.95em;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card_go {
+
+        li {
+
+            &:nth-child(n) {
+                border-bottom: 7px solid @card_color_blue_2;
+
+                .card_block_title {
+                    background: @card_color_blue_1;
+                    color: @card_color_blue_2;
+                }
+            }
+
+            &:nth-child(2n) {
+                border-bottom: 7px solid @card_color_green_2;
+
+                .card_block_title {
+                    background: @card_color_green_1;
+                    color: @card_color_green_2;
+                }
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////内页
+    .card_8 {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 120px;
+
+        .card_body {
+            margin-top: 0px;
+        }
+        .card_top {
+            height:120px;
+        }
+    }
+
+    .card_inpage_top {
+        background: #fff;
+        overflow: hidden;
+        padding: 15px;
+        font-size: 0.95em;
+        margin-bottom: 15px;
+
+        div {
+            width: 7px;
+            height: 21px;
+            background: @card_theme_color;
+            float: left;
+            margin-right: 10px;
+        }
+
+        a {
+            display: inline-block;
+            color: @word_color_1;
+            .transition(color 0.5s);
+
+            &:hover {
+                color: @card_theme_color;
+            }
+        }
+    }
+
+    .card_inpage_bottom {
+        overflow: hidden;
+    }
+
+    .card_inpage_left {
+        float: left;
+        width: 20%;
+        background: #fff;
+        padding: 10px 0;
+    }
+
+    .card_inpage_left_body {
+        margin: 15px;
+
+        li {
+            background: #ffefd5;
+            margin-bottom: 18px;
+            .transition(background 0.5s);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                background: #ffe7c0;
+            }
+
+            a {
+                color: @word_color_1;
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    .card_inpage_right {
+        float: right;
+        width: 79%;
+    }
+
+    .card_inpage_right_content {
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            background: #fff;
+            width: (1-0.045)/4*100%;
+            width:23.5%\9;
+            margin-right: 1.5%;
+            margin-bottom: 15px;
+
+            &:hover {
+                .card_inpage_img {
+                    img {
+                        .scale(1.1,1.1);
+                    }
+                }
+
+                .card_inpage_intro {
+                    color: @card_theme_color;
+                }
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .card_inpage_img {
+        margin: 15px;
+        height:123px\9;
+        overflow: hidden;
+
+        img {
+            .img(100%);
+            .transition(transform 0.5s);
+        }
+    }
+
+    .card_inpage_intro {
+        text-align: center;
+        margin: 15px;
+        height: 48px;
+        overflow: hidden;
+        color: @word_color_1;
+        font-size: 0.95em;
+        .transition(color 0.5s);
+    }
+
+    //////////////////////////////////////////////////////页码
+
+    .pageing {
+        padding: 10px 0 5px 0;
+        text-align: center;
+        background: #fff;
+
+        a {
+            display: inline-block;
+            font-size: 0.7em;
+            margin-bottom: 5px;
+            padding: 10px 20px;
+            color: @word_color_2;
+            border: 1px solid @line_color;
+            .transition(background 0.5s,color 0.5s,border 0.5s);
+
+            &:hover {
+                border: 1px solid @card_theme_color;
+                background: @card_theme_color;
+                color: #fff;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////内页详情
+
+    .card_inpage_detail_body {
+        background: #fff;
+        padding: 20px;
+    }
+
+    .card_inpage_title {
+        padding: 15px 0;
+        text-align: center;
+        font-size: 1.5em;
+        border-bottom: 1px solid @line_color;
+    }
+
+    .card_inpage_detail_intro {
+        text-align: center;
+        font-size: 0.9em;
+        color: @word_color_2;
+        margin: 15px;
+
+        span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+
+
+@media screen and (max-width:1680px) {
+    .card_buy_1, .card_buy_4 {
+        width: 62%;
+    }
+
+    .card_buy_5 {
+        width: 34%;
+        left: 33%;
+    }
+}
+
+
+@media screen and (max-width:1380px) {
+    .card_nav {
+        ul {
+            margin-top: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    .card {
+        padding-bottom: 100px;
+    }
+
+    .card_1 {
+        padding-bottom: 60px;
+    }
+
+    .card_2 {
+        padding-bottom: 150px;
+    }
+
+    .card_6 {
+        padding-bottom: 180px;
+    }
+
+    .card_7 {
+        padding-bottom: 200px;
+    }
+
+    .card_content {
+        padding: 90px 4% 40px 4%;
+    }
+
+    .card_title {
+        top: -60px;
+    }
+
+    .card_logo {
+        right: 10px;
+    }
+
+    /////////////////////////////////////////////////////////////左侧按钮 笔记本
+
+    .card_left_icon {
+        left: 12%;
+
+        ul {
+            margin-top: 95%;
+        }
+
+        a {
+            padding: 10px 10px;
+        }
+    }
+    /////////////////////////////////////////////////////////四季节庆 笔记本
+
+    .card_1_block {
+
+        li {
+            width: 43%;
+        }
+    }
+
+    //////////////////////////////////////////////////////////购在吉林 笔记本
+
+    .card_3 {
+        .card_content {
+            position: relative;
+        }
+    }
+
+    .card_buy {
+
+        img {
+            width: 88%;
+        }
+    }
+
+    .card_buy_1 {
+        height: 23%;
+        width: 56%;
+        top: 90px;
+        left: 50px;
+    }
+
+    .card_buy_2 {
+        border-top: 7px solid @card_theme_color;
+        width: 30%;
+        height: 44%;
+        top: 90px;
+        right: 50px;
+    }
+
+    .card_buy_3 {
+        border-bottom: 7px solid @card_theme_color;
+        width: 30%;
+        height: 44%;
+        top: 41%;
+        left: 50px;
+    }
+
+    .card_buy_4 {
+        border-bottom: 7px solid @card_theme_color;
+        width: 56%;
+        height: 23%;
+        top: 62%;
+        right: 50px;
+    }
+
+    .card_buy_5 {
+        width: 24%;
+        height: 16%;
+        top: 42%;
+        left: 38%;
+
+        img {
+            width: 85%;
+        }
+    }
+    /////////////////////////////////////////////////////////////////购在吉林 笔记本
+
+
+    .card_buy {
+
+        span {
+            height: 100px;
+            width: 96%;
+            overflow-y: auto;
+        }
+    }
+
+    //////////////////////////////////////////////////////////////住在吉林 笔记本
+
+    .card_6 {
+        .card_content {
+            padding-top: 90px;
+        }
+    }
+
+    .card_four_block {
+
+        .card_block_intro {
+            height: 105px;
+        }
+    }
+
+    .card_block_rank {
+
+        img {
+            margin: 0 3px;
+            width: 22px;
+        }
+    }
+
+    /////////////////////////////////////////////////////行在吉林 笔记本
+
+    .card_7 {
+        padding-bottom: 120px;
+
+        .card_content {
+            padding-top: 90px;
+        }
+
+        .card_block_intro {
+            height: 130px !important;
+        }
+    }
+    /////////////////////////////////////////////////////footer 笔记本
+
+    .card_footer {
+        div {
+            margin-bottom: 0;
+        }
+
+            div:nth-child(1) {
+                margin-top: 15px;
+            }
+    }
+
+    ////////////////////////////////////////////////////////////内页 笔记本
+
+    .card_8 {
+        
+        .card_top {
+            height:80px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    /////////////////////////////////////////////////////导航 手机端
+    .mobile_menu_btn {
+        display: block;
+    }
+
+    .card_left_icon {
+        display: none;
+    }
+
+    .card_nav {
+        height: auto;
+        top: 0px;
+        background:rgba(0, 0, 0, 0.6);
+
+        ul {
+            overflow: hidden;
+            margin-top: 50px;
+            font-size: 0.9em;
+            overflow-x: auto;
+            display: none;
+        }
+
+        li {
+            margin-bottom: 0;
+            width: 50%;
+            float: left;
+            display: inline-block;
+        }
+    }
+
+    ///////////////////////////////////////////////////////////logo 手机端
+    .card_logo {
+        display: none;
+    }
+    /////////////////////////////////////////////////////////////footer 手机端
+
+    .card_footer {
+        height: auto;
+        padding-top: 8px;
+
+        div {
+            font-size: 0.8em;
+            margin-top: 0 !important;
+            margin-bottom: 3px;
+        }
+    }
+
+    //////////////////////////////////////////////////////////第一屏 手机端
+
+    .mobile_card_first {
+        display: block;
+        position: relative;
+        padding-bottom:0;
+        height:100vh;
+
+        .card_left_icon {
+            top: 53%;
+            left: 10%;
+            width: 80%;
+            position: absolute;
+            display: block !important;
+
+            ul {
+                margin-top: 0;
+                overflow: hidden;
+            }
+
+            li {
+                margin-bottom: 20px;
+                width: 47%;
+
+                &:nth-child(odd) {
+                    float: left;
+                }
+                &:nth-child(even) {
+                    float: right;
+                }
+            }
+        }
+
+
+        .card_logo {
+            width: 80%;
+            margin:0 auto;
+            text-align:center;
+            position: relative;
+            display: block !important;
+
+            img {
+                margin-top: 0;
+                width: 60%;
+                margin-top:60px;
+                margin-left:10px;
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////主体 手机端
+    .card {
+        height:auto;
+        padding-top:80px;
+    }
+    .card_body {
+        width:96%;
+    }
+    .card_title {
+        img {
+            width:35%;
+        }
+    }
+    .card_content {
+        padding: 90px 4% 20px 4%;
+
+        li {
+            float:none!important;
+            margin-right:0!important;
+            margin-bottom:15px!important;
+            width:100%;
+        }
+    }
+    .card_block {
+        li {
+            padding-top:1px;
+        }
+    }
+    .card_block_intro {
+        height:auto!important;
+    }
+
+    ///////////////////////////////////////////////////四季节庆 手机端
+    .card_1_block {
+        li {
+            width:87%;
+        }
+    }
+
+    
+    /////////////////////////////////////////////////////购在吉林 手机端
+    .card_3 {
+        
+        .card_content {
+            height:auto;
+        }
+    }
+    .card_buy {
+        position: relative;
+        width: 100% !important;
+        top: 0;
+        left: 0;
+        height: auto;
+        margin-bottom: 15px;
+
+        img {
+            width:91%;
+        }
+
+        span {
+            height: auto;
+        }
+    }
+
+    /////////////////////////////////////////////////////住在吉林 手机端
+
+    .card_2,.card_6 {
+        padding-bottom:80px;
+    }
+
+        //////////////////////////////////////////////////////////内页 手机端
+
+
+    .card.card_8 {
+        padding-top: 0 !important;
+
+        .card_body {
+            margin-top: 0px;
+        }
+
+        .card_content {
+            padding:60px 4% 20px 4%;
+        }
+    }
+    .card_inpage_left,.card_inpage_right {
+        float:none;
+        width:100%;
+    }
+    .card_inpage_left {
+        padding: 1px 0;
+
+        ul {
+            overflow: hidden;
+
+            li {
+                width: 45%;
+
+                &:nth-child(odd) {
+                    float: left !important;
+                }
+
+                &:nth-child(even) {
+                    float: right !important;
+                }
+
+                a {
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .card_inpage_right {
+        margin-top:15px;
+        ul {
+            overflow: hidden;
+
+            li {
+                width: 47%;
+
+                &:nth-child(odd) {
+                    float: left !important;
+                }
+
+                &:nth-child(even) {
+                    float: right !important;
+                }
+            }
+        }
+
+        .card_inpage_img {
+            margin:8px;
+        }
+    }
+    .pageing {
+        a {
+            padding:7px 14px;
+        }
+    }
+}

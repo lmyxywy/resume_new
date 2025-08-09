@@ -1,0 +1,96 @@
+@media screen and (max-width: 1920px) {
+  .detail_tittle {
+    text-align: center;
+    color: #01d4f2;
+    padding: 20px 0;
+    line-height: 30px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .detail_intro {
+    text-align: center;
+    margin: 20px;
+    color: #959595;
+    font-size: 0.8em;
+  }
+  .detail_content {
+    margin-top: 20px;
+  }
+  .inpage_form_intro {
+    font-family: initial;
+  }
+  .inpage_form_intro div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  code,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td,
+  hr,
+  button,
+  article,
+  aside,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    font-family: initial;
+  }
+  .detail_content div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  code,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td,
+  hr,
+  button,
+  article,
+  aside,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    font-family: initial;
+  }
+}

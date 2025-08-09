@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <style>
+        .add_btn_outer {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <h1>添加地址</h1>
+    </header>
+    <div class="hui-wrap">
+        <form style="padding:28px 10px;" class="hui-form" id="form1">
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">收货人</div>
+                <input type="text" class="hui-input hui-input-clear" name="nickname" placeholder="如：张三" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">手机号码</div>
+                <input type="number" class="hui-input" placeholder="如：1889088..." name="phonenum" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">省市区</div>
+                <div class="hui-form-radios" style="line-height:38px;">
+                    <input type="radio" value="1" name="gender" id="g1" checked="checked" onchange="showSelectRes(this);" />
+                </div>
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">详细地址</div>
+                <div class="hui-form-textarea">
+                    <textarea placeholder="请填写详细地址" name="note"></textarea>
+                </div>
+            </div>
+            <div class="hui-form-items">
+                <!-- <div class="hui-form-items-title"></div> -->
+                设为默认地址
+                <div class="hui-switch un_realize_switch" id="switchBox2" style="display: inline-block;margin-left: 10px;">
+                    <span style="margin-right: 0;">否</span>
+                    <div class="hui-switch-in"></div>
+                </div>
+            </div>
+        </form>
+        <div onclick="window.location.href='addAddress.html';" class="add_btn_outer">
+            <button class="hui-button hui-button-large hui-primary add_btn">
+                确认添加
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/hui.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/hui-form.js"></script>
+    <script type="text/javascript" src="../script/hui-picker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/cities.js" charset="UTF-8"></script>
+</body>
+<script>
+    hui('.un_realize_switch').switchBox(['否', '是'], function() {});
+
+    hui.formInit();
+    //获取单选框的值
+    function showSelectRes(_selfBtn) {
+        var val;
+        hui(_selfBtn).parent().find('input').each(function(cObj) {
+            if (cObj.checked) {
+                val = cObj.value;
+            }
+        });
+        console.log(val);
+    }
+    // 地区选择
+    var picker3 = new huiPicker('#address_btn', function() {
+        var sheng = picker3.getText(0);
+        var shi = picker3.getText(1);
+        var qu = picker3.getText(2);
+        var shengVal = picker3.getVal(0);
+        var shiVal = picker3.getVal(1);
+        var quVal = picker3.getVal(2);
+        console.log(shengVal, shiVal, quVal);
+        hui('#address').html(sheng + shi + qu);
+    });
+    picker3.level = 3;
+    //cities 数据来源于 cities.js
+    // 默认值设置方式 [330000 330400 330424] 浙江省 嘉兴市 海盐区
+    var defaultVal = [330000, 330400, 330424];
+    // 不设置默认值忽略第三个参数即可
+    picker3.bindRelevanceData(cities, defaultVal);
+</script>
+
+</html>

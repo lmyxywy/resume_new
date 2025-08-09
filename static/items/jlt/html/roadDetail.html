@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body>
+    <div id="event">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav header" style="padding:10px 0;line-height: 30px;">
+            <div>路段详情</div>
+
+        </div>
+        <div class="second_header">
+            <div class="aui-row-padded">
+                <div class="aui-col-xs-11">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-round" style="margin-left: 15px;">
+                        <div class="aui-bar-btn-item aui-active header-tab-btn">
+                            <span>
+                                <i class="aui-iconfont aui-icon-more"></i> 详情</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn" style="border-right:1px solid #fff;">
+                            <span>
+                                <i class="aui-iconfont aui-icon-paper"></i> 事件</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn">
+                            <span>
+                                <i class="aui-iconfont aui-icon-video"></i> 监控</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="aui-content content road-detail">
+            <!-- 固定按钮 -->
+            <div class="float-btn" onclick="window.location.href='upload.html'">
+                <i class="aui-iconfont aui-icon-paper"></i>
+            </div>
+            <!-- 路段基础信息 -->
+            <div class="header-tab-body">
+                <ul class="aui-list aui-list-noborder">
+                    <li class="aui-list-header aui-row">
+                        <span class="aui-col-xs-6">路段基础信息</span>
+                        <span class="aui-col-xs-6" style="text-align: right;">
+                        </span>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段编号：</span>
+                            <span class="aui-col-xs-7">005</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段名称：</span>
+                            <span class="aui-col-xs-7">
+                                <i class="dot"></i> 张家大院
+                                <span style="color: #dddddd;">—</span>
+                            <i class="dot dot1"></i> 黏土矿
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段等级：</span>
+                            <span class="aui-col-xs-7">专用公路</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">行政区划：</span>
+                            <span class="aui-col-xs-7"><div class="aui-label aui-label-info">龙潭区</div></span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段代码：</span>
+                            <span class="aui-col-xs-7">Zxxxxxxxxx</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段简称：</span>
+                            <span class="aui-col-xs-7">福安沟口至红石鹿场</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">养护单位：</span>
+                            <span class="aui-col-xs-7">交通部门</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">技术等级：</span>
+                            <span class="aui-col-xs-7"><div class="aui-label aui-label-info">四级</div></span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="aui-list aui-list-noborder">
+                    <li class="aui-list-header aui-row">
+                        <span class="aui-col-xs-6">路长指示牌</span>
+                        <span class="aui-col-xs-6" style="text-align: right;">
+                        </span>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段编号：</span>
+                            <span class="aui-col-xs-7">005</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段名称：</span>
+                            <span class="aui-col-xs-7">福安沟口至红石鹿场</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段里程：</span>
+                            <span class="aui-col-xs-7"><div class="aui-label aui-label-warning">0.538公里</div></span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路长：</span>
+                            <span class="aui-col-xs-7">--</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路长单位：</span>
+                            <span class="aui-col-xs-7">--</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路长职务：</span>
+                            <span class="aui-col-xs-7">--</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路管员：</span>
+                            <span class="aui-col-xs-7">孙福军</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路管员电话：</span>
+                            <span class="aui-col-xs-7">130********</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="aui-list aui-list-noborder">
+                    <li class="aui-list-header aui-row">
+                        <span class="aui-col-xs-6">路段详细信息</span>
+                        <span class="aui-col-xs-6" style="text-align: right;">
+                        </span>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段编号：</span>
+                            <span class="aui-col-xs-7">005</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路段名称：</span>
+                            <span class="aui-col-xs-7">福安沟口至红石鹿场</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">行政区划：</span>
+                            <span class="aui-col-xs-7">
+                                <div class="aui-label aui-label-primary">龙潭区</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">设计车速</span>
+                            <span class="aui-col-xs-7">20</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">起点名称：</span>
+                            <span class="aui-col-xs-7">红石村入点</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">止点名称：</span>
+                            <span class="aui-col-xs-7">红石村出点</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">起点桩号：</span>
+                            <span class="aui-col-xs-7">6.696</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">止点桩号：</span>
+                            <span class="aui-col-xs-7">7.334</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">管养单位：</span>
+                            <span class="aui-col-xs-7">吉林市公路段</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">管养单位类型：</span>
+                            <span class="aui-col-xs-7">公路交通部门养护管理</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">技术等级：</span>
+                            <span class="aui-col-xs-7">
+                                <div class="aui-label aui-label-primary">四级</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">车道分类：</span>
+                            <span class="aui-col-xs-7">单车道</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">面层类型：</span>
+                            <span class="aui-col-xs-7">水泥混凝土</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路基宽度：</span>
+                            <span class="aui-col-xs-7">6.5米</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">路面宽度：</span>
+                            <span class="aui-col-xs-7">4.5米</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">可绿化里程：</span>
+                            <span class="aui-col-xs-7">0.538km</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">已绿化里程：</span>
+                            <span class="aui-col-xs-7">0.538km</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">是否城管路段：</span>
+                            <span class="aui-col-xs-7">
+                                <div class="aui-label aui-label-primary">否</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">是否断头路段：</span>
+                            <span class="aui-col-xs-7">
+                                <div class="aui-label aui-label-primary">否</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">是否收费路段：</span>
+                            <span class="aui-col-xs-7">
+                                <div class="aui-label aui-label-primary">否</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">初始修建年度：</span>
+                            <span class="aui-col-xs-7">2003</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">建成通车日期：</span>
+                            <span class="aui-col-xs-7">20031030 </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-5">改建年度：</span>
+                            <span class="aui-col-xs-7">-- </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 事件列表 -->
+            <ul class="event-list aui-list aui-media-list header-tab-body" style="display: none;">
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                                <div class="aui-list-item-right">
+                                    <div class="aui-label aui-label-primary" style="border-radius: 10px;padding: 3px 5px;">待处理</div>
+                                </div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class="aui-label aui-label-outlined">行政管理类（道路质量问题）</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                                <div class="aui-list-item-right">
+                                    <div class="aui-label aui-label-warning" style="border-radius: 10px;padding: 3px 5px;">待处理</div>
+                                </div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class="aui-label aui-label-outlined">行政管理类（道路质量问题）</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                                <div class="aui-list-item-right">
+                                    <div class="aui-label aui-label-danger" style="border-radius: 10px;padding: 3px 5px;">待处理</div>
+                                </div>
+
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class="aui-label aui-label-outlined">
+                                    行政管理类（道路质量问题）</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                                <div class="aui-list-item-right">
+                                    <div class="aui-label aui-label-success" style="border-radius: 10px;padding: 3px 5px;">待处理</div>
+                                </div>
+
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class="aui-label aui-label-outlined">
+                                    行政管理类（道路质量问题）</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                                <div class="aui-list-item-right">
+                                    <div class="aui-label aui-label-info" style="border-radius: 10px;padding: 3px 5px;">待处理</div>
+                                </div>
+
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class="aui-label aui-label-outlined">
+                                    行政管理类（道路质量问题）</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- 监控列表 -->
+            <div class="header-tab-body" style="display: none;">
+                <div class="aui-row-padded" style="padding: 6px;">
+                    <div class="aui-col-xs-4" onclick="showCheck()">
+                        <div class="aui-bar aui-bar-btn aui-bar-btn-sm aui-bar-btn-round area-btn" style="z-index: 159;">
+                            <div class="aui-bar-btn-item"><span>区域</span> <i class="aui-iconfont aui-icon-down"></i></div>
+                        </div>
+                    </div>
+                    <div class="aui-col-xs-8">
+                        <div class="aui-searchbar" id="search">
+                            <div class="aui-searchbar-input aui-border-radius" tapmode>
+                                <form>
+                                    <input type="search" placeholder="请输入搜索内容">
+                                </form>
+                                <i class="aui-iconfont aui-icon-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="check">
+                    <ul class="aui-list aui-list-noborder header-tab-body">
+                        <li class="aui-list-item active">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点1
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点2
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点3
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点4
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点5
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点6
+                            </div>
+                        </li>
+                        <li class="aui-list-item">
+                            <div class="aui-list-item-inner header-tab-change">
+                                监控点7
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="aui-row-padded" style="padding:0 15px">
+                    <li class="aui-col-xs-6">
+                        <div class="aui-card-list">
+                            <div class="aui-card-list-content">
+                                <img src="../image/demo1.png" />
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-word">监控视频标题描述方便查找</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-col-xs-6">
+                        <div class="aui-card-list">
+                            <div class="aui-card-list-content">
+                                <img src="../image/demo2.png" />
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-word">监控视频标题描述方便查找</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="aui-bar aui-bar-tab aui-row" id="footer">
+            <span class="aui-col-xs-6" onclick="window.location.href='road.html'" style="color: rgb(6, 217, 149);border-right: 1px solid #f0f0f0;">
+                <i class="aui-iconfont aui-icon-back"></i> 返回</span>
+            <span class="aui-col-xs-6" onclick="showMap()">
+                <i class="aui-iconfont aui-icon-map"></i> 显示地图
+            </span>
+        </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-2', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+</script>
+
+<script>
+    $(function() {
+        showTab()
+    })
+
+    // 头部“区域”和“状态”tab按钮切换
+    function showTab() {
+        $('.header-tab-btn').click(function() {
+            var index = parseInt($(this).index('.header-tab-btn'));
+
+            if ($('.header-check').css('display') === 'none') {
+                $('.header-check').show()
+
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+
+            } else {
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+            }
+        })
+    }
+
+    function showMap() {
+        if ($('.map-outer-2').css('display') === 'none') {
+            $('.map-outer-2').show()
+            $('.content').addClass('active')
+        } else {
+            $('.map-outer-2').hide()
+            $('.content').removeClass('active')
+        }
+    }
+
+    function fullMap() {
+        if ($('.map-outer-2').hasClass('full-map')) {
+            $('.map-outer-2').removeClass('full-map')
+            $('.full-map-btn').show()
+            $('.unfull-map-btn').hide()
+        } else {
+            $('.map-outer-2').addClass('full-map')
+            $('.unfull-map-btn').show()
+
+            $('.full-map-btn').hide()
+        }
+    }
+
+    function showCheck() {
+        if ($('.check').css('display') === 'none') {
+            $('.check').slideDown()
+            $('.area-btn').addClass('active')
+        } else {
+            $('.check').slideUp()
+            $('.area-btn').removeClass('active')
+        }
+    }
+</script>
+
+</html>

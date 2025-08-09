@@ -1,0 +1,184 @@
+﻿
+
+//////////////////////////////////////////////////////浏览器前缀//////////////////////////////////////////
+.prefix5(@style;@value){
+    @{style}: @value;
+    -ms-@{style}: @value;
+    -webkit-@{style}: @value;
+    -o-@{style}: @value;
+    -moz-@{style}: @value;
+}
+.prefix4(@style;@value){
+    @{style}: @value;
+    -webkit-@{style}: @value;
+    -o-@{style}: @value;
+    -moz-@{style}: @value;
+}
+.prefix3_1(@style;@value){
+    @{style}: @value;
+    -webkit-@{style}: @value;
+    -moz-@{style}: @value;
+}
+.prefix3_2(@style;@value){
+    @{style}: @value;
+    -ms-@{style}: @value;
+    -webkit-@{style}: @value;
+}
+.prefix2(@style;@value){
+    @{style}: @value;
+    -webkit-@{style}: @value;
+}
+
+//////////////////////////////////////////////////////颜色渐变（只有简单线性,四种颜色以下）//////////////////////////////////////////
+
+.linear-gradient(@angle;@color1;@color2){
+    background: -webkit-linear-gradient(@angle,@color1,@color2);
+    background: -o-linear-gradient(@angle,@color1,@color2); 
+    background: -moz-linear-gradient(@angle,@color1,@color2); 
+    background: linear-gradient(@angle,@color1,@color2);
+}
+.linear-gradient(@angle;@color1;@color2;@color3){
+    background: -webkit-linear-gradient(@angle,@color1,@color2,@color3);
+    background: -o-linear-gradient(@angle,@color1,@color2,@color3); 
+    background: -moz-linear-gradient(@angle,@color1,@color2,@color3); 
+    background: linear-gradient(@angle,@color1,@color2,@color3);
+}
+.linear-gradient(@angle;@color1;@color2;@color3;@color4){
+    background: -webkit-linear-gradient(@angle,@color1,@color2,@color3,@color4);
+    background: -o-linear-gradient(@angle,@color1,@color2,@color3,@color4); 
+    background: -moz-linear-gradient(@angle,@color1,@color2,@color3,@color4); 
+    background: linear-gradient(@angle,@color1,@color2,@color3,@color4);
+}
+
+//////////////////////////////////////////////////////2D和3D原点//////////////////////////////////////////////////////
+
+.transform-origin(@x;@y){
+    .prefix5(transform-origin;@x @y);
+}
+
+//////////////////////////////////////////////////////2D效果//////////////////////////////////////////////////////
+
+//////////////////////////////////////平移///////////
+ 
+.translate(@x;@y){
+    .prefix5(transform;translate(@x,@y));
+}
+//////////////////////////////////////旋转///////////
+
+.rotate(@angle){
+    .prefix5(transform;rotate(@angle));
+}
+
+//////////////////////////////////////大小///////////
+
+.scale(@x;@y){
+    .prefix5(transform;scale(@x,@y));
+}
+
+//////////////////////////////////////斜切///////////
+
+.skew(@angle1;@angle2){
+    .prefix5(transform;skew(@angle1,@angle2));
+}
+
+//////////////////////////////////////高阶-2D合集（旋转，缩放，平移，斜切）///////////
+
+.matrix(@n1;@n2;@n3;@n4;@n5;@n6){
+    .prefix3_2(transform;matrix(@n1,@n2,@n3,@n4,@n5,@n6));
+}
+//////////////////////////////////////////////////////3D效果//////////////////////////////////////////////////////
+
+//////////////////////////////////////3D透视距离///////////
+
+.perspective(@distance) {
+    perspective: @distance;
+    -webkit-perspective: @distance;
+}
+
+//////////////////////////////////////平移///////////
+ 
+.translate(@x;@y;@z){
+    .prefix5(transform;translate(@x,@y,@z));
+}
+
+//////////////////////////////////////绕X轴旋转///////////
+
+.rotateX(@angle){
+    .prefix3_1(transform;rotateX(@angle));
+}
+
+//////////////////////////////////////绕Y轴旋转///////////
+
+.rotateY(@angle){
+    .prefix3_1(transform;rotateY(@angle));
+}
+
+//////////////////////////////////////////////////////过渡(每个effect效果里包含css属性名和时间),目前只支持6组参数//////////////////
+
+.transition(@effect1){
+    .prefix4(transition;@effect1);
+}
+
+.transition(@effect1;@effect2){
+    .prefix4(transition;@effect1,@effect2);
+}
+
+.transition(@effect1;@effect2;@effect3){
+    .prefix4(transition;@effect1,@effect2,@effect3);
+}
+
+.transition(@effect1;@effect2;@effect3;@effect4){
+    .prefix4(transition;@effect1,@effect2,@effect3,@effect4);
+}
+
+.transition(@effect1;@effect2;@effect3;@effect4;@effect5){
+    .prefix4(transition;@effect1,@effect2,@effect3,@effect4,@effect5);
+}
+
+.transition(@effect1;@effect2;@effect3;@effect4;@effect5;@effect6){
+    .prefix4(transition;@effect1,@effect2,@effect3,@effect4,@effect5,@effect6);
+}
+
+//////////////////////////////////////////////////////动画//////////////////
+
+.animation(@name;@time) {
+    .prefix4(animation;@name @time);
+}//后两个参数为延迟、播放次数
+.animation-delay(@time) {
+    .prefix3_1(animation-delay;@time);
+}
+
+//////////////////////////////////////公用部分///////////
+.keyframes(@name) {
+    @-webkit-keyframes @name {
+        .-frames();
+    }
+    @-moz-keyframes @name {
+        .-frames();
+    }
+    @-o-keyframes @name {
+        .-frames();
+    }
+    @-ms-keyframes @name {
+        .-frames();
+    }
+    @keyframes @name {
+        .-frames();
+    }
+}
+//////////////////////////////////////自定义部分///////////    
+.style_01_1{
+}
+.style_01_2{
+}
+.-frames(){
+    0% {
+        .style_01_1;
+    }
+
+    100% {
+        .style_01_2;
+    }
+}
+  
+

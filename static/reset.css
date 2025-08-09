@@ -1,0 +1,137 @@
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+}
+
+.input {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.show_result {
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.updata_img {
+    margin: 15px auto;
+    display: block;
+}
+
+
+.back-btn{
+	border-radius: 30px;
+	padding: 0 30px;
+	font-size: 16px;
+	width: 80px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: all 0.3s;
+	border: 1px solid #fff;
+	color: #fff;
+	opacity: 0.7;
+	height: 40px;
+	line-height: 40px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.back-btn:hover, 
+.back-btn.active{
+	opacity: 0.3;
+	transform: scale(0.9, 0.9);
+}
+.fixed-btn{
+	z-index: 10;
+	font-size: 12px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fixed-btn:hover, 
+.fixed-btn.active{
+	opacity: 0.5;
+	transform: scale(0.9, 0.9);
+}
+.fixed-btn img{
+	width: 25%;
+	display: block;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+</head>
+<style>
+    .hui-media-list li {
+        margin: 0;
+        border-bottom: 1px solid rgb(238, 238, 238);
+        padding: 0;
+    }
+    
+    .hui-media-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .hui-media-list li a {
+        padding: 25px 10px;
+    }
+    
+    .wishes_user,
+    .wishes_middle {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .wishes_user span {
+        color: rgb(167, 167, 167);
+    }
+    
+    .wishes_middle {
+        margin: 8px 0 12px 0;
+    }
+    
+    .wishes_middle span {
+        font-size: 10px;
+    }
+    
+    .wishes_middle_left {
+        color: #ff4f49;
+    }
+    
+    .wishes_middle_middle {
+        color: rgb(129, 129, 129);
+    }
+    
+    .wishes_middle_right {
+        color: #ccc;
+    }
+    
+    .wishes_realize_btn {
+        display: inline-block;
+        background: #fc7551;
+        color: #fff!important;
+        border-radius: 30px;
+        padding: 2px 10px 3px 10px;
+        font-size: 10px;
+    }
+    
+    .wishes_top {
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+        background: #fff;
+        position: relative;
+    }
+    
+    .wishes_btn {
+        position: absolute;
+        width: 30%;
+        text-align: center;
+        line-height: 35px;
+        height: 35px;
+        color: #dd4435;
+        background: rgb(249, 216, 163);
+        box-shadow: 0 0 5px 5px rgba(248, 203, 130, 0.2);
+        left: 35%;
+        bottom: 20px;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        font-weight: bold;
+    }
+    
+    .wishes_list_top span {
+        margin-right: 10px;
+        font-size: 14px!important;
+    }
+    
+    .hui-header {
+        background: none;
+    }
+    
+    .wishes_list_top {
+        padding: 15px 10px!important;
+    }
+    
+    .wishes_list_top span {
+        margin-right: 10px;
+        font-size: 14px!important;
+    }
+    
+    .wishes_check {
+        color: #fc7551;
+    }
+</style>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+    </header>
+    <!-- 认证弹出框 -->
+    <div id="hui-black-mask" class="prove">
+        <div id="hui-black-mask-content" style="width: 60%;">
+            <div style="text-align:center;">
+                <div class="prove_top">
+                    <div class="prove_close" id="hui-black-close"></div>
+                    <div class="prove_icon">
+                        <img src="../image/prove.png" alt="">
+                    </div>
+                    <div class="prove_word">您还没有认证</div>
+                </div>
+                <div class="prove_bottom" onclick="window.location.href='identity.html'">
+                    <div class="prove_btn">去认证</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wishes">
+        <div class="wishes_top">
+            <img src="../image/wishes_top.jpg" style="width: 100%;">
+            <div class="wishes_btn active" onclick="hui.shwoBlackMasker();">许下心愿</div>
+        </div>
+        <div class="hui-media-list">
+            <ul>
+                <li class="wishes_list_top">
+                    <div>
+                        <span class="wishes_check">默认</span>
+                        <span>靠谱度</span>
+                    </div>
+                    <div>
+                        <span>只看未实现</span>
+                        <div class="hui-switch un_realize_switch" id="switchBox2" style="display: inline-block;vertical-align: top;">
+                            <span style="margin-right: 0;">关</span>
+                            <div class="hui-switch-in"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="wishesDetail.html">
+                        <div class="hui-media-list-img"><img src="" onerror="this.src='../image/home.png'" /></div>
+                        <div class="hui-media-content">
+                            <h1 style="font-size: 16px;">想要《三体》全集，请求天使帮助，感激不尽。</h1>
+                            <p class="wishes_middle">
+                                <span class="wishes_middle_left">【100%靠谱】</span>
+                                <span class="wishes_middle_middle">【文学艺术】</span>
+                                <span class="wishes_middle_right">【2019/02/28】</span>
+                            </p>
+                            <div class="wishes_user">
+                                <span><i>156********</i> 的心愿</span>
+                                <span class="wishes_realize_btn">帮他/她实现</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="wishesDetail.html">
+                        <div class="hui-media-list-img">
+                            <img src="" onerror="this.src='../image/home.png'" />
+                        </div>
+                        <div class="hui-media-content">
+                            <h1 style="font-size: 16px;">想要《三体》全集，请求天使帮助</h1>
+                            <p class="wishes_middle">
+                                <span class="wishes_middle_left">【80%靠谱】</span>
+                                <span class="wishes_middle_middle">【文学艺术】</span>
+                                <span class="wishes_middle_right">【2019/02/28】</span>
+                            </p>
+                            <div class="wishes_user">
+                                <span><i>156********</i> 的心愿</span>
+                                <span class="wishes_realize_btn">帮他/她实现</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../script/hui.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script>
+    hui('.un_realize_switch').switchBox(['关', '开'], function() {});
+
+    // 认证弹出框
+    hui.blackMask();
+</script>
+
+</html>

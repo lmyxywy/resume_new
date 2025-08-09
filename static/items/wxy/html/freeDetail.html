@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <link rel="stylesheet" href="../script/plug-ins/phoneswipe/photoswipe.css" type="text/css" />
+</head>
+<style>
+    .detail_big_title {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .detail_big_title span {
+        color: #f88f99;
+    }
+    
+    .detail_user {
+        display: flex;
+        justify-content: space-between;
+        line-height: 40px;
+        margin-top: 5px;
+    }
+    
+    .detail_user div {
+        color: rgb(165, 165, 165);
+        font-size: 14px;
+    }
+    
+    .detail_user img {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 0.5;
+    }
+    
+    .detail_content {
+        line-height: 30px;
+    }
+    
+    .detail_content img {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .detail_other {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .detail_other div {
+        font-size: 12px;
+    }
+    
+    .detail_time {
+        text-align: right;
+        color: rgb(190, 190, 190);
+    }
+    
+    .detail_progress_word {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .detail_progress_word div {
+        font-size: 12px;
+        color: rgb(134, 134, 134);
+    }
+    
+    .detail_progress_word span {
+        color: #f88f99;
+    }
+    
+    .hui-progress {
+        margin: 15px 0;
+    }
+    
+    .detail_btns {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn_outer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    .add_btn {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    .detail_btns .hui-button {
+        font-size: 14px;
+    }
+    
+    .detail_condition {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .detail_condition span {
+        font-size: 12px;
+        color: rgb(126, 126, 126);
+    }
+    
+    .hui-swipe-item img {
+        min-height: 50vw;
+    }
+    
+    .detail_receiver_avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    .detail_receiver {
+        margin-top: 15px;
+    }
+</style>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <h1>免费详情</h1>
+    </header>
+    <div class="hui-wrap wishes_detail">
+        <!-- 认证弹出框 -->
+        <div id="hui-black-mask" class="prove">
+            <div id="hui-black-mask-content" style="width: 60%;">
+                <div style="text-align:center;">
+                    <div class="prove_top">
+                        <div class="prove_close" id="hui-black-close"></div>
+                        <div class="prove_icon">
+                            <img src="../image/prove.png" alt="">
+                        </div>
+                        <div class="prove_word">您还没有认证</div>
+                    </div>
+                    <div class="prove_bottom" onclick="window.location.href='identity.html'">
+                        <div class="prove_btn">去认证</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="width index_swipe">
+            <div class="hui-swipe" id="swipe">
+                <div class="hui-swipe-items">
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/1.jpg" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/2.jpg" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/banner.png" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail_block">
+            <div class="detail_big_title">物品名称<span>【9成新】</span></div>
+            <div class="detail_condition">
+                <span>申领人 ： 2</span>
+                <span>件数 ： 2</span>
+                <span>重量 ： 1kg</span>
+            </div>
+            <div class="detail_content">
+                虽然这本书很晦涩难懂，但是大家都说是好书，那就一定很好看， 就算欣赏不了也应该手里留一本，说不定哪天逼格变高了就看懂了呢。想要邮费到付。
+            </div>
+            <div class="detail_user">
+                <div>
+                    <img src="../image/user.png" alt=""> 156********
+                </div>
+                <div>
+                    <img src="../image/address.png" alt=""> 吉林市 【2019-03-07】
+                </div>
+            </div>
+        </div>
+        <div class="detail_block">
+            <div class="detail_title">成功申领名单（2）</div>
+            <div class="detail_receiver">
+                <img src="../image/home.png" alt="" class="detail_receiver_avatar"><img src="../image/gift.png" alt="" class="detail_receiver_avatar">
+            </div>
+        </div>
+        <!-- 以下为 phoneSwipe 插件 dom 复制即可 -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container" style="overflow:visible;">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="关闭"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_outer">
+            <button class="hui-button hui-button-large hui-primary add_btn" onclick="hui.shwoBlackMasker();">申领</button>
+        </div>
+    </div>
+    <script src="../script/hui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../script/hui-swipe.js" type="text/javascript"></script>
+    <!-- 使用 phoneSwipe 插件完成图片预览 -->
+    <!-- 引用 phoneSwipe 插件依赖的 css 及 js -->
+    <script type="text/javascript" src="../script/plug-ins/phoneswipe/photoswipe.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/plug-ins/phoneswipe/photoswipe-ui-default.min.js" charset="UTF-8"></script>
+</body>
+<script>
+    hui.ready(function() {
+        // 轮播图
+        var swipe = new huiSwpie('#swipe');
+        swipe.run()
+            // 认证弹出框
+        hui.blackMask();
+
+    });
+
+
+    // 全屏幻灯片图片观看
+    //js 调用插件
+    hui('.hui-swipe-item').click(function() {
+        var index = hui(this).index();
+        previewImg(index);
+    });
+
+    function previewImg(index) {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        var items = [];
+        var length = document.querySelectorAll('.hui-swipe-item img').length - 2
+
+        //获取图片数据并填充近数组
+        document.querySelectorAll('.hui-swipe-item img').forEach(function(element, index2) {
+            if (index2 < length + 1 && index2 > 0) {
+                var imgObj = {
+                    src: element.getAttribute('src'),
+                    w: element.naturalWidth,
+                    h: element.naturalHeight
+                };
+                items.push(imgObj);
+            }
+        })
+        var options = {
+            index: index - 1
+        };
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    }
+</script>
+
+</html>

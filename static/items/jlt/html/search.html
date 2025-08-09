@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>APICloud APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/aui_search.css" /> -->
+
+    <style>
+        header {
+            background: rgb(6, 217, 149);
+            height: 70px;
+            border-bottom: 1px solid #DDDFE3;
+        }
+        
+        .left {
+            float: left;
+            width: 50px;
+            height: 50px;
+            background: url(../image/back.png) no-repeat center center;
+            background-size: 15px auto;
+        }
+        
+        .right {
+            float: right;
+            width: 50px;
+            line-height: 50px;
+            color: #FFFFFF;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .right-hov {
+            color: #DD8400;
+        }
+        
+        .middle {
+            position: absolute;
+            left: 50px;
+            right: 60px;
+            margin-top: 8px;
+            height: 34px;
+            border-radius: 34px;
+            background-color: #FFFFFF;
+        }
+        
+        .middle>img:first-child {
+            float: left;
+            padding-top: 7px;
+            height: 30px;
+            vertical-align: top;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .middle>input {
+            position: absolute;
+            left: 40px;
+            right: 50px;
+            margin-top: 8px;
+            height: 18px;
+            line-height: 18px;
+            color: #999;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .middle>input::-webkit-input-placeholder {
+            color: #666;
+            line-height: 18px;
+            font-size: 14px;
+        }
+        
+        .middle>img:last-child {
+            float: right;
+            padding-top: 4px;
+            height: 27px;
+            vertical-align: top;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .app-status-bar {
+            padding-top: 20px;
+            background-color: rgb(0, 0, 0);
+        }
+        /* 后加 */
+        
+        .search_check_header {
+            background: #fff;
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .search_check_header li {
+            font-size: 14px;
+            text-align: center;
+            width: 50%;
+        }
+        
+        .search_check_header li i {
+            transition: all 0.5s;
+        }
+        
+        .search_check_header li.active {
+            color: rgb(6, 217, 149);
+        }
+        
+        .search_check_header li.active i {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+        
+        .header-check .aui-list {
+            top: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="app-status-bar"></div>
+        <div class="left event-back" onclick="api.closeWin();"></div>
+        <div class="right" tapmode="highlight" onclick="fnSearch();">搜索</div>
+        <div class="middle">
+            <img src="../image/search_groupbuy.png">
+            <input id="searchText" type="text" placeholder="请输入搜索内容">
+
+        </div>
+    </header>
+    <div class="search_check">
+        <ul class="search_check_header">
+            <li class="header-tab-btn">
+                <span>路段区域</span>
+                <i class="aui-iconfont aui-icon-down"></i>
+            </li>
+            <li class="header-tab-btn">
+                <span>路段状态</span>
+                <i class="aui-iconfont aui-icon-down"></i>
+            </li>
+        </ul>
+        <div class="header-check">
+            <div class="black-bg header-tab-bg"></div>
+            <ul class="aui-list aui-list-noborder header-tab-body">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        全部区域
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        昌邑区
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        龙潭区
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        船营区
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        丰满区
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        蛟河市
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        永吉县
+                    </div>
+                </li>
+            </ul>
+            <ul class="aui-list aui-list-noborder header-tab-body">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        全部状态
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        建设
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        运营
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner header-tab-change">
+                        规划
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script>
+    $(function() {
+
+        showTab()
+    })
+
+    // 头部“区域”和“状态”tab按钮切换
+    function showTab() {
+        $('.header-tab-btn').click(function() {
+            var index = parseInt($(this).index('.header-tab-btn'));
+            if ($('.header-check').css('display') === 'none') {
+                $('.header-check').show()
+                $('body').css({
+                    'overflow': 'hidden'
+                })
+
+                $('.header-tab-btn').eq(index).addClass('active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+
+            } else if ($('.header-tab-btn').eq(index).hasClass('active')) {
+                hideContent()
+            } else {
+                $('.header-tab-btn').eq(index).addClass('active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+            }
+        })
+
+        // 点击半透明黑色背景，隐藏下拉框
+        $('.header-tab-bg').click(function() {
+            hideContent()
+        })
+
+        // 点击下拉框中选项，tab按钮相应文字改变
+        $('.header-tab-change').click(function() {
+            var text = $(this).text()
+            $(this).parent().addClass('active').siblings().removeClass('active')
+            var bodyIndex = parseInt($(this).parent().parent('.header-tab-body').index('.header-tab-body'));
+            $('.header-tab-btn').eq(bodyIndex).children('span').text(text)
+
+            hideContent()
+        })
+    }
+    // 隐藏下拉框
+    function hideContent() {
+        $('.header-check').hide()
+        $('body').css({
+            'overflow': 'inherit'
+        })
+
+        $('.header-tab-btn').removeClass('active');
+    }
+</script>
+
+<script type="text/javascript">
+    apiready = function() {
+        $api.fixStatusBar($api.dom('.app-status-bar'));
+        showTab()
+    };
+
+    function fnSearch() {
+
+        var searchText = $api.val($api.byId('searchText'));
+        if (!searchText) {
+            return;
+        }
+        api.ajax({
+                url: 'http://192.168.1.137:8080/jeecg/ajController.do?sbList',
+                method: 'get',
+                dataType: 'json',
+                data: {
+                    values: {
+                        "sjms": searchText
+                    }
+                }
+
+            }, function(ret, err) {
+
+                if (ret) {
+                    $api.html($api.byId("result"), '');
+                    var html = '';
+                    for (var i in ret.data) {
+                        html += '<li class="aui-list-view-cell" tapmode onclick="eventDetail(\'' + ret.data[i].id + '\');" ><div class="aui-img-body">';
+                        html += ret.data[i].sjms;
+                        html += '<p class="aui-ellipsis-1">' + ret.data[i].sjlx + '</p>';
+                        html += '</div></li>';
+                    }
+                    $api.append($api.byId("result"), html);
+                    api.parseTapmode();
+                } else {
+                    alert("没有搜索到结果");
+                }
+
+            })
+            //api.refreshHeaderLoading();
+
+    }
+
+    //事件详情页
+    function eventDetail(ajId) {
+        api.openWin({
+            name: 'eventDetail',
+            url: './eventDetail.html',
+            pageParam: {
+                ajId: ajId
+            }
+        });
+    }
+</script>
+
+</html>

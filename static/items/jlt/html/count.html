@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body style="background: #fff;">
+    <div id="event">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav header" style="padding:10px 0;line-height: 30px;">
+            <div>吉路通</div>
+
+        </div>
+        <div class="second_header">
+            <div class="aui-row-padded">
+                <div class="aui-col-xs-11">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-round" style="margin-left: 15px;">
+                        <div class="aui-bar-btn-item aui-active header-tab-btn">
+                            <span>
+                                <i class="aui-iconfont aui-icon-location"></i> 道路</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn" style="border-right:1px solid #fff;">
+                            <span>
+                                <i class="aui-iconfont aui-icon-hide"></i> 区域总里程</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn" style="border-right:1px solid #fff;">
+                            <span>
+                                <i class="aui-iconfont aui-icon-flag"></i> 事件统计</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="aui-content content road-detail">
+            <!-- 路段基础信息 -->
+            <div class="header-tab-body">
+                <div style="position: relative; width:100vw;overflow-x: scroll;">
+                    <div style="width:250vw;overflow-x: scroll;">
+                        <canvas id="chart1" height="150"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="header-tab-body" style="display: none;">
+                <div style="position: relative;width:100vw;">
+                    <canvas id="chart2" height="380"></canvas>
+                </div>
+            </div>
+            <div class="header-tab-body" style="display: none;">
+                <div style="position: relative;width:100vw;">
+                    <canvas id="chart3" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="aui-bar aui-bar-tab footer">
+            <div class="aui-bar-tab-item" onclick="window.location.href='road.html'">
+                <i class="aui-iconfont aui-icon-map"></i>
+                <div class="aui-bar-tab-label">路段</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='event.html'">
+                <i class="aui-iconfont aui-icon-flag"></i>
+                <div class="aui-bar-tab-label">事件</div>
+            </div>
+            <div class="aui-bar-tab-item aui-active" onclick="window.location.href='count.html'">
+                <i class="aui-iconfont aui-icon-cert"></i>
+                <div class="aui-bar-tab-label">统计</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='my.html'">
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">我的</div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../script/Chart.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<!-- <script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-2', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+</script> -->
+
+<script>
+    $(function() {
+        showTab()
+    })
+
+    // 头部“区域”和“状态”tab按钮切换
+    function showTab() {
+        $('.header-tab-btn').click(function() {
+            var index = parseInt($(this).index('.header-tab-btn'));
+
+            if ($('.header-check').css('display') === 'none') {
+                $('.header-check').show()
+
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+
+            } else {
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+            }
+        })
+
+        // 点击下拉框中选项，tab按钮相应文字改变
+        $('.header-tab-change').click(function() {
+            var text = $(this).text()
+            $(this).parent().addClass('active').siblings().removeClass('active')
+            $('.area-btn span').text(text)
+
+            $('.check').slideUp()
+            $('.area-btn').removeClass('active')
+        })
+    }
+
+    function showMap() {
+        if ($('.map-outer-2').css('display') === 'none') {
+            $('.map-outer-2').show()
+            $('.content').addClass('active')
+        } else {
+            $('.map-outer-2').hide()
+            $('.content').removeClass('active')
+        }
+    }
+
+    function fullMap() {
+        if ($('.map-outer-2').hasClass('full-map')) {
+            $('.map-outer-2').removeClass('full-map')
+            $('.full-map-btn').show()
+            $('.unfull-map-btn').hide()
+        } else {
+            $('.map-outer-2').addClass('full-map')
+            $('.unfull-map-btn').show()
+
+            $('.full-map-btn').hide()
+        }
+    }
+</script>
+<script>
+    // 柱状图
+    var ctx = document.getElementById("chart1").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["昌邑区", "龙潭区", "船营区", "丰满区", "蛟河市", "桦甸市", "舒兰市", "磐石市"],
+            datasets: [{
+                label: ' 村道',
+                data: [12, 19, 3, 5, 2, 3, 14, 24],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                ],
+                borderWidth: 1
+            }, {
+                label: ' 一般国道',
+                data: [10, 9, 5, 7, 1, 8, 23, 12],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                ],
+                borderWidth: 1
+            }, {
+                label: ' 省道',
+                data: [11, 7, 2, 9, 5, 12, 7, 11],
+                backgroundColor: [
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                ],
+                borderWidth: 1
+            }, {
+                label: ' 县道',
+                data: [15, 6, 4, 8, 10, 13, 14, 3],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                ],
+                borderWidth: 1
+            }, {
+                label: ' 乡道',
+                data: [8, 7, 12, 9, 6, 4, 10, 7],
+                backgroundColor: [
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                ],
+                borderWidth: 1
+            }, {
+                label: ' 专用公路',
+                data: [14, 13, 6, 7, 5, 11, 6, 13],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            tooltips: {
+                enabled: true
+            },
+            events: ["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"],
+            animation: {
+                "duration": 1,
+                "onComplete": function() {
+                    var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+
+                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+
+                    this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+        }
+    });
+
+    // 饼状图
+    var ctx1 = document.getElementById("chart2").getContext('2d');
+    var myPieChart = new Chart(ctx1, {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [1027, 572, 563, 1877, 2192, 3091, 2799, 2162, 722],
+                backgroundColor: [
+                    'rgb(6, 217, 149,0.5)',
+                    'rgb(6, 73, 217,0.5)',
+                    'rgba(255, 206, 86,0.5)',
+                    'rgba(255, 99, 132,0.5)',
+                    'rgba(54, 162, 235,0.5)',
+                    'rgba(200, 200, 86,0.5)',
+                    'rgba(153, 102, 255,0.5)',
+                    'rgba(255, 159, 64,0.5)',
+                    'rgba(22, 150, 180,0.5)',
+                ]
+            }],
+            labels: ['昌邑区', '龙潭区', '船营区', '丰满区', '永吉县', '蛟河市', '桦甸市', '舒兰市', '磐石市']
+        },
+        options: {
+            title: {
+                display: true,
+                text: "单位：公里"
+            },
+            // 是否显示每段行程（即环形区，不为true则无法看到后面设置的边框颜色）
+            segmentShowStroke: true,
+            //设置每段行程的边框颜色
+            segmentStrokeColor: "#fff",
+            //设置每段环形的边框宽度
+            segmentStrokeWidth: 2,
+            //图标中心剪切圆的比例（0为饼图，接近100则环形宽度越小）50
+            percentageInnerCutout: 0
+        }
+    });
+
+    // 堆叠图
+    var ctx2 = document.getElementById("chart3").getContext("2d");
+    window.myBar = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['昌邑区', '龙潭区', '船营区', '丰满区', '永吉县', '蛟河市', '桦甸市', '舒兰市', '磐石市'],
+            datasets: [{
+                label: '已处理',
+                backgroundColor: 'rgb(6, 217, 149,0.5)',
+                data: [2, 5, 1, 6, 8, 4, 6, 3, 2]
+            }, {
+                label: '未处理',
+                backgroundColor: 'rgb(6, 73, 217,0.5)',
+                data: [5, 3, 6, 2, 9, 13, 7, 4, 6]
+            }, {
+                label: '已逾期',
+                backgroundColor: 'rgba(255, 206, 86,0.5)',
+                data: [8, 9, 11, 25, 33, 14, 7, 8, 9]
+            }, {
+                label: '未逾期',
+                backgroundColor: 'rgba(255, 99, 132,0.5)',
+                data: [3, 1, 5, 4, 9, 1, 2, 6, 7]
+            }]
+
+        },
+        options: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+</script>
+
+</html>

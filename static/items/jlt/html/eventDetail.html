@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body>
+    <div id="event">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav header" style="padding:10px 0;line-height: 30px;">
+            <div>事件详情</div>
+        </div>
+        <div class="second_header">
+            <div class="aui-row-padded">
+                <div class="aui-col-xs-11">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-round" style="margin-left: 15px;">
+                        <div class="aui-bar-btn-item aui-active header-tab-btn">
+                            <span>
+                                <i class="aui-iconfont aui-icon-more"></i> 详情</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn" style="border-right:1px solid #fff;">
+                            <span>
+                                <i class="aui-iconfont aui-icon-paper"></i> 历史</span>
+                        </div>
+                        <div class="aui-bar-btn-item header-tab-btn" style="border-right:1px solid #fff;">
+                            <span>
+                                <i class="aui-iconfont aui-icon-pencil"></i> 督办</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="aui-content content road-detail">
+            <!-- 固定按钮 -->
+            <!-- <div class="float-btn" onclick="">
+                <i class="aui-iconfont aui-icon-pencil"></i>
+            </div> -->
+            <!-- 路段基础信息 -->
+            <div class="header-tab-body">
+                <ul class="aui-list aui-list-noborder">
+
+                    <li class="aui-list-header aui-row">
+                        <span class="aui-col-xs-6">事件基础信息</span>
+                        <span class="aui-col-xs-6" style="text-align: right;">
+                        </span>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row-padded camera">
+                            <span class="aui-col-xs-6">
+                                <img src="../image/demo2.png" alt="">
+                            </span>
+                            <span class="aui-col-xs-6">
+                                <img src="../image/demo1.png" alt="">
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">事件类型：</span>
+                            <span class="aui-col-xs-8">路政管理类（道路质量问题）</span>
+                        </div>
+                    </li>
+
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">事件等级：</span>
+                            <span class="aui-col-xs-8"><div class="aui-label aui-label-info">中</div></span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">处理状态：</span>
+                            <span class="aui-col-xs-8"><div class="aui-label aui-label-warning">待处理</div></span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">上报人：</span>
+                            <span class="aui-col-xs-8">三月三</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">联系电话：</span>
+                            <span class="aui-col-xs-8">130********</span>
+                        </div>
+                    </li>
+
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change aui-row">
+                            <span class="aui-col-xs-4">事件描述：</span>
+                            <span class="aui-col-xs-8">描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容</span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-row-padded detail-time">
+                            <div class="aui-col-xs-4">
+                                <div class="time-card">
+                                    <div class="time-card-top">
+                                        <div class="time-small">2019-01-24</div>
+                                        <div class="time-big">08：33</div>
+                                    </div>
+
+                                    <div class="time-card-bottom">立案时间</div>
+                                </div>
+                            </div>
+                            <div class="aui-col-xs-4">
+                                <div class="time-card">
+                                    <div class="time-card-top">
+                                        <div class="time-small">2019-01-24</div>
+                                        <div class="time-big">08：33</div>
+                                    </div>
+
+                                    <div class="time-card-bottom">处理时限</div>
+                                </div>
+                            </div>
+                            <div class="aui-col-xs-4">
+                                <div class="time-card">
+                                    <div class="time-card-top">
+                                        <div class="time-small">2019-01-24</div>
+                                        <div class="time-big">08：33</div>
+                                    </div>
+
+                                    <div class="time-card-bottom">上报时间</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 底部 -->
+                <div class="aui-bar aui-bar-tab aui-row footer">
+                    <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="window.location.href='event.html'">
+                        <i class="aui-iconfont aui-icon-back"></i> 返回</span>
+                    <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="showMap()">
+                        <i class="aui-iconfont aui-icon-map"></i> 显示地图
+                    </span>
+                    <span class="aui-col-xs-4" onclick="window.location.href='upload.html'" style="background: rgb(6, 217, 149);color: #fff;">
+                        <i class="aui-iconfont aui-icon-correct"></i> 处理</span>
+                </div>
+            </div>
+            <!-- 事件列表 -->
+            <ul class="event-list aui-list aui-media-list header-tab-body" style="display: none;">
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="../image/demo1.png">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">道路凹凸不平，影响车辆行驶</div>
+                            </div>
+                            <div class="list-time">
+                                <i>2019/01/21 13:36</i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <!-- 底部 -->
+                    <div class="aui-bar aui-bar-tab aui-row footer">
+                        <span class="aui-col-xs-6" style="border-right: 1px solid #f0f0f0;" onclick="window.location.href='event.html'">
+                            <i class="aui-iconfont aui-icon-back"></i> 返回</span>
+                        <span class="aui-col-xs-6" style="border-right: 1px solid #f0f0f0;" onclick="showMap()">
+                            <i class="aui-iconfont aui-icon-map"></i> 显示地图
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-tab-body full-textarea" style="display: none;">
+                <textarea name="" id="" cols="30" rows="10" placeholder="请输入督办意见"></textarea>
+                <!-- 底部 -->
+                <div class="aui-bar aui-bar-tab aui-row footer">
+                    <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="window.location.href='event.html'">
+                        <i class="aui-iconfont aui-icon-back"></i> 返回</span>
+                    <span class="aui-col-xs-4" style="border-right: 1px solid #f0f0f0;" onclick="showMap()">
+                        <i class="aui-iconfont aui-icon-map"></i> 显示地图
+                    </span>
+                    <span class="aui-col-xs-4" onclick="window.location.href='roadDetail.html'" style="background: rgb(6, 217, 149);color: #fff;">
+                        <i class="aui-iconfont aui-icon-correct"></i> 提交督办</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-2', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+</script>
+
+<script>
+    $(function() {
+        showTab()
+    })
+
+    // 头部“区域”和“状态”tab按钮切换
+    function showTab() {
+        $('.header-tab-btn').click(function() {
+            var index = parseInt($(this).index('.header-tab-btn'));
+
+            if ($('.header-check').css('display') === 'none') {
+                $('.header-check').show()
+
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+
+            } else {
+                $('.header-tab-btn').eq(index).addClass('aui-active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('aui-active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+            }
+        })
+
+        // 点击下拉框中选项，tab按钮相应文字改变
+        $('.header-tab-change').click(function() {
+            var text = $(this).text()
+            $(this).parent().addClass('active').siblings().removeClass('active')
+            $('.area-btn span').text(text)
+
+            $('.check').slideUp()
+            $('.area-btn').removeClass('active')
+        })
+    }
+
+    function showMap() {
+        if ($('.map-outer-2').css('display') === 'none') {
+            $('.map-outer-2').show()
+            $('.content').addClass('active')
+        } else {
+            $('.map-outer-2').hide()
+            $('.content').removeClass('active')
+        }
+    }
+
+    function fullMap() {
+        if ($('.map-outer-2').hasClass('full-map')) {
+            $('.map-outer-2').removeClass('full-map')
+            $('.full-map-btn').show()
+            $('.unfull-map-btn').hide()
+        } else {
+            $('.map-outer-2').addClass('full-map')
+            $('.unfull-map-btn').show()
+
+            $('.full-map-btn').hide()
+        }
+    }
+
+    function showCheck() {
+        if ($('.check').css('display') === 'none') {
+            $('.check').slideDown()
+            $('.area-btn').addClass('active')
+        } else {
+            $('.check').slideUp()
+            $('.area-btn').removeClass('active')
+        }
+    }
+</script>
+
+</html>

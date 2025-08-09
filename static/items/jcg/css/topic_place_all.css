@@ -1,0 +1,841 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+li {
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  display: block;
+}
+img {
+  border: 0;
+}
+.whole {
+  width: 100%;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+/******************************************首页样式******************************************/
+.topic_mechanic_top {
+  position: relative;
+}
+.topic_mechanic_top img {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: bottom;
+}
+.topic_mechanic_nav {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+}
+.topic_mechanic_nav ul {
+  width: 80%;
+  overflow: hidden;
+}
+.topic_mechanic_nav li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+}
+.topic_mechanic_nav li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.topic_mechanic_nav a {
+  color: #fff;
+  font-size: 1.5vw;
+  font-size: 1.5em\9;
+  padding: 0.8vw 0;
+  padding-bottom: 15px\9;
+}
+.topic_mechanic_tit {
+  position: relative;
+  margin: 60px 0 40px 0;
+}
+.topic_mechanic_tit_line {
+  border-bottom: 1px solid #2f2f2f;
+}
+.topic_mechanic_tit_word {
+  font-size: 1.7em;
+  text-align: center;
+  width: 20%;
+  border-left: 8px solid #2f2f2f;
+  border-right: 8px solid #2f2f2f;
+  color: #000;
+  margin: -18px auto 0 auto;
+  background: #fff;
+}
+.topic_mechanic_tit_word div {
+  font-size: 0.6em;
+  color: #e13b3c;
+  font-weight: bold;
+  background: #e13b3c;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+}
+.topic_mechanic_block_body ul {
+  overflow: hidden;
+}
+.topic_mechanic_block_body li {
+  background: #f3f3f3;
+  float: left;
+  width: 48%;
+  margin-bottom: 30px;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+}
+.topic_mechanic_block_body li:hover {
+  background: #ffffff;
+}
+.topic_mechanic_block_body li:nth-child(odd) {
+  float: left;
+}
+.topic_mechanic_block_body li:nth-child(even) {
+  float: right;
+}
+.topic_mechanic_block_body li:nth-child(9),
+.topic_mechanic_block_body li:nth-child(10) {
+  margin-bottom: 0;
+}
+.topic_mechanic_block_body li a {
+  margin: 20px;
+  overflow: hidden;
+}
+.topic_mechanic_time {
+  color: #2f2f2f;
+  width: 15%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 20px;
+  float: left;
+  margin-top: -5px;
+}
+.topic_mechanic_day {
+  font-size: 2.5em;
+}
+.topic_mechanic_month {
+  font-size: 0.7em;
+  background: #2f2f2f;
+  color: #fff;
+}
+.topic_mechanic_word {
+  float: left;
+  width: 80%;
+}
+.topic_mechanic_name {
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #3e3a33;
+  overflow: hidden;
+}
+.topic_mechanic_content {
+  text-indent: 2em;
+  color: #808080;
+  line-height: 25px;
+  height: 50px;
+  overflow: hidden;
+}
+.topic_mechanic_small_btn {
+  color: #cc4748;
+  margin-top: 5px;
+}
+.topic_mechanic_block_2 .topic_mechanic_tit_line {
+  border-bottom: 1px solid #c11a1e;
+}
+.topic_mechanic_block_2 .topic_mechanic_tit_word {
+  border-left: 8px solid #c11a1e;
+  border-right: 8px solid #c11a1e;
+  color: #c11a1e;
+}
+.topic_mechanic_block_2 .topic_mechanic_time {
+  color: #c11a1e;
+}
+.topic_mechanic_block_2 .topic_mechanic_month {
+  background: #c11a1e;
+}
+.topic_mechanic_footer {
+  text-align: center;
+  background: #2f2f2f;
+  color: rgba(255, 255, 255, 0.71);
+  color: #fff\9;
+  font-size: 0.95em;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+.topic_mechanic_footer .content {
+  border: 1px solid #626262;
+  padding: 30px 0;
+}
+.topic_mechanic_wrap {
+  width: 100%;
+  position: relative;
+}
+.swiper-slide {
+  height: auto !important;
+  position: relative;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 300px;
+  vertical-align: bottom;
+}
+.swiper-wrapper {
+  height: auto !important;
+}
+.swiper-container {
+  position: relative;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  right: 10px;
+  bottom: 40px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: red;
+}
+.arrow-left {
+  position: absolute;
+  left: 24%;
+  top: 45%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  font-size: 3em;
+  color: rgba(34, 34, 34, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  left: 74.5%;
+  top: 45%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  font-size: 3em;
+  color: rgba(34, 34, 34, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+.wrap_block {
+  margin: 0 20px;
+  position: relative;
+}
+.wrap_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 3%;
+  width: 94%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.wrap_white_left {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  width: 23.4%;
+  z-index: 9;
+}
+.wrap_white_right {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  width: 23.4%;
+  z-index: 9;
+}
+/******************************************列表页样式******************************************/
+.listpage_tittle {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #afafaf;
+}
+.listpage_vertical_line {
+  height: 60%;
+  border-left: 7px solid #2f2f2f;
+  display: inline-block;
+  margin-top: 12px;
+  float: left;
+}
+.listpage_tittle_word {
+  display: inline;
+}
+.listpage_tittle_word img {
+  width: 20px;
+  margin: 20px 5px 0 10px;
+  display: block;
+  float: left;
+}
+.listpage_tittle_word a {
+  display: inline-block;
+  color: #626262;
+}
+.listpage_content {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.listpage_left {
+  float: left;
+  width: 15%;
+  border: 1px solid #afafaf;
+  min-height: 400px;
+  position: relative;
+}
+.listpage_left_tittle {
+  text-align: center;
+  background: #2f2f2f;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 1.3em;
+}
+.listpage_left_tittle a {
+  color: #fff;
+}
+.listpage_left_ul {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.listpage_left_ul li a {
+  color: #626262;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+}
+.listpage_left_ul li a:hover {
+  color: #2f2f2f;
+}
+.listpage_left_line {
+  height: 25px;
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  margin-top: 12px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.listpage_left_line_checked {
+  height: 25px;
+  border-left: 7px solid #2f2f2f;
+  margin-top: 12px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.listpage_right {
+  float: none;
+  width: 100%;
+}
+.listpage_right_tittle {
+  padding: 20px 0;
+  font-size: 1.3em;
+  color: #626262;
+}
+.listpage_right_tittle a {
+  color: #2f2f2f;
+}
+.listpage_right_ul {
+  margin-left: 20px;
+  color: #2f2f2f;
+}
+.listpage_right_ul li {
+  list-style: disc;
+  border-bottom: 1px dotted #afafaf;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1%;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  list-style: none none lower-roman;
+}
+.listpage_right_ul li:hover {
+  background: #fff2d1;
+}
+.listpage_right_ul li a {
+  overflow: hidden;
+  font-size: 0.9em;
+  width: 100%;
+  float: right;
+  color: #626262;
+}
+.list_name {
+  float: left;
+  width: 79%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.list_time {
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+.pageing {
+  margin-top: 4%;
+  text-align: center;
+}
+.pageing a {
+  display: inline-block;
+  font-size: 0.7em;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  color: #626262;
+  border: 1px solid #afafaf;
+  transition: background 0.5s, color 0.5s, border 0.5s;
+  -webkit-transition: background 0.5s, color 0.5s, border 0.5s;
+  -o-transition: background 0.5s, color 0.5s, border 0.5s;
+  -moz-transition: background 0.5s, color 0.5s, border 0.5s;
+}
+.pageing a:hover {
+  border: 1px solid #2f2f2f;
+  background: #2f2f2f;
+  color: #fff;
+}
+.list_write_btn {
+  float: right;
+  width: 20%;
+  margin-top: 3%;
+  background: #2f2f2f;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+}
+.list_write_btn:hover {
+  background: #2d2e42;
+}
+.list_write_btn img {
+  width: 25px;
+  vertical-align: top;
+}
+.list_write_btn span {
+  display: inline-block;
+  margin-top: 2px;
+}
+/******************************************详情页页样式******************************************/
+.detail_tittle {
+  text-align: center;
+  color: #2f2f2f;
+  padding: 20px 0;
+  line-height: 30px;
+  font-size: 1.3em;
+  border-bottom: 1px solid #afafaf;
+}
+.detail_intro {
+  text-align: center;
+  margin: 20px;
+  color: #959595;
+  font-size: 0.8em;
+}
+.detail_content {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.inpage_form_intro {
+  font-family: initial;
+}
+.inpage_form_intro div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  font-family: initial;
+}
+.detail_content div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  font-family: initial;
+}
+/******************************************图片列表样式******************************************/
+.ninteenth_pic_list {
+  overflow: hidden;
+}
+.ninteenth_pic_list a {
+  float: left;
+  width: 23.5%;
+  width: 23%\9;
+  margin-right: 2%;
+  margin-top: 25px;
+  text-align: center;
+  background: #f3f3f3;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+}
+.ninteenth_pic_list a:hover {
+  opacity: 0.7;
+}
+.ninteenth_pic_list a:nth-child(4n) {
+  margin-right: 0;
+}
+.ninteenth_pic_list img {
+  width: 100%;
+  height: 160px;
+  vertical-align: bottom;
+}
+.ninteenth_pic_list_word {
+  color: #bb282e;
+  margin: 20px;
+  height: 60px;
+  overflow: hidden;
+  line-height: 30px;
+}
+@media screen and (max-width: 1660px) {
+  .topic_mechanic_top img {
+    width: 110%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .topic_mechanic_big_title img {
+    width: 140%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: -20%;
+  }
+}
+@media screen and (max-width: 798px) {
+  .content {
+    width: 96%;
+  }
+  /****************************************移动端 主页******************************/
+  .topic_mechanic_big_title img {
+    width: 150%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: -25%;
+  }
+  .topic_mechanic_big_title_1 {
+    top: 0px;
+  }
+  .topic_mechanic_block_1 .topic_mechanic_block_body {
+    padding-top: 40px;
+  }
+  .topic_mechanic_block_3 {
+    margin-top: 20px;
+  }
+  .topic_mechanic_block_body li {
+    width: 95%;
+    float: none!important;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .topic_mechanic_block_body li:nth-child(odd) {
+    border-right: none;
+  }
+  .topic_mechanic_block_body li:nth-child(even) {
+    padding-left: 0;
+  }
+  .topic_mechanic_block_body li:nth-child(9) {
+    padding-bottom: 15px;
+  }
+  .topic_mechanic_block_body li a {
+    overflow: hidden;
+  }
+  .topic_mechanic_time {
+    width: 25%;
+    margin-right: 10px;
+  }
+  .topic_mechanic_word {
+    float: left;
+    width: 55%;
+  }
+  .topic_mechanic_name {
+    font-size: 1em;
+  }
+  .topic_mechanic_bottom_left,
+  .topic_mechanic_bottom_right {
+    float: none;
+    width: 100%;
+  }
+  .topic_mechanic_bottom_title img {
+    width: 100%;
+  }
+  .topic_mechanic_block_2 {
+    overflow: hidden;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    background-size: cover;
+  }
+  .topic_mechanic_wrap {
+    width: 100%;
+    position: relative;
+    height: 275px\9;
+    overflow: hidden;
+  }
+  .swiper-slide {
+    height: auto !important;
+    position: relative;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100px;
+    vertical-align: bottom;
+  }
+  .swiper-wrapper {
+    height: auto !important;
+  }
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-visible-switch {
+    background: #aaa;
+  }
+  .swiper-active-switch {
+    background: red;
+  }
+  .arrow-left {
+    position: absolute;
+    left: 22%;
+    top: 35%;
+  }
+  .arrow-right {
+    position: absolute;
+    left: 73%;
+    top: 35%;
+  }
+  .wrap_block {
+    margin: 10px;
+  }
+  .wrap_title {
+    font-size: 0.9em;
+    padding: 5px 3%;
+  }
+  .wrap_white_left,
+  .wrap_white_right {
+    display: none;
+  }
+  /****************************************移动端 列表页******************************/
+  .listpage_tittle {
+    height: auto;
+    line-height: 25px;
+    padding: 10px 0;
+  }
+  .listpage_tittle img {
+    width: 20px;
+    margin: 3px 3px 0 0;
+    float: left;
+  }
+  .listpage_right {
+    float: none;
+    width: 100%;
+  }
+  .listpage_right_tittle {
+    padding: 20px 0;
+    font-size: 1.3em;
+    margin-left: 10px;
+    color: #626262;
+  }
+  .listpage_right_ul {
+    margin-left: 20px;
+    color: #2f2f2f;
+  }
+  .listpage_right_ul li {
+    list-style: disc;
+    border-bottom: 1px dotted #afafaf;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1%;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    list-style: none none lower-roman;
+  }
+  .listpage_right_ul li:hover {
+    background: #ededed;
+  }
+  .listpage_right_ul li a {
+    overflow: hidden;
+    font-size: 0.9em;
+    width: 100%;
+    float: right;
+    color: #626262;
+  }
+  .list_name {
+    float: left;
+    width: 69%;
+  }
+  .list_time {
+    float: right;
+    width: 30%;
+  }
+  .pageing {
+    width: 100%;
+  }
+  .pageing ul {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 4%;
+  }
+  .pageing ul li {
+    float: left;
+    font-size: 0.7em;
+  }
+  .pageing ul li a {
+    padding: 10px 20px;
+    color: #626262;
+    border: 1px solid #afafaf;
+    transition: background 0.5s, color 0.5s;
+    -webkit-transition: background 0.5s, color 0.5s;
+    -o-transition: background 0.5s, color 0.5s;
+    -moz-transition: background 0.5s, color 0.5s;
+  }
+  .pageing ul li a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #2f2f2f;
+    color: #fff;
+  }
+  .list_write_btn {
+    float: none;
+    clear: both;
+    margin-left: 20px;
+    margin-top: 18%;
+  }
+  /****************************************移动端 图片列表页******************************/
+  /****************************************移动端 详情页******************************/
+}

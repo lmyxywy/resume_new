@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+
+    <style>
+        .code_outer {
+            position: relative;
+        }
+        
+        .code {
+            position: absolute;
+            width: 80px;
+            text-align: center;
+            background: rgb(6, 217, 149);
+            color: #fff;
+            top: 0;
+            right: 0;
+            border-radius: 20px;
+            font-size: 12px;
+            height: 35px;
+            line-height: 35px;
+            margin-top: 5px;
+        }
+        
+        .active {
+            background: rgba(6, 217, 150, 0.4);
+        }
+    </style>
+</head>
+
+<body style="background: #fff;">
+    <div class="login">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav" style="padding:50px 0;">
+            <img src="../image/logo.jpg" alt="" class="avatar">
+            <div class="user-name">注册</div>
+        </div>
+
+
+        <!-- 主体 -->
+        <div class="aui-content aui-margin-b-15" style="background: #fff;padding:50px 20px 50px 20px;">
+            <div class="transport-row aui-row-padded transport-start">
+                <div class="aui-col-xs-1">
+                    <span><i class="aui-iconfont aui-icon-my"></i></span>
+                </div>
+                <div class="aui-col-xs-11">
+                    <i class="aui-iconfont aui-icon-close remove-btn"></i>
+                    <input type="text" placeholder="请输入手机号" class="login-input">
+                </div>
+            </div>
+            <div class="transport-row aui-row-padded transport-start">
+                <div class="aui-col-xs-1">
+                    <span><i class="aui-iconfont aui-icon-lock"></i></span>
+                </div>
+                <div class="aui-col-xs-11 code_outer">
+                    <i class="aui-iconfont aui-icon-close remove-btn"></i>
+                    <input type="text" placeholder="请输入验证码" class="login-input">
+                    <!-- <div class="code">获取验证码</div> -->
+                    <div class="code active">12s 后重发</div>
+                </div>
+            </div>
+            <div class="aui-btn aui-btn-info aui-btn-block login-btn" onclick="window.location.href='road.html'">注册</div>
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('.login-input').on('input propertychange', function() {
+            if ($(this).val()) {
+                var index = parseInt($(this).index('.login-input'))
+                $('.remove-btn').eq(index).show()
+            }
+        })
+        $('.remove-btn').click(function() {
+            var index = parseInt($(this).index('.remove-btn'))
+            $('.login-input').eq(index).val('')
+            $('.remove-btn').hide()
+        })
+    })
+</script>
+
+
+</html>

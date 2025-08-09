@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+
+    <style>
+        .index_bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+        }
+        
+        .index_bg img {
+            width: 100%;
+        }
+        
+        .index_top {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .index_top img {
+            width: 60%;
+        }
+        
+        .width {
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+        .index_swipe {
+            width: calc(85% - 20px);
+            padding: 10px;
+            background: #fff;
+        }
+        
+        .index_three_btns {
+            margin-top: 30px;
+            overflow: visible;
+        }
+        
+        .index_three_btn {
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            margin-right: 15px;
+            box-shadow: 0 0 3px 3px rgba(252, 123, 84, 0.1);
+        }
+        
+        .index_three_btn:last-child {
+            margin-right: 0;
+        }
+        
+        .index_three_btn img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 5px auto;
+            display: block;
+        }
+        
+        .index_two_btns {
+            margin-top: 65px;
+        }
+        
+        .index_two_btn {
+            width: 100%;
+        }
+        
+        .index_two_btn:first-child {
+            margin-right: 20px;
+        }
+        
+        .index_two_btn img {
+            width: 100%;
+        }
+        
+        @media screen and (max-height: 823px) {
+            .index_two_btns {
+                margin-top: 130px;
+            }
+        }
+        
+        @media screen and (max-height: 812px) {
+            .index_two_btns {
+                margin-top: 120px;
+            }
+        }
+        
+        @media screen and (max-height: 736px) {
+            .index_two_btns {
+                margin-top: 95px;
+            }
+        }
+        
+        @media screen and (max-height: 667px) {
+            .index_two_btns {
+                margin-top: 65px;
+            }
+        }
+        
+        @media screen and (max-height: 568px) {
+            .index_two_btns {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: #fff;">
+    <!-- 认证弹出框 -->
+    <div id="hui-black-mask" class="prove">
+        <div id="hui-black-mask-content" style="width: 60%;">
+            <div style="text-align:center;">
+                <div class="prove_top">
+                    <div class="prove_close" id="hui-black-close"></div>
+                    <div class="prove_icon">
+                        <img src="../image/prove.png" alt="">
+                    </div>
+                    <div class="prove_word">您还没有认证</div>
+                </div>
+                <div class="prove_bottom" onclick="window.location.href='identity.html'">
+                    <div class="prove_btn">去认证</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主页主体 -->
+    <div class="index" style="overflow: visible;">
+        <div class="index_bg">
+            <img src="../image/index_bg.jpg" alt="">
+        </div>
+        <div class="index_top">
+            <img src="../image/index_top.png" alt="">
+        </div>
+        <div class="width index_swipe">
+            <div class="hui-swipe" id="swipe">
+                <div class="hui-swipe-items">
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/1.jpg" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/2.jpg" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/banner.png" alt="">
+                    </div>
+                    <div class="hui-swipe-item">
+                        <img src="../image/imglist/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="width index_three_btns">
+            <div class="hui-flex" style="overflow: visible;">
+                <!-- <div class="index_three_btn active" onclick="hui.shwoBlackMasker();">
+                    <img src="../image/three_btn_1.png" alt="">
+                    <span>发布分享</span>
+                </div> -->
+                <div class="index_three_btn active" onclick="window.location.href='wishes.html'">
+                    <img src="../image/three_btn_2.png" alt="">
+                    <span>许愿池</span>
+                </div>
+                <div class="index_three_btn active" onclick="window.location.href='rank.html'">
+                    <img src="../image/three_btn_3.png" alt="">
+                    <span>爱心排行</span>
+                </div>
+            </div>
+        </div>
+        <div class="width index_two_btns">
+            <div class="hui-flex" style="overflow: visible;">
+                <div class="index_two_btn active" onclick="hui.shwoBlackMasker();">
+                    <img src="../image/two_btn_1.png" alt="">
+                </div>
+                <div class="index_two_btn active" onclick="window.location.href='free.html';">
+                    <img src="../image/two_btn_2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div id="hui-footer">
+        <a href="index.html" class="active" id="nav-home">
+            <div class="hui-footer-icons hui-icons-home" style="font-weight: bold;font-size: 20px;"></div>
+        </a>
+        <div style="width:33.33%; text-align:center;" class="hui-fl active" onclick="window.location.href='search.html';">
+            <img src="../image/logo_footer.png" height="44" />
+        </div>
+        <a href="my.html">
+            <div class="hui-footer-icons hui-icons-my"></div>
+        </a>
+    </div>
+</body>
+<script type="text/javascript" src="../script/hui.js"></script>
+<script type="text/javascript" src="../script/hui-swipe.js"></script>
+
+<script>
+    // 轮播图
+    var swipe = new huiSwpie('#swipe');
+    swipe.run()
+
+    // 认证弹出框
+    hui.blackMask();
+</script>
+
+</html>

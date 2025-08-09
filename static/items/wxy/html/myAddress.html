@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <style>
+        .hui-list {
+            margin: 0;
+            border: none;
+        }
+        
+        .list_block {
+            background: #fff;
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+        
+        .span_block {
+            display: inline-block;
+            padding: 0 10px;
+        }
+        
+        .hui-list li:active,
+        .hui-list>a:active {
+            background-color: #fff!important;
+        }
+        
+        .hui-form-radios {
+            line-height: 49px;
+        }
+        
+        .set_default {
+            padding-left: 4px;
+        }
+        
+        .set_default span {
+            border: 1px solid rgb(160, 160, 160);
+            color: rgb(160, 160, 160);
+            padding: 1px 4px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        
+        .set_default i {
+            display: inline-block;
+            margin-right: 12px;
+        }
+        
+        .set_default.active span {
+            border: 1px solid #ff7c24;
+            background: #ff7c24;
+            color: #fff;
+            padding: 1px 4px;
+            border-radius: 50%;
+            font-size: 10px;
+        }
+        
+        .add_btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <h1>我的地址</h1>
+    </header>
+    <div class="hui-wrap">
+        <div class="list_block">
+            <div class="hui-common-title">
+                <div class="hui-common-title-line"></div>
+                <div class="hui-common-title-txt">地址1</div>
+                <div class="hui-common-title-line"></div>
+            </div>
+            <div class="hui-list">
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/user.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        收货人
+                        <div class="hui-list-info">
+                            张云成
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/phone.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        联系方式
+                        <div class="hui-list-info">
+                            18643216789
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/address.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        收货地址
+                        <div class="hui-list-info">
+                            吉林省吉林市丰满区南山街3999号
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-text">
+                        <div class="set_default active">
+                            <i>设为默认地址</i><span>✔</span></div>
+                        <div class="hui-list-info">
+                            <span class="span_block">编辑</span>
+                            <span class="span_block">删除</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="list_block">
+            <div class="hui-common-title">
+                <div class="hui-common-title-line"></div>
+                <div class="hui-common-title-txt">地址2</div>
+                <div class="hui-common-title-line"></div>
+            </div>
+            <div class="hui-list">
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/user.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        收货人
+                        <div class="hui-list-info">
+                            张云成
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/phone.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        联系方式
+                        <div class="hui-list-info">
+                            18643216789
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-icons">
+                        <img src="../image/address.png" />
+                    </div>
+                    <div class="hui-list-text">
+                        收货地址
+                        <div class="hui-list-info">
+                            吉林省吉林市丰满区南山街3999号
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <div class="hui-list-text">
+                        <div class="set_default">
+                            <i>设为默认地址</i><span>✔</span></div>
+                        <div class="hui-list-info">
+                            <span class="span_block">编辑</span>
+                            <span class="span_block">删除</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div onclick="window.location.href='addAddress.html';" class="add_btn_outer">
+            <button class="hui-button hui-button-large hui-primary add_btn">
+                <span style="font-size: 18px;display: inline-block;margin-right: 5px;">+</span>添加地址
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/hui.js" charset="UTF-8"></script>
+</body>
+
+</html>

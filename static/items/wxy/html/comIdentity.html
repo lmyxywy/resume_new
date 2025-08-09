@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+    <style>
+        .hui-form-items-title span {
+            color: #f88f99;
+        }
+        
+        .hui-form {
+            background: transparent;
+        }
+        
+        .form_row {
+            margin-bottom: 10px;
+            background: #fff;
+            padding: 0 10px;
+        }
+        
+        .upload_img {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
+        
+        .upload_btn {
+            height: 80px;
+            width: 80px;
+            font-size: 50px;
+            border: none;
+            background: #f7f7f7;
+            color: #ccc;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <h1>企业认证</h1>
+    </header>
+    <div class="hui-wrap">
+        <form class="hui-form" id="form1">
+            <div class="form_row">
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 机构logo</div>
+                    <button class="upload_btn active">+</button>
+                    <!-- <img src="../image/logo.png" class="upload_img"> -->
+                </div>
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 登记证书</div>
+                    <button class="upload_btn active">+</button>
+                </div>
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 机构名称</div>
+                    <input type="text" class="hui-input hui-input-clear" placeholder="请输入机构名称" />
+                </div>
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 负责人</div>
+                    <input type="number" class="hui-input" placeholder="请输入负责人" />
+                </div>
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 联系电话</div>
+                    <input type="number" class="hui-input" placeholder="请输入联系电话" />
+                </div>
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 机构地址</div>
+                    <input type="number" class="hui-input" placeholder="请输入机构地址" />
+                </div>
+                <div class="hui-form-items" style="display: flex;justify-content: space-between;">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 成立日期</div>
+                    <div class="hui-list-info">
+
+                        <input type="date" class="hui-button hui-button-large hui-date-picker" value="" placeholder="请选择日期" style="height:30px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 类别</div>
+
+                    <div class="hui-form-radios" style="line-height: 38px;">
+                        <input type="radio" value="1" name="gender" id="g1" checked="checked" onchange="showSelectRes(this);" />
+                        <label for="g1">慈善机构</label>
+                        <br/>
+                        <input type="radio" value="2" name="gender" id="g2" onchange="showSelectRes(this);" />
+                        <label for="g2">慈善家</label>
+                        <br/>
+                        <input type="radio" value="3" name="gender" id="g3" onchange="showSelectRes(this);" />
+                        <label for="g3">爱心协会</label>
+                        <br/>
+                        <input type="radio" value="4" name="gender" id="g4" onchange="showSelectRes(this);" />
+                        <label for="g4">公益使者</label>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="hui-form-items">
+                    <div class="hui-form-items-title">
+                        <span>*</span> 简介</div>
+                    <div class="hui-form-textarea">
+                        <textarea placeholder="请简单介绍一下您的机构"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding:15px 8px;">
+                <button type="button" class="hui-button hui-primary hui-button-large" id="submitBtn">提交</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="../script/hui.js"></script>
+    <script type="text/javascript" src="../script/hui-picker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../script/hui-form.js"></script>
+    <script type="text/javascript">
+        hui.formInit();
+
+        // //获取单选框的值
+        // function showSelectRes(_selfBtn) {
+        //     var val;
+        //     hui(_selfBtn).parent().find('input').each(function(cObj) {
+        //         if (cObj.checked) {
+        //             val = cObj.value;
+        //         }
+        //     });
+        //     console.log(val);
+        // }
+    </script>
+</body>
+
+</html

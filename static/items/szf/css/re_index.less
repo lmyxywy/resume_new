@@ -1,0 +1,162 @@
+@import "css3-library";
+@import "definition";
+
+.right_show{
+    display: none;
+}
+.middle_btn_right{
+    top: 540px;
+}
+.left_bg_outer img{
+    transition: all 0.7s;
+}
+.active2{
+    .right_show{
+        display: block;
+    }
+    .right_hidden{
+        display: none;
+    }
+    .index_left{
+        width: 78%;
+    }
+    .index_right{
+        width: 22%;
+    }
+    .left{
+        .top{
+            transform:scale(1.5,1.5);
+            margin: 100px 39% 200px 0;
+        }
+        .left_bg_outer img{
+            width: 100%;
+            margin-top: -200px;
+        }
+    }
+    .nav.right_show li{
+        width: 100%;
+        text-align: left;
+        font-size: 1.35em;
+
+        &:hover{
+            background: inherit;
+            a{
+                color: inherit;
+            }
+        }
+    }
+    .top_link{
+        text-align: left;
+        padding-left:60px;
+    }
+    .icons{
+        text-align: center;
+
+        a:last-child{
+            margin-right: 0;
+        }
+    }
+    .left_btns{
+        text-align: center;
+    }
+    .btn_1{
+        width: 10%;
+    }
+    .btn_2{
+        width: 14%;
+    }
+    .btns_5{
+        min-height: inherit;
+    }
+    .box_body{
+        margin-top: 0;
+    }
+    .left_body{
+        min-height: inherit;
+    }
+    .footer_tit{
+        display: block;
+    }
+    .index_footer .index_left{
+        padding: 70px 0 100px 0;
+    }
+    .footer_word{
+        margin-top: 10px;
+    }
+    .footer_right_hidden{
+        bottom: 245px;
+    }
+    // 站点地图
+    .inpage_map_1{
+        border-top-left-radius: 0;
+        padding: 20px 30px;
+    }
+    .inpage_map_title_1{
+        font-weight: inherit;
+        font-size: 1.4em;
+    }
+    .inpage_map_title_2{
+        font-size: 1.1em;
+    }
+    .inpage_map_1{
+        &.active{
+            .inpage_map_1{
+                color: @theme_color_1;
+            }
+            .inpage_map_2,.inpage_map_3{
+                display: block;
+            }
+            .map_show_btn{
+                .rotate(180deg); 
+            }
+        }
+    }
+    .inpage_map_2{
+        display: none;
+    }
+    .map_show_btn{
+        display: inline-block;
+        transition: all 0.5s;
+        font-size: 0.7em;
+        padding:0 30px 0 10px;
+    }  
+    .middle_btn{
+        left:calc(~'78% - 20px');
+    }    
+}
+@media screen and (max-width:1700px) {
+    .active2 {
+        .index_left{
+            width: 75%;
+        }
+        .index_right{
+            width: 25%;
+        }
+        .left .top{
+            margin: 100px 34% 200px 0;
+        }
+        .middle_btn{
+            left:calc(~'75% - 20px');
+        }  
+    }
+}
+@media screen and (max-width:1366px) {
+    .middle_btn_right{
+        top: 410px;
+    }
+    .active2 {
+        .index_left{
+            width: 70%;
+        }
+        .index_right{
+            width: 30%;
+        }
+        .left .top{
+            margin: 100px 30% 200px 0;
+        }
+        .middle_btn{
+            left:calc(~'70% - 20px');
+        }  
+    }
+    
+}

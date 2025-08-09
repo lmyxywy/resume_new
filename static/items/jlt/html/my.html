@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body>
+    <div id="road-header">
+        <div class="map-outer-2">
+            <i class="aui-iconfont aui-icon-close" style="position: absolute;right: 5px;bottom: 0;z-index: 165;font-size: 1.5rem;" onclick="showMap()"></i>
+            <span class="full-map-btn" style="" onclick="fullMap()">▣</span>
+            <span class="unfull-map-btn" onclick="fullMap()">⊹</span>
+            <div id="map-2"></div>
+        </div>
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav" style="padding:22px 0;">
+            <img src="../image/liulangnan.png" alt="" class="avatar">
+            <div class="user-name">sys</div>
+        </div>
+
+
+        <!-- 主体 -->
+        <div class="aui-content aui-margin-b-15" style="padding-bottom: 50px;">
+            <section class="aui-grid aui-margin-b-15">
+                <div class="aui-row">
+                    <div class="aui-col-xs-4" onclick="window.location.href='reset.html'">
+                        <i class="aui-iconfont aui-icon-lock"></i>
+                        <div class="aui-grid-label">修改密码</div>
+                    </div>
+                    <div class="aui-col-xs-4" onclick="window.location.href='about.html'">
+                        <i class="aui-iconfont aui-icon-info"></i>
+                        <div class="aui-grid-label">关于</div>
+                    </div>
+                    <div class="aui-col-xs-4" onclick="window.location.href='login.html'">
+                        <i class="aui-iconfont aui-icon-forward"></i>
+                        <div class="aui-grid-label">退出</div>
+                    </div>
+                </div>
+            </section>
+            <div class="transport">
+                <div class="transport-title">
+                    <i class="aui-iconfont aui-icon-calendar"></i> 实时客运
+                </div>
+                <div class="transport-body">
+                    <div class="transport-info">
+                        <div class="transport-info-left">
+                            <span><i class="aui-iconfont aui-icon-flag"></i></span> 吉林市客运站
+                        </div>
+                        <div class="transport-info-right">
+                            <span><i class="aui-iconfont aui-icon-map"></i></span> 距离我 <b>4.18</b> km
+                        </div>
+                    </div>
+                    <div class="transport-search">
+                        <div class="aui-row-padded">
+                            <div class="aui-col-xs-10">
+                                <div class="transport-row aui-row-padded transport-start">
+                                    <div class="aui-col-xs-1">
+                                        <span>起</span>
+                                    </div>
+                                    <div class="aui-col-xs-11">
+                                        <input type="text" placeholder="请输入起点">
+                                    </div>
+                                </div>
+                                <div class="transport-row aui-row-padded transport-end">
+                                    <div class="aui-col-xs-1">
+                                        <span>终</span>
+                                    </div>
+                                    <div class="aui-col-xs-11">
+                                        <input type="text" placeholder="请输入终点">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="aui-col-xs-2" onclick="exchangeInput()">
+                                <div class="transport-arrow">↓↑</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="transport-btn-outer">
+                        <div class="aui-btn aui-btn-default aui-btn-sm transport-btn" onclick="showMap()">显示地图</div>
+                        <div class="aui-btn aui-btn-success aui-btn-sm transport-btn">查询</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="aui-bar aui-bar-tab footer">
+            <div class="aui-bar-tab-item" onclick="window.location.href='road.html'">
+                <i class="aui-iconfont aui-icon-map"></i>
+                <div class="aui-bar-tab-label">路段</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='event.html'">
+                <i class="aui-iconfont aui-icon-flag"></i>
+                <div class="aui-bar-tab-label">事件</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='count.html'">
+                <i class="aui-iconfont aui-icon-cert"></i>
+                <div class="aui-bar-tab-label">统计</div>
+            </div>
+            <div class="aui-bar-tab-item aui-active" onclick="window.location.href='my.html'">
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">我的</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-2', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+
+    function showMap() {
+        if ($('.map-outer-2').css('display') === 'none') {
+            $('.map-outer-2').show()
+        } else {
+            $('.map-outer-2').hide()
+        }
+    }
+
+    function exchangeInput() {
+        if ($('.transport-start input').val() || $('.transport-end input').val()) {
+            var start = $('.transport-start input').val()
+            var end = $('.transport-end input').val()
+            $('.transport-start input').val(end)
+            $('.transport-end input').val(start)
+        }
+    }
+
+    function fullMap() {
+        if ($('.map-outer-2').hasClass('full-map')) {
+            $('.map-outer-2').removeClass('full-map')
+            $('.full-map-btn').show()
+            $('.unfull-map-btn').hide()
+        } else {
+            $('.map-outer-2').addClass('full-map')
+            $('.unfull-map-btn').show()
+
+            $('.full-map-btn').hide()
+        }
+    }
+</script>
+
+
+</html>

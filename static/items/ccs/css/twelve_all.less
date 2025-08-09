@@ -1,0 +1,508 @@
+﻿@import "css3-library";
+@import "definition";
+
+html {
+    //////////////////////解决移动端点击出现蓝色色块的问题
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, hr, button, article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+li {
+    list-style: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+    display: block;
+}
+img {
+    border:0;
+}
+
+.whole {
+    width: 100%;
+}
+.content {
+    width:70%;
+    margin:0 auto;
+}
+
+/******************************************首页******************************************/
+body{
+    background: #03ccf9;
+}
+.twelve_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+
+    img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+}
+.twelve_body{
+    position: relative;
+    z-index: 1;
+    background: #1da7e6;
+    margin-top: 40%;
+    margin-bottom: 70px;
+}
+.twelve_body_top{
+    background: #dd0002;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    line-height: 45px;
+    font-weight: bold;
+    padding-bottom: 30px;
+
+    img{
+        width: 100%;
+    }
+}
+iframe{
+    height: 750px;
+}
+.twelve_time{
+    font-size: 50px;
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+}
+.twelve_block_body{
+    overflow: hidden;
+    position: relative;
+}
+.twelve_left{
+    float: left;
+    width: 55%;
+
+    img{
+        .img(100%);
+    }
+}
+.twelve_right{
+    float: right;
+    width: 45%;
+    background: #fff;
+    height: 350px;
+    margin-top: 35px;
+}
+.twelve_tit{
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    background: #dd0002;
+    color: #fff;
+    text-align: center;
+    padding: 35px 5px;
+    border-radius: 70px;
+    font-size: 45px;
+
+    img{
+        vertical-align: bottom;
+    }
+}
+.twelve_word{
+    p{
+        margin: 40px 30px 40px 100px;
+        line-height: 45px;
+        font-size: 25px;
+        color: #808080;
+    }
+}
+.twelve_bottom{
+    background: #fff;
+    padding-top:30px ;
+    margin-top: 70px;
+    color: #1e1961;
+    font-size: 25px;
+    line-height: 35px;
+
+    p{
+        width: 90%;
+        text-indent: 2em;
+        margin: 10px auto;
+    }
+
+    img{
+        margin-top: 30px;
+        width: 100%;
+        vertical-align: bottom;
+    }
+}
+
+.footer{
+    background: #f8f8f8;
+    padding: 20px 0 10px 0;
+}
+.footer_intro {
+  overflow: hidden;
+  line-height: 60px;
+}
+.footer_intro span {
+  display: inline-block;
+  margin-right: 20px;
+  float: left;
+}
+.footer_intro_img {
+  float: left;
+  width: 10%;
+}
+.footer_intro_img:nth-child(5) {
+  text-align: right;
+}
+.footer_intro_img:nth-child(5) img {
+  margin-top: 5px;
+}
+.footer_triangle {
+  display: inline-block;
+  width: 0!important;
+  height: 0;
+  margin-left: 8px;
+  border-width: 6px;
+  border-style: dashed dashed solid dashed;
+  border-color: #1f1f1f transparent transparent transparent;
+}
+.footer_intro {
+  line-height: 28px;
+}
+.footer_intro_img {
+  width: 7%;
+}
+.footer_word {
+  float: left;
+  overflow: hidden;
+}
+.footer_word a {
+  display: inline-block;
+  color: #939393;
+}
+.footer_word img {
+  float: left;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+   
+
+
+@media screen and (max-width:1600px) {
+    .two_big_title {
+        img {
+            .img(122%);
+            margin-left:-11%;
+        }
+    }
+}
+@media screen and (max-width:1366px) {
+    .two_big_title {
+        img {
+            .img(140%);
+            margin-left:-20%;
+        }
+    }
+}
+@media screen and (max-width:798px) {
+    .content {
+        width:96%;
+    }
+    .fixed_img{
+        display:none;
+    }
+    iframe{
+        height: 200px;
+    }
+    /****************************************移动端 主页******************************/
+    .twelve_body_top{
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .twelve_left{
+        float: none;
+        width: 100%;
+    }
+    .twelve_right{
+        float: none;
+        width:100%;
+        height: inherit;
+        margin-top: 0;
+
+        p{
+            margin: 0;
+            padding: 40px 30px 40px 100px;
+            font-size: 20px;
+        }
+    }
+    .twelve_tit{
+        top: 36%;
+        left: 0;
+        width: 50px;
+        font-size: 20px;
+
+        img{
+            width: 100%;
+        }
+    }
+    .tfHour_top{
+        height: 80vw;
+    }
+    .tfHour_top_inner{
+        margin-top: 5vw;
+        margin-right: 0;
+        width: 100%;
+    }
+    .tfHour_top_left{
+        float: right;
+        width:60%;
+    }
+    .tfHour_top_right{
+        float: none;
+        width: 80%;
+        margin: 3% auto;
+        
+        iframe{
+            height: 50vw;
+        }
+    }    
+    .thumbnails{
+        li{
+            float: none;
+            width:100%;
+        }
+    }
+    .two_big_title {
+
+        img {
+            .img(150%);
+            margin-left:-25%;
+        }
+    }
+    .two_big_title_1 {
+        top: 0px;
+    }
+    .two_block_1 .two_block_body {
+         padding-top: 40px; 
+    }
+    .two_block_3{
+        margin-top:20px;
+    }
+    .two_block_body {
+        li {
+            width:95%;
+            float: none!important;
+            padding: 20px 0;
+            margin-bottom:20px;
+
+            &:nth-child(odd) {
+                border-right: none;
+            }
+
+            &:nth-child(even) {
+                padding-left: 0;
+            }
+
+            &:nth-child(9) {
+                padding-bottom: 15px;
+            }
+
+            a {
+                overflow:hidden; 
+            }
+        }
+    }
+    .two_time {
+        width:25%;
+        margin-right:10px;
+    }
+    .two_word {
+        float: left;
+        width: 55%;
+    }
+    .two_name {
+        font-size: 1em;
+    }
+    .two_bottom_left,.two_bottom_right {
+        float:none;
+        width:100%;
+    }
+    .two_bottom_title {
+        img {
+            width:100%;
+        }
+    }
+
+    
+    .two_block_2 {
+        overflow: hidden;
+        margin-top: 20px;
+        padding-bottom: 0px;
+        background-size:cover;
+    }
+    ////////////////////////////////////////////////////////////////////////////swiper2x版本样式
+    .two_wrap {
+        width: 100%;
+        position: relative;
+        height:275px\9;
+        overflow:hidden;
+    }
+    .swiper-slide {
+        height: auto !important;
+        position: relative;
+
+        img {
+            width:100%;
+            height:100px;
+            vertical-align:bottom;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+
+    .swiper-visible-switch {
+        background: #aaa;
+    }
+
+    .swiper-active-switch {
+        background: red;
+    }
+
+    .arrow-left {
+        position: absolute;
+        left: 22%;
+        top: 35%;
+    }
+
+    .arrow-right {
+        position: absolute;
+        left: 73%;
+        top: 35%;
+    }
+    .wrap_block {
+        margin:10px;
+    }
+    .wrap_title {
+        font-size:0.9em;
+        padding: 5px 3%;
+    }
+    .wrap_white_left,.wrap_white_right {
+        display:none;
+    }
+    /****************************************移动端 列表页******************************/
+    .listpage_tittle {
+        height: auto;
+        line-height: 25px;
+        padding:10px 0;
+
+        img {
+            width: 20px;
+             margin: 3px 3px 0 0; 
+            float: left;
+        }
+    }
+
+
+    ////////////////////////////////////移动端 右侧列表
+
+    .listpage_right {
+        float: none;
+        width: 100%;
+    }
+
+    .listpage_right_tittle {
+        padding: 20px 0;
+        font-size: 1.3em;
+        margin-left: 10px;
+        color: @word_color_2;
+    }
+
+    .listpage_right_ul {
+        margin-left: 20px;
+        color: @theme_color_1;
+
+        li {
+            list-style: disc;
+            border-bottom: 1px dotted @line_color;
+            .line_height(50px);
+            padding:0 1%;
+            .transition(background 0.5s);
+
+            list-style:none none lower-roman; 
+
+                &:hover {
+                    background: #ededed;
+                }
+
+            a {
+                overflow: hidden;
+                font-size: 0.9em;
+                width:100%;
+                float:right;
+                color: @word_color_2;
+            }
+        }
+    }
+
+    .list_name {
+        float: left;
+        width:69%;
+    }
+
+    .list_time {
+        float:right;
+        width:30%;
+    }
+
+    .pageing {
+        width: 100%;
+
+        ul {
+            overflow: hidden;
+            margin-left: 20px;
+            margin-top: 4%;
+
+            li {
+                float: left;
+                font-size: 0.7em;
+
+                a {
+                    padding: 10px 20px;
+                    color: @word_color_2;
+                    border: 1px solid @line_color;
+                    .transition(background 0.5s,color 0.5s);
+
+                    &:hover {
+                        border: 1px solid rgba(0, 0, 0, 0.00);
+                        background: @theme_color_1;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .list_write_btn {
+        float:none;
+        clear:both;
+        margin-left:20px;
+        margin-top:18%;
+    }
+    /****************************************移动端 图片列表页******************************/
+    
+    /****************************************移动端 详情页******************************/
+}

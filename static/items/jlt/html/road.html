@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>吉路通</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+
+<body>
+    <div id="road">
+        <!-- 头部 -->
+        <div class="aui-bar aui-bar-nav header" style="padding:10px 0;line-height: 30px;">
+            <div>吉路通</div>
+
+
+        </div>
+        <div class="second_header">
+            <div class="aui-row-padded">
+                <div class="aui-col-xs-10">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-round" style="margin-left: 15px;">
+                        <div class="aui-bar-btn-item aui-active header-tab-btn" style="border-right:1px solid rgb(6, 217, 149);">
+                            <span>路段区域</span>
+                            <i class="aui-iconfont aui-icon-down"></i>
+                        </div>
+                        <div class="aui-bar-btn-item aui-active header-tab-btn">
+                            <span>路段状态</span>
+                            <i class="aui-iconfont aui-icon-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-2" onclick="showSearch()">
+                    <i class="aui-iconfont aui-icon-search"></i>
+                </div>
+                <div class="aui-col-xs-12 road-search">
+                    <div class="aui-searchbar">
+                        <div class="aui-searchbar-input aui-border-radius" tapmode>
+                            <div class="aui-list-item-input" style="margin: 0 15px 0 0;">
+                                <label>
+                                    <input class="aui-radio" type="radio" name="demo1" checked> 路段</label>
+                                <label>
+                                    <input class="aui-radio" type="radio" name="demo1"> 路线</label>
+                            </div>
+                            <form action="javascript:search();" style="width: 48%;">
+                                <input type="search" placeholder="请输入搜索内容" id="search-input">
+                            </form>
+                            <i class="aui-iconfont aui-icon-search"></i>
+                            <i class="aui-iconfont aui-icon-close" onclick="showSearch()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-check">
+                <div class="black-bg header-tab-bg"></div>
+                <ul class="aui-list aui-list-noborder header-tab-body">
+                    <li class="aui-list-item active">
+                        <div class="aui-list-item-inner header-tab-change">
+                            全部区域
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            昌邑区
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            龙潭区
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            船营区
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            丰满区
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            蛟河市
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            永吉县
+                        </div>
+                    </li>
+                </ul>
+                <ul class="aui-list aui-list-noborder header-tab-body">
+                    <li class="aui-list-item active">
+                        <div class="aui-list-item-inner header-tab-change">
+                            全部状态
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            建设
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            运营
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner header-tab-change">
+                            规划
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="aui-content content">
+            <!-- <div class="map-outer-1">
+                <div id="map-1"></div>
+            </div> -->
+            <ul class="aui-list aui-media-list">
+
+                <!-- <li class="aui-list-header">
+                    全部区域 - 建设
+                </li> -->
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.1</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div><span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-info">运营</div>
+                            <div class="aui-label aui-label-outlined">龙潭区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.2</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-danger">规划</div>
+                            <div class="aui-label aui-label-outlined">船营区</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="aui-list-item" onclick="window.location.href='roadDetail.html'">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media list-num">
+                            <span>No.3</span>
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">
+                                    <div>
+                                        <span class="dot"></span> 张家大院</div>
+                                    <div class="road-line">|</div>
+                                    <div>
+                                        <span class="dot dot1"></span> 黏土矿</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-right">
+                            <div class="aui-label aui-label-warning">建设</div>
+                            <div class="aui-label aui-label-outlined">越北镇</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 底部 -->
+        <div class="aui-bar aui-bar-tab footer">
+            <div class="aui-bar-tab-item aui-active" onclick="window.location.href='road.html'">
+                <i class="aui-iconfont aui-icon-map"></i>
+                <div class="aui-bar-tab-label">路段</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='event.html'">
+                <i class="aui-iconfont aui-icon-flag"></i>
+                <div class="aui-bar-tab-label">事件</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='count.html'">
+                <i class="aui-iconfont aui-icon-cert"></i>
+                <div class="aui-bar-tab-label">统计</div>
+            </div>
+            <div class="aui-bar-tab-item" onclick="window.location.href='my.html'">
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">我的</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=0215b77d62b225b4fc7108e1efd7492c"></script>
+
+<script type="text/javascript">
+    // 地图
+    var map = new AMap.Map('map-1', {
+        zoom: 11, //级别
+        center: [126.757023, 42.956216] //辉发河坐标
+    });
+</script>
+
+<script>
+    $(function() {
+        showTab()
+    })
+
+    // 头部“区域”和“状态”tab按钮切换
+    function showTab() {
+        $('.header-tab-btn').click(function() {
+            var index = parseInt($(this).index('.header-tab-btn'));
+
+            if ($('.header-check').css('display') === 'none') {
+                $('.header-check').show()
+                $('body').css({
+                    'overflow': 'hidden'
+                })
+
+                $('.header-tab-btn').eq(index).addClass('active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+
+            } else if ($('.header-tab-btn').eq(index).hasClass('active')) {
+                hideContent()
+            } else {
+                $('.header-tab-btn').eq(index).addClass('active');
+                $('.header-tab-btn').not(":eq(" + index + ")").removeClass('active');
+                $('.header-tab-body').eq(index).show().siblings('.header-tab-body').hide();
+            }
+        })
+
+        // 点击半透明黑色背景，隐藏下拉框
+        $('.header-tab-bg').click(function() {
+            hideContent()
+        })
+
+        // 点击下拉框中选项，tab按钮相应文字改变
+        $('.header-tab-change').click(function() {
+            var text = $(this).text()
+            $(this).parent().addClass('active').siblings().removeClass('active')
+            var bodyIndex = parseInt($(this).parent().parent('.header-tab-body').index('.header-tab-body'));
+            $('.header-tab-btn').eq(bodyIndex).children('span').text(text)
+
+            hideContent()
+        })
+    }
+
+
+    // 显示隐藏搜索框
+    function showSearch() {
+        if ($('.road-search').css('display') === 'none') {
+            $('.road-search').show()
+        } else {
+            $('.road-search').hide()
+        }
+    }
+</script>
+
+</html>

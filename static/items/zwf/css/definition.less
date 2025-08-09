@@ -1,0 +1,45 @@
+﻿@import "css3-library";
+
+/////////////////////////////////////////////////////////定义方法/////////////////////////////////////////////////////////
+
+@theme_color_1:#b4ebff;
+@theme_color_3:#65d6fe;
+@theme_color_2:#73bbff;
+@theme_color_4:#cdccff;
+@theme_color_5:#eae9ff;
+@theme_color_6:#73bbff;
+@theme_color_7:#ecf6ff;
+@theme_color_8:#1db3ec;
+@theme_color_9:#def6ff;
+@theme_color_10:linear-gradient(180deg,#adacff,#f1f1ff);
+@theme_color_11:rgb(241, 251, 255);
+@theme_hover_color:#2d2e42;
+@word_color_1:#2f2f2f;
+@word_color_2:lighten(@word_color_1,20%);
+@word_color_3:lighten(@word_color_1,40%);
+@header_height:130px;
+@header_fixed_height:60px;
+@line_color:lighten(@theme_color_2,70%);
+
+.content_center(@width) {
+    width: @width;
+    margin: 0 auto;
+}
+
+.line_height(@height) {
+    height: @height;
+    line-height: @height;
+}
+
+.img(@width) {
+    width: @width;
+    margin: 0 auto;
+    vertical-align: bottom;
+}
+
+.word_color{
+    background: -webkit-gradient(linear,left top,left bottom,from(#ff6562),to(#ff5f28));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}

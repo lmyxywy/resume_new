@@ -1,0 +1,344 @@
+﻿@import "css3-library";
+@import "definition";
+
+@media screen and (max-width:1920px) {
+    .listpage_tittle {
+        .line_height(60px);
+        border-bottom: 1px solid @line_color;
+    }
+
+    .listpage_vertical_line {
+        height: 60%;
+        border-left: 7px solid @theme_color_1;
+        display: inline-block;
+        margin-top: 12px;
+        float: left;
+    }
+
+    .listpage_tittle_word {
+        display: inline;
+
+
+        img {
+            width: 20px;
+            margin: 20px 5px 0 10px;
+            display: block;
+            float: left;
+        }
+
+        a {
+            display: inline-block;
+            color: @word_color_2;
+        }
+    }
+
+    .listpage_content {
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+    ////////////////////////////////////左侧导航
+
+    .listpage_left {
+        float: left;
+        width: 15%;
+        border: 1px solid @line_color;
+        min-height: 400px;
+        position:relative;
+    }
+
+    .listpage_left_tittle {
+        text-align: center;
+        background: @theme_color_1;
+        color: #fff;
+        padding: 20px 0;
+        font-size: 1.3em;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .listpage_left_ul {
+        .line_height(40px);
+        margin-left: 10px;
+
+        li {
+            a {
+                color:@word_color_2;
+                .transition(color 0.5s);
+
+                &:hover {
+                    color: @theme_color_1;
+                }
+            }
+        }
+    }
+
+    .listpage_left_line {
+        height: 25px;
+        border-left: 7px solid rgba(0, 0, 0, 0.00);
+        margin-top: 12px;
+        float: left;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+
+    .listpage_left_line_checked {
+        height: 25px;
+        border-left: 7px solid @theme_color_1;
+        margin-top: 12px;
+        float: left;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+    ////////////////////////////////////右侧列表
+
+    .listpage_right {
+        float: none;
+        width: 100%;
+    }
+
+    .listpage_right_tittle {
+        padding: 20px 0;
+        font-size: 1.3em;
+        margin-left: 20px;
+        color: @word_color_2;
+
+        a {
+            color:@theme_color_1;
+        }
+    }
+
+    .listpage_right_ul {
+        margin-left: 35px;
+        color: @theme_color_1;
+
+        li {
+            list-style: disc;
+            border-bottom: 1px dotted @line_color;
+            .line_height(50px);
+            padding:0 1%;
+            .transition(background 0.5s);
+
+            list-style:none none lower-roman; 
+
+                &:hover {
+                    background: #ededed;
+                }
+
+            a {
+                overflow: hidden;
+                font-size: 0.9em;
+                width:100%;
+                float:right;
+                color: @word_color_2;
+            }
+        }
+    }
+
+    .list_name {
+        float: left;
+        width:79%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .list_time {
+        float:right;
+        width:20%;
+        text-align:right;
+    }
+
+    /*.pageing {
+        width: 80%;
+        float:left;
+
+        ul {
+            overflow: hidden;
+            margin-left: 20px;
+            margin-top: 4%;
+
+            li {
+                float: left;
+                font-size: 0.7em;
+
+                a {
+                    padding: 10px 20px;
+                    color: @word_color_2;
+                    border: 1px solid @line_color;
+                    .transition(background 0.5s,color 0.5s);
+
+                    &:hover {
+                        border: 1px solid rgba(0, 0, 0, 0.00);
+                        background: @theme_color_1;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }*/
+
+    //////////////////////////////////////////////////////页码
+
+    .pageing {
+        margin-top: 4%;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            font-size: 0.7em;
+            margin-bottom:5px;
+            padding: 10px 20px;
+            color: @word_color_2;
+            border: 1px solid @line_color;
+            .transition(background 0.5s,color 0.5s,border 0.5s);
+
+            &:hover {
+                border: 1px solid @theme_color_1;
+                background: @theme_color_1;
+                color: #fff;
+            }
+        }
+    }
+    .list_write_btn {
+        float: right;
+        width: 20%;
+        margin-top: 3%;
+        background: @theme_color_1;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        .transition(background 0.5s);
+
+        &:hover {
+            background: @theme_hover_color;
+        }
+
+        img {
+            width: 25px;
+            vertical-align: top;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 2px;
+        }
+    }
+}
+@media screen and (max-width:414px) {
+    .listpage_tittle {
+        height: auto;
+    }
+
+////////////////////////////////////移动端左侧导航
+
+    .listpage_left {
+        float: none;
+        width: 99.5%;
+        min-height:initial;
+        height: auto;
+    }
+
+    .listpage_left_tittle {
+        padding: 10px 0;
+    }
+
+    .listpage_left_ul {
+        height: auto;
+        margin-left: 10px;
+        overflow: hidden;
+
+        li {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    ////////////////////////////////////移动端 右侧列表
+
+    .listpage_right {
+        float: none;
+        width: 100%;
+    }
+
+    .listpage_right_tittle {
+        padding: 20px 0;
+        font-size: 1.3em;
+        margin-left: 10px;
+        color: @word_color_2;
+    }
+
+    .listpage_right_ul {
+        margin-left: 20px;
+        color: @theme_color_1;
+
+        li {
+            list-style: disc;
+            border-bottom: 1px dotted @line_color;
+            .line_height(50px);
+            padding:0 1%;
+            .transition(background 0.5s);
+
+            list-style:none none lower-roman; 
+
+                &:hover {
+                    background: #ededed;
+                }
+
+            a {
+                overflow: hidden;
+                font-size: 0.9em;
+                width:100%;
+                float:right;
+                color: @word_color_2;
+            }
+        }
+    }
+
+    .list_name {
+        float: left;
+        width:69%;
+    }
+
+    .list_time {
+        float:right;
+        width:30%;
+    }
+
+    .pageing {
+        width: 100%;
+
+        ul {
+            overflow: hidden;
+            margin-left: 20px;
+            margin-top: 4%;
+
+            li {
+                float: left;
+                font-size: 0.7em;
+
+                a {
+                    padding: 10px 20px;
+                    color: @word_color_2;
+                    border: 1px solid @line_color;
+                    .transition(background 0.5s,color 0.5s);
+
+                    &:hover {
+                        border: 1px solid rgba(0, 0, 0, 0.00);
+                        background: @theme_color_1;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .list_write_btn {
+        float:none;
+        clear:both;
+        margin-left:20px;
+        margin-top:18%;
+    }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微心愿</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+</head>
+<style>
+    .hui-media-list li {
+        margin: 0;
+        border-bottom: 1px solid rgb(238, 238, 238);
+        padding: 0;
+    }
+    
+    .hui-media-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .hui-media-list li a {
+        padding: 16px 10px 0 10px;
+        line-height: 35px;
+    }
+    
+    .wishes_user,
+    .wishes_middle {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .wishes_realize_btn {
+        display: inline-block;
+        color: #fc7551!important;
+    }
+    
+    .wishes_top {
+        margin-bottom: 10px;
+        padding-bottom: 120px;
+        background: #fff;
+        position: relative;
+    }
+    
+    .wishes_btn {
+        position: absolute;
+        text-align: center;
+        color: #dd4435;
+        width: 100%;
+        left: 0;
+        bottom: 20px;
+    }
+    
+    .wishes_btn img {
+        width: 25vw;
+        height: 25vw;
+        background: rgb(249, 216, 163);
+        box-shadow: 0 0 8px 8px rgba(221, 155, 49, 0.2);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .hui-header {
+        background: none;
+    }
+    
+    .hui-media-list-img {
+        width: 10%!important;
+    }
+    
+    .hui-media-content {
+        width: 65%;
+    }
+    
+    .rank_top_big_word {
+        font-weight: bold;
+    }
+    
+    .rank_top_big_word span {
+        font-size: 18px;
+    }
+    
+    .rank_first {
+        color: #dd4435;
+        margin-left: -5px;
+    }
+    
+    .rank_num {
+        color: #000;
+        font-size: 16px;
+        width: 18%;
+    }
+    
+    .rank_num span {
+        color: #dd4435;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .rank_top_small_word {
+        color: rgb(216, 216, 216);
+        margin-top: 5px;
+    }
+    
+    .rank_bottom {
+        position: fixed;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        z-index: 2;
+    }
+    
+    .rank_bottom li a {
+        padding: 5px 10px 0 10px!important;
+    }
+</style>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+    </header>
+    <div class="wishes">
+        <!-- 第一名 -->
+        <div class="wishes_top">
+            <img src="../image/rank_top.jpg" style="width: 100%;">
+            <div class="wishes_btn">
+                <img src="" onerror="this.src='../image/home.png'" />
+                <div class="rank_top_big_word">
+                    <span class="rank_first">【No.1】</span>
+                    <span>雨天阴天、艳阳天</span>
+                </div>
+                <div class="rank_top_small_word"><span>公益次数：</span><span>123</span></div>
+            </div>
+        </div>
+        <!-- 排行列表 -->
+        <div class="hui-media-list">
+            <ul>
+                <li class="wishes_list_top">
+                    <div>
+                        <span>排名</span>
+                    </div>
+                    <div>
+                        <span>公益次数</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="rank_num">No.<span>2</span></div>
+                        <div class="hui-media-list-img"><img src="" onerror="this.src='../image/home.png'" /></div>
+                        <div class="hui-media-content">
+                            <h1></h1>
+                            <div class="wishes_user">
+                                <span><b>天气好心情好</b></span>
+                                <span class="wishes_realize_btn">109</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="rank_num">No.<span>3</span>
+                        </div>
+                        <div class="hui-media-list-img">
+                            <img src="" onerror="this.src='../image/home.png'" />
+                        </div>
+                        <div class="hui-media-content">
+                            <h1></h1>
+                            <div class="wishes_user">
+                                <span>
+                                    <b>天气好</b>
+                                </span>
+                                <span class="wishes_realize_btn">89</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="rank_num">No.4
+                        </div>
+                        <div class="hui-media-list-img">
+                            <img src="" onerror="this.src='../image/home.png'" />
+                        </div>
+                        <div class="hui-media-content">
+                            <h1></h1>
+                            <div class="wishes_user">
+                                <span>
+                                    <b>天气好</b>
+                                </span>
+                                <span class="wishes_realize_btn">55</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 我的排名 -->
+        <div class="rank_bottom">
+            <ul class="hui-media-list">
+                <li>
+                    <a href="javascript:;">
+                        <div class="rank_num">No.100+
+                            <span></span>
+                        </div>
+                        <div class="hui-media-list-img">
+                            <img src="" onerror="this.src='../image/home.png'" />
+                        </div>
+                        <div class="hui-media-content">
+                            <h1></h1>
+                            <div class="wishes_user">
+                                <span>
+                                    <b>天气好心情好</b>
+                                </span>
+                                <span class="wishes_realize_btn">5</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../script/hui.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script>
+</script>
+
+</html>

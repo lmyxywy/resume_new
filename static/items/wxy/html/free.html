@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI - 图片列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/hui.css" />
+</head>
+
+<style>
+    #list2 {
+        padding: 0 5px;
+    }
+    
+    #list2 li {
+        width: 50%;
+        float: left;
+        padding: 5px;
+    }
+    
+    #list2 .hui-img-list-content {
+        padding: 5px;
+        padding-bottom: 10px;
+    }
+    
+    #list2 h1 {
+        font-size: 14px;
+    }
+    
+    .free_top {
+        background: #fff;
+        overflow-x: auto;
+    }
+    
+    .free_top_item {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .free_top_item.active {
+        background: rgb(241, 241, 241);
+    }
+    
+    .free_top_item:active {
+        background: rgb(241, 241, 241);
+    }
+    
+    .hui-button-small {
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+    
+    .free_status_1 {
+        background: #ccc!important;
+    }
+    
+    .free_status_2 {
+        background: #fcaa7e!important;
+    }
+</style>
+
+<body>
+    <header class="hui-header">
+        <div id="hui-back"></div>
+        <div id="hui-header-sreach">
+            <div id="hui-header-sreach-icon"></div>
+            <form>
+                <input type="search" id="searchKey" onkeydown="if(event.keyCode==13)return false;" placeholder="搜一搜你感兴趣的" />
+            </form>
+        </div>
+        <div class="hui-header-sreach-txt" onclick="clearSearch();">清空</div>
+    </header>
+    <div class="hui-wrap">
+        <div class="free_top" id="free_top">
+            <div>
+                <div class="free_top_item active">
+                    母婴用品
+                </div>
+                <div class="free_top_item">
+                    宠物用品</div>
+                <div class="free_top_item">
+                    鞋包服饰</div>
+                <div class="free_top_item">
+                    美妆洗护</div>
+                <div class="free_top_item">
+                    数码设备</div>
+                <div class="free_top_item">
+                    数码设备</div>
+                <div class="free_top_item">
+                    母婴用品
+                </div>
+                <div class="free_top_item">
+                    宠物用品</div>
+                <div class="free_top_item">
+                    鞋包服饰</div>
+                <div class="free_top_item">
+                    美妆洗护</div>
+                <div class="free_top_item">
+                    数码设备</div>
+                <div class="free_top_item">
+                    数码设备</div>
+            </div>
+        </div>
+        <div class="hui-common-title">
+            <div class="hui-common-title-line"></div>
+            <div class="hui-common-title-txt">母婴用品</div>
+            <div class="hui-common-title-line"></div>
+        </div>
+        <div class="hui-img-list" id="list2">
+            <ul>
+                <li>
+                    <a href="freeDetail.html">
+                        <img src="../image/imglist/1.jpg" />
+                        <div class="hui-img-list-content">
+                            <h1>超级滋润的护手霜</h1>
+                            <button class="hui-button hui-primary hui-button-small hui-fr free_status_2">挑选中</button>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="freeDetail.html">
+                        <img src="../image/imglist/2.jpg" />
+                        <div class="hui-img-list-content">
+                            <h1>超级滋润的护手霜</h1>
+                            <button class="hui-button hui-primary hui-button-small hui-fr free_status_1">已完成</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../script/hui.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        hui('#free_top').scrollX(5.5, '.free_top_item');
+    </script>
+</body>
+
+</html>
