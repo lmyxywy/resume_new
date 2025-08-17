@@ -1338,7 +1338,7 @@ body.active .big_nav.active .nav li {
   margin-bottom: 20px;
 }
 .new_index_right .wrap_switch_outer {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .new_index_right .new_card {
   margin-top: 30px;
@@ -1425,24 +1425,30 @@ body.active .big_nav.active .nav li {
 .four_btns {
   margin-bottom: 15px;
 }
-.four_btns li {
+.four_btns a {
   display: inline-block;
-  width: 22%;
-  margin-right: 2.5%;
+  width: 25%;
+  /* margin-right: 2.5%; */
   font-size: 11px;
   text-align: center;
-  color: #858585;
   padding: 5px 0;
+  margin-left: -4px;
 }
-.four_btns li:last-child{
+.four_btns a{
+	
+	color: #5297f2;
+}
+.four_btns a:last-child{
 	margin-right: 0;
 }
-.four_btns li:hover {
+.four_btns a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.four_btns li img {
-  width: 12px;
+.four_btns a img {
+  width: 16px;
   vertical-align: middle;
+  display: block;
+  margin: 0 auto 5px;
 }
 .pic_and_word img {
   width: 100%;
